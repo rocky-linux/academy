@@ -81,3 +81,4 @@ Using the exercises throughout these chapters, will help you gain a comfort leve
 :heavy_check_mark: [Ansible Intermediate](./Learning_Ansible_with_Rocky-2-Ansible_Advanced.html)
 :heavy_check_mark: [Management of Files](./Learning_Ansible_with_Rocky-3-Working_with_files.html)
 :heavy_check_mark: [Ansible Galaxy](./Learning_Ansible_with_Rocky-4-Ansible_galaxy.html)
+:heavy_check_mark: [Ansible deployments with Ansistrano](./Learning_Ansible_with_Rocky-5-Ansible_deployments_with_ansistrano.html)
