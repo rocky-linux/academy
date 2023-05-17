@@ -748,3 +748,4 @@ You can then store your own plugins or roles inside this new collection.
 # Ansible Collections
 
 > More information can be found at https://docs.ansible.com/ansible/latest/user_guide/collections_using.html
+
