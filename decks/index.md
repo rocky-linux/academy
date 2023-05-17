@@ -66,6 +66,8 @@ Learning Linux made easy.
 
 # What you will learn :
 
+- Learning Linux Administration with Rocky Linux (soon)
+- Learning Bash with Rocky Linux (soon)
 - Learning Ansible with Rocky Linux
 
 ---
