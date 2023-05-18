@@ -82,3 +82,6 @@ Using the exercises throughout these chapters, will help you gain a comfort leve
 :heavy_check_mark: [Management of Files](./Learning_Ansible_with_Rocky-3-Working_with_files.html)
 :heavy_check_mark: [Ansible Galaxy](./Learning_Ansible_with_Rocky-4-Ansible_galaxy.html)
 :heavy_check_mark: [Ansible deployments with Ansistrano](./Learning_Ansible_with_Rocky-5-Ansible_deployments_with_ansistrano.html)
+:heavy_check_mark: [Large scale infrastructure](./ansible/Learning_Ansible_with_Rocky-6-Ansible_Large_scale_infrastructure.html)
+:heavy_check_mark: [Working with filters](./ansible/Learning_Ansible_with_Rocky-7-Ansible_Working_with_filters.html)
+:heavy_check_mark: [Management server optimizations](./ansible/Learning_Ansible_with_Rocky-8-Ansible_Management_server_optimizations.html)

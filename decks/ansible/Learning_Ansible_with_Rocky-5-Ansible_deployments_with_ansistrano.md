@@ -67,7 +67,7 @@ table {
 }
 </style>
 
-# 45 - Ansible deployments with Ansistrano
+# 5 - Ansible deployments with Ansistrano
 ## Learning Ansible with Rocky
 
 ---
