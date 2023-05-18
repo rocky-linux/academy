@@ -88,11 +88,11 @@ In this chapter you will learn how to manage files with Ansible.
 # Plan
 
 * [ini_file module](#5)
-* [lineinfile module](#10)
-* [copy module](#14)
-* [fetch module](#18)
-* [template module](#22)
-* [get_url module](#27)
+* [lineinfile module](#11)
+* [copy module](#16)
+* [fetch module](#21)
+* [template module](#26)
+* [get_url module](#32)
 
 
 ---

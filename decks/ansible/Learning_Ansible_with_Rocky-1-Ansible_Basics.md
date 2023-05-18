@@ -86,12 +86,12 @@ In this chapter you will learn how to work with Ansible.
 
 # Plan
 
-* [Generalities](./Learning_Ansible_with_Rocky-1-Ansible_Basics.html#4)
-* [Installation](./Learning_Ansible_with_Rocky-1-Ansible_Basics.html#12)
-* [Ansible CLI](./Learning_Ansible_with_Rocky-1-Ansible_Basics.html#20)
-* [Deployment](./Learning_Ansible_with_Rocky-1-Ansible_Basics.html#30)
-* [The modules](./Learning_Ansible_with_Rocky-1-Ansible_Basics.html#46)
-* [Playbooks](./Learning_Ansible_with_Rocky-1-Ansible_Basics.html#58)
+* [Generalities](#4)
+* [Installation](#12)
+* [Ansible CLI](#20)
+* [Deployment](#30)
+* [The modules](#46)
+* [Playbooks](#59)
 ---
 #
 
@@ -1113,7 +1113,7 @@ test.yml
 <br/>
 <br/>
 
-[Next Chapter >>](./Learning_Ansible_with_Rocky-1-Ansible_Basics.html)
+[Next Chapter >>](./Learning_Ansible_with_Rocky-2-Ansible_Advanced.html)
 
 </div>
 </div>
