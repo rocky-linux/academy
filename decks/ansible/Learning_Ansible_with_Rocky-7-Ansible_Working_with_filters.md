@@ -85,11 +85,8 @@ In this chapter you will learn how to transform data with jinja filters.
 
 # Plan
 
-* [Converting data](./Learning_Ansible_with_Rocky-7-Ansible_Working_with_filters.html#9)
-* [](./Learning_Ansible_with_Rocky-7-Ansible_Working_with_filters.html#5)
-* [](./Learning_Ansible_with_Rocky-7-Ansible_Working_with_filters.html#5)
-* [](./Learning_Ansible_with_Rocky-7-Ansible_Working_with_filters.html#5)
-* [](./Learning_Ansible_with_Rocky-7-Ansible_Working_with_filters.html#5)
+* [Converting data](#9)
+
 
 ---
 #
@@ -699,3 +696,40 @@ code {
   * `{{ ip_list | ansible.netcommon.ipv4 }}`: only displays v4 IPs. Without dwelling on this, if you need, there are many filters dedicated to the network.
   * `{{ user_password | password_hash('sha512') }}`: generates a hashed password in sha512.
 
+
+---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
+---
+#
+
+<div class="columns">
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
+
+
+</div>
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Next Chapter >>](./Learning_Ansible_with_Rocky-8-Ansible_Management_server_optimizations.html)
+
+</div>
+</div>

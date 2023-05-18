@@ -85,9 +85,9 @@ In this chapter you will learn how to use, install, and manage Ansible roles and
 
 # Plan
 
-* [ansible-galaxy command](./Learning_Ansible_with_Rocky-4-Ansible_galaxy.html#5)
-* [Ansible Roles](./Learning_Ansible_with_Rocky-4-Ansible_galaxy.html#9)
-* [Ansible Collections](./Learning_Ansible_with_Rocky-4-Ansible_galaxy.html#40)
+* [ansible-galaxy command](#5)
+* [Ansible Roles](#10)
+* [Ansible Collections](#42)
 
 
 ---
@@ -157,6 +157,14 @@ ansible-galaxy collection [import|init|install|login|remove|...]
 | `init`       | generate a skeleton of a new collection.                   |
 | `install`    | installs a collection.                                     |
 | `list`       | display the name and the version of installed collections. |
+
+---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
 
 ---
 <br/>
@@ -611,6 +619,14 @@ Obviously, there is no limit to how much you can improve your role. Imagine that
 <br/>
 <br/>
 
+
+# Questions ?
+
+---
+<br/>
+<br/>
+<br/>
+
 # Ansible Collections
 ---
 # Ansible Collections
@@ -749,3 +765,42 @@ You can then store your own plugins or roles inside this new collection.
 
 > More information can be found at https://docs.ansible.com/ansible/latest/user_guide/collections_using.html
 
+
+---
+
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
+---
+
+#
+
+<div class="columns">
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
+
+
+</div>
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Next Chapter >>](./Learning_Ansible_with_Rocky-5-Ansible_deployments_with_ansistrano.html)
+
+</div>
+</div>

@@ -87,11 +87,11 @@ In this chapter you will continue to learn how to work with Ansible.
 
 # Plan
 
-* [The variables](./Learning_Ansible_with_Rocky-2-Advanced.html#5)
-* [Loop management](./Learning_Ansible_with_Rocky-2-Advanced.html#17)
-* [Conditionnals](./Learning_Ansible_with_Rocky-2-Advanced.html#27)
-* [Managing changes: the `handlers`](./Learning_Ansible_with_Rocky-2-Advanced.html#36)
-* [Asynchronous tasks](./Learning_Ansible_with_Rocky-2-Advanced.html#43)
+* [The variables](#5)
+* [Loop management](#17)
+* [Conditionnals](#27)
+* [Managing changes: the `handlers`](#36)
+* [Asynchronous tasks](#43)
 ---
 #
 
@@ -686,3 +686,41 @@ You can also decide to launch a long-running task and forget it (fire and forget
 # Asynchronous tasks
 
 > More information can be at https://docs.ansible.com/ansible/latest/user_guide/playbooks_async.html.
+
+---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
+---
+
+#
+
+<div class="columns">
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
+
+
+</div>
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Next Chapter >>](./Learning_Ansible_with_Rocky-3-Working_with_files.html)
+
+</div>
+</div>

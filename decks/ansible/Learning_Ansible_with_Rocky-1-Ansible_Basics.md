@@ -706,6 +706,14 @@ The installed software being a service, it is now necessary to start it with the
 Try to launch those last 2 commands twice. You will observe that the first time Ansible will take actions to reach the state set by the command. The second time, it will do nothing because it will have detected that the state is already reached!
 
 ---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
+---
 # Exercises
 <style scoped>
 li {
@@ -1072,3 +1080,40 @@ $ yamllint test.yml
 test.yml
   8:1       error    syntax error: could not find expected ':' (syntax)
 ```
+
+---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
+---
+#
+
+<div class="columns">
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
+
+
+</div>
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Next Chapter >>](./Learning_Ansible_with_Rocky-1-Ansible_Basics.html)
+
+</div>
+</div>

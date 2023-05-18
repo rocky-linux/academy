@@ -754,3 +754,42 @@ changed: [192.168.10.11]
 As you have seen during this chapter, Ansible can greatly improve the life of the system administrator. Very intelligent roles like Ansistrano are "must haves" that quickly become indispensable.
 
 Using Ansistrano, ensures that good deployment practices are respected, reduces the time needed to put a system into production, and avoids the risk of potential human errors. The machine works fast, well, and rarely makes mistakes!
+
+
+---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
+---
+
+#
+
+<div class="columns">
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
+
+
+</div>
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Next Chapter >>](./Learning_Ansible_with_Rocky-6-Ansible_Large_scale_infrastructure.html)
+
+</div>
+</div>

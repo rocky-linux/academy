@@ -85,12 +85,11 @@ In this chapter you will learn how to scale your configuration management system
 
 # Plan
 
-* [Variables storage](./Learning_Ansible_with_Rocky-6-Ansible_Large_scale_infrastructure.html#10)
-* [About Ansible tags](./Learning_Ansible_with_Rocky-6-Ansible_Large_scale_infrastructure.html#17)
-* [About the directory layout
-](./Learning_Ansible_with_Rocky-6-Ansible_Large_scale_infrastructure.html#22)
-* [Tests](./Learning_Ansible_with_Rocky-6-Ansible_Large_scale_infrastructure.html#31)
-* [Benefits](./Learning_Ansible_with_Rocky-6-Ansible_Large_scale_infrastructure.html#39)
+* [Variables storage](#10)
+* [About Ansible tags](#18)
+* [About the directory layout](#24)
+* [Tests](#34)
+* [Benefits](#43)
 ---
 #
 <br/>
@@ -201,6 +200,14 @@ For example, if you want to make the `PermitRootLogin` value in the `sshd_config
 <br/>
 <br/>
 
+
+# Questions ?
+
+---
+<br/>
+<br/>
+<br/>
+
 # About Ansible tags
 
 ---
@@ -251,6 +258,14 @@ ansible-playbook -i inventories/production/hosts --skip-tags groups --tags users
 # About Ansible tags
 
 > More information can be found at https://docs.ansible.com/ansible/latest/user_guide/playbooks_tags.html
+
+---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
 
 ---
 <br/>
@@ -420,6 +435,14 @@ cms
 <br/>
 <br/>
 
+
+# Questions ?
+
+---
+<br/>
+<br/>
+<br/>
+
 # Tests
 
 ---
@@ -563,6 +586,14 @@ As you can see, `functionality2` is only played on the `client1`.
 <br/>
 <br/>
 
+
+# Questions ?
+
+---
+<br/>
+<br/>
+<br/>
+
 # Benefits
 
 ---
@@ -581,5 +612,39 @@ By following the advice given in the Ansible documentation, you will quickly obt
 * the specifics of your information system are separated from the code, easily audit-able, and centralized in the inventory files of your configuration management.
 
 
+---
+<br/>
+<br/>
+<br/>
 
 
+# Questions ?
+
+---
+#
+
+<div class="columns">
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
+
+
+</div>
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Next Chapter >>](./Learning_Ansible_with_Rocky-7-Ansible_Working_with_filters.html)
+
+</div>
+</div>

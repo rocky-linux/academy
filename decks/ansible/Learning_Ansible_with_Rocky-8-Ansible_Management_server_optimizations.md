@@ -83,11 +83,11 @@ In this chapter, we will review the configuration options that may be of interes
 # Plan
 
 * [The `ansible.cfg` configuration file](#5)
-* [Caching the facts](#12)
-* [Using Vault](#16)
-* [Working with Windows servers](#24)
-* [Working with IP modules](#28)
-* [Generating a CMDB](#30)
+* [Caching the facts](#13)
+* [Using Vault](#18)
+* [Working with Windows servers](#27)
+* [Working with IP modules](#32)
+* [Generating a CMDB](#35)
 
 ---
 
@@ -184,7 +184,14 @@ Some interesting configuration options to comment on:
 * `pipelining`: Setting this value to `True` increases performance by reducing the number of SSH connections needed when running remote modules. You must first make sure that the `requiretty` option is disabled in the `sudoers` options (see documentation).
 
 ---
+<br/>
+<br/>
+<br/>
 
+
+# Questions ?
+
+---
 <br/>
 <br/>
 <br/>
@@ -233,7 +240,14 @@ redis-cli
 ```
 
 ---
+<br/>
+<br/>
+<br/>
 
+
+# Questions ?
+
+---
 <br/>
 <br/>
 <br/>
@@ -341,7 +355,14 @@ if __name__ == '__main__':
 ```
 
 ---
+<br/>
+<br/>
+<br/>
 
+
+# Questions ?
+
+---
 <br/>
 <br/>
 <br/>
@@ -386,7 +407,14 @@ pip3 install kerberos requests-kerberos
 ```
 
 ---
+<br/>
+<br/>
+<br/>
 
+
+# Questions ?
+
+---
 <br/>
 <br/>
 <br/>
@@ -403,7 +431,14 @@ sudo pip3 install netaddr
 ```
 
 ---
+<br/>
+<br/>
+<br/>
 
+
+# Questions ?
+
+---
 <br/>
 <br/>
 <br/>
@@ -442,3 +477,23 @@ If you prefer a web interface:
 ```
 ansible-cmdb -t html_fancy_split /var/www/ansible/cmdb/out/
 ```
+
+
+
+
+---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
+---
+#
+<br/>
+<br/>
+<br/>
+<br/>
+
+# END

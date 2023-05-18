@@ -87,12 +87,12 @@ In this chapter you will learn how to manage files with Ansible.
 
 # Plan
 
-* [ini_file module](./Learning_Ansible_with_Rocky-3-Working_with_files.html#5)
-* [lineinfile module](./Learning_Ansible_with_Rocky-3-Working_with_files.html#10)
-* [copy module](./Learning_Ansible_with_Rocky-3-Working_with_files.html#14)
-* [fetch module](./Learning_Ansible_with_Rocky-3-Working_with_files.html#18)
-* [template module](./Learning_Ansible_with_Rocky-3-Working_with_files.html#22)
-* [get_url module](./Learning_Ansible_with_Rocky-3-Working_with_files.html#27)
+* [ini_file module](#5)
+* [lineinfile module](#10)
+* [copy module](#14)
+* [fetch module](#18)
+* [template module](#22)
+* [get_url module](#27)
 
 
 ---
@@ -155,6 +155,14 @@ Example of use:
 <br/>
 <br/>
 
+
+# Questions ?
+
+---
+<br/>
+<br/>
+<br/>
+
 # `lineinfile` module
 
 ---
@@ -180,6 +188,14 @@ For example, to ensure that the line starting with `SELINUX=` in the `/etc/selin
 # `lineinfile` module
 
 > More information can be found at https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html.
+---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
 ---
 
 <br/>
@@ -217,6 +233,15 @@ Here we are copying `myflile.conf` from one location to another:
 <br/>
 <br/>
 
+
+# Questions ?
+
+---
+
+<br/>
+<br/>
+<br/>
+
 # `fetch` module
 
 ---
@@ -240,6 +265,14 @@ This module does the opposite of the `copy` module:
 # `fetch` module
 
 > More information can be found at https://docs.ansible.com/ansible/latest/collections/ansible/builtin/fetch_module.html.
+
+---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
 
 ---
 <br/>
@@ -292,6 +325,14 @@ It is possible to add a validation step if the targeted service allows it (for e
 <br/>
 <br/>
 
+
+# Questions ?
+
+---
+<br/>
+<br/>
+<br/>
+
 # `get_url` module
 
 ---
@@ -311,3 +352,40 @@ To upload files from a web site or ftp to one or more hosts, use the `get_url` m
 # `get_url` module
 
 By providing a checksum of the file, the file will not be re-downloaded if it is already present at the destination location and its checksum matches the value provided.
+
+---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
+---
+#
+
+<div class="columns">
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
+
+
+</div>
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[Next Chapter >>](./Learning_Ansible_with_Rocky-4-Ansible_galaxy.html)
+
+</div>
+</div>
