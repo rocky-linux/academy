@@ -496,7 +496,7 @@ $ sudo su - ansible
 ---
 # Test with the ping module
 
-Run a ping on each server of the rocky8 group:
+Run a ping on each server of the rocky9 group:
 
 ```bash
 SHELL > ansible rocky9 -m ping
