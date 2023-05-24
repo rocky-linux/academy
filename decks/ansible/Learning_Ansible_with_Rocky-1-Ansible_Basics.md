@@ -354,7 +354,7 @@ ansible <host-pattern> [-m module_name] [-a args] [options]
 ---
 #
 
-List the hosts belonging to the rocky8 group:
+List the hosts belonging to the rocky9 group:
 
 ```bash
 ansible rocky9 --list-hosts
