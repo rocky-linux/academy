@@ -71,7 +71,18 @@ Learning Linux made easy.
 - Learning Ansible with Rocky Linux
 
 ---
+# Learning Linux Administration with Rocky Linux
 
+:heavy_check_mark: [Introduction](./admin_guide/00-toc.html)
+:heavy_check_mark: [Ansible Basics](./admin_guide/01-presentation.html)
+
+
+---
+# Learning Bash with Rocky Linux
+
+soon...
+
+---
 # Learning Ansible with Rocky Linux
 
 :heavy_check_mark: [Introduction](./ansible/Learning_Ansible_with_Rocky-0-Introduction.html)
