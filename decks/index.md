@@ -74,7 +74,7 @@ Learning Linux made easy.
 # Learning Linux Administration with Rocky Linux
 
 :heavy_check_mark: [Introduction](./admin_guide/00-toc.html)
-:heavy_check_mark: [Ansible Basics](./admin_guide/01-presentation.html)
+:heavy_check_mark: [Introduction to Linux](./admin_guide/01-presentation.html)
 
 
 ---
