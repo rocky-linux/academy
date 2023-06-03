@@ -44,6 +44,19 @@ footer {
     color: white;
 }
 
+kbd {
+    background-color: #fafafa;
+    border: .05rem solid #0000008a;
+    border-radius: .12rem;
+    box-shadow: .08rem .08rem #0000008a;
+    color: #000000de;
+    display: inline-block;
+    font-size: .75em;
+    padding: 0 .6666666667em;
+    vertical-align: text-top;
+    word-break: break-word;
+}
+
 .columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -55,6 +68,7 @@ footer {
   gap: 1rem;
 } 
 
+.kbd { color: blue; }
 .fa-twitter { color: aqua; }
 .fa-mastodon { color: purple; }
 .fa-linkedin { color: blue; }
@@ -145,7 +159,7 @@ The user's login directory is by convention stored in the `/home` directory of t
 
 #
 
-A workstation-type installation (with graphical interface) starts this interface on terminal 1. Linux being multi-user, it is possible to connect several users several times, on different **physical terminals** (TTY) or **virtual terminals** (PTS). Virtual terminals are available within a graphical environment. A user switches from one physical terminal to another using [Alt] + <kbd>Fx</kbd> from the command line or using <kbd>CTRL</kbd> + <kbd>Alt</kbd> + <kbd>Fx</kbd>.
+A workstation-type installation (with graphical interface) starts this interface on terminal 1. Linux being multi-user, it is possible to connect several users several times, on different **physical terminals** (TTY) or **virtual terminals** (PTS). Virtual terminals are available within a graphical environment. A user switches from one physical terminal to another using <kbd>Alt</kbd> + <kbd>Fx</kbd> from the command line or using <kbd>CTRL</kbd> + <kbd>Alt</kbd> + <kbd>Fx</kbd>.
 
 ---
 
