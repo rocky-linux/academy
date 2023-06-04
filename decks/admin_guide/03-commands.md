@@ -10,75 +10,10 @@ backgroundColor: #fff
 header: Rocky Linux Admin Guide | 3 - Commands for Linux Users
 footer: Rocky Linux Academy - Admin Guide
 ---
+
 <style>
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
-}
-blockquote {
-  background: #ffedcc;
-  border-left: 10px solid #d1bf9d;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-}
-blockquote:before{
-  content: unset;
-}
-blockquote:after{
-  content: unset;
-}
-header {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-    font-size: 1em;
-    padding: 20px;
-}
-footer {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-}
-
-kbd {
-    background-color: #fafafa;
-    border: .05rem solid #0000008a;
-    border-radius: .12rem;
-    box-shadow: .08rem .08rem #0000008a;
-    color: #000000de;
-    display: inline-block;
-    font-size: .75em;
-    padding: 0 .6666666667em;
-    vertical-align: text-top;
-    word-break: break-word;
-}
-
-.columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-.columns3 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-} 
-
-.kbd { color: blue; }
-.fa-twitter { color: aqua; }
-.fa-mastodon { color: purple; }
-.fa-linkedin { color: blue; }
-.fa-window-maximize { color: skyblue; }
-.fa-circle-exclamation { color: red; }
-.fa-trophy { color: #10b981; }
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
-table {
-  font-size: 10px;
-}
+@import url('../../css/rocky-theme.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
 </style>
 
 # 3 - Commands for Linux Users
