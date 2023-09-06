@@ -144,7 +144,7 @@ For example, from a playbook:
 
 ```yml
 ---
-- hosts: apache1
+- hosts: apache
   vars:
     port_http: 80
     service:
@@ -208,7 +208,7 @@ Variables can be included in a file external to the playbook, in which case this
 
 ```yml
 ---
-- hosts: apache1
+- hosts: apache
   vars_files:
     - myvariables.yml
 ```
@@ -644,7 +644,7 @@ handlers:
 
   - name: restart apache
     systemd:
-      name: apache
+      name: httpd
       state: restarted
     listen: "web services restart"
 
