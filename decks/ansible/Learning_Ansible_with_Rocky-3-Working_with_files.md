@@ -53,7 +53,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-} 
+}
 
 .fa-twitter { color: aqua; }
 .fa-mastodon { color: purple; }
@@ -66,10 +66,11 @@ table {
   font-size: 10px;
 }
 </style>
+<!-- markdownlint-disable MD033 -->
 
 # 3 - Management of Files
-## Learning Ansible with Rocky
 
+## Learning Ansible with Rocky
 
 ---
 <br/>
@@ -94,9 +95,10 @@ In this chapter you will learn how to manage files with Ansible.
 * [template module](#26)
 * [get_url module](#32)
 
-
 ---
+
 #
+
 <br/>
 <br/>
 <br/>
@@ -111,11 +113,12 @@ Depending on your needs, you will have to use different Ansible modules to modif
 # `ini_file` module
 
 ---
+
 # `ini_file` module
 
 When you want to modify an INI file eg:
 
-```
+```ini
 [section]
 key=value
 ```
@@ -123,6 +126,7 @@ key=value
 the easiest way is to use the `ini_file` module.
 
 ---
+
 # `ini_file` module
 
 The module requires:
@@ -132,11 +136,12 @@ The module requires:
 * The new value
 
 ---
+
 # `ini_file` module
 
 Example of use:
 
-```
+```yml
 - name: change value on inifile
   community.general.ini_file:
     dest: /path/to/file.ini
@@ -146,6 +151,7 @@ Example of use:
 ```
 
 ---
+
 # `ini_file` module
 
 > More information can be found at https://docs.ansible.com/ansible/latest/collections/community/general/ini_file_module.html.
@@ -155,7 +161,6 @@ Example of use:
 <br/>
 <br/>
 
-
 # Questions ?
 
 ---
@@ -166,6 +171,7 @@ Example of use:
 # `lineinfile` module
 
 ---
+
 # `lineinfile` module
 
 To ensure that a line is present in a file, or when a single line in a file needs to be added or modified, use the `linefile` module.
@@ -173,11 +179,12 @@ To ensure that a line is present in a file, or when a single line in a file need
 In this case, the line to be modified in a file will be found using a regexp.
 
 ---
+
 # `lineinfile` module
 
 For example, to ensure that the line starting with `SELINUX=` in the `/etc/selinux/config` file contains the value `enforcing`:
 
-```
+```yml
 - ansible.builtin.lineinfile:
     path: /etc/selinux/config
     regexp: '^SELINUX='
@@ -185,14 +192,16 @@ For example, to ensure that the line starting with `SELINUX=` in the `/etc/selin
 ```
 
 ---
+
 # `lineinfile` module
 
 > More information can be found at https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html.
----
-<br/>
-<br/>
-<br/>
 
+---
+
+<br/>
+<br/>
+<br/>
 
 # Questions ?
 
@@ -205,16 +214,18 @@ For example, to ensure that the line starting with `SELINUX=` in the `/etc/selin
 # `copy` module
 
 ---
+
 # `copy` module
 
 When a file has to be copied from the Ansible server to one or more hosts, it is better to use the `copy` module.
 
 ---
+
 # `copy` module
 
 Here we are copying `myflile.conf` from one location to another:
 
-```
+```yml
 - ansible.builtin.copy:
     src: /data/ansible/sources/myfile.conf
     dest: /etc/myfile.conf
@@ -224,15 +235,16 @@ Here we are copying `myflile.conf` from one location to another:
 ```
 
 ---
-#  `copy` module
+
+# `copy` module
 
 > More information can be found at https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html.
 
 ---
-<br/>
-<br/>
-<br/>
 
+<br/>
+<br/>
+<br/>
 
 # Questions ?
 
@@ -245,16 +257,18 @@ Here we are copying `myflile.conf` from one location to another:
 # `fetch` module
 
 ---
+
 # `fetch` module
 
 When a file has to be copied from a remote server to the local server, it is best to use the `fetch` module.
 
 ---
+
 # `fetch` module
 
 This module does the opposite of the `copy` module:
 
-```
+```yml
 - ansible.builtin.fetch:
     src: /etc/myfile.conf
     dest: /data/ansible/backup/myfile-{{ inventory_hostname }}.conf
@@ -262,19 +276,21 @@ This module does the opposite of the `copy` module:
 ```
 
 ---
+
 # `fetch` module
 
 > More information can be found at https://docs.ansible.com/ansible/latest/collections/ansible/builtin/fetch_module.html.
 
 ---
-<br/>
-<br/>
-<br/>
 
+<br/>
+<br/>
+<br/>
 
 # Questions ?
 
 ---
+
 <br/>
 <br/>
 <br/>
@@ -282,16 +298,18 @@ This module does the opposite of the `copy` module:
 # `template` module
 
 ---
+
 # `template` module
 
 Ansible and its `template` module use the **Jinja2** template system (http://jinja.pocoo.org/docs/) to generate files on target hosts.
 
 ---
+
 # `template` module
 
 For example:
 
-```
+```yml
 - ansible.builtin.template:
     src: /data/ansible/templates/monfichier.j2
     dest: /etc/myfile.conf
@@ -301,11 +319,12 @@ For example:
 ```
 
 ---
+
 # `template` module
 
 It is possible to add a validation step if the targeted service allows it (for example apache with the command `apachectl -t`):
 
-```
+```yml
 - template:
     src: /data/ansible/templates/vhost.j2
     dest: /etc/httpd/sites-available/vhost.conf
@@ -316,6 +335,7 @@ It is possible to add a validation step if the targeted service allows it (for e
 ```
 
 ---
+
 # `template` module
 
 > More information can be found at https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_module.html.
@@ -325,7 +345,6 @@ It is possible to add a validation step if the targeted service allows it (for e
 <br/>
 <br/>
 
-
 # Questions ?
 
 ---
@@ -336,11 +355,12 @@ It is possible to add a validation step if the targeted service allows it (for e
 # `get_url` module
 
 ---
+
 # `get_url` module
 
 To upload files from a web site or ftp to one or more hosts, use the `get_url` module:
 
-```
+```yml
 - get_url:
     url: http://site.com/archive.zip
     dest: /tmp/archive.zip
@@ -349,6 +369,7 @@ To upload files from a web site or ftp to one or more hosts, use the `get_url` m
 ```
 
 ---
+
 # `get_url` module
 
 By providing a checksum of the file, the file will not be re-downloaded if it is already present at the destination location and its checksum matches the value provided.
@@ -358,10 +379,10 @@ By providing a checksum of the file, the file will not be re-downloaded if it is
 <br/>
 <br/>
 
-
 # Questions ?
 
 ---
+
 #
 
 <div class="columns">
@@ -374,7 +395,6 @@ By providing a checksum of the file, the file will not be re-downloaded if it is
 <br/>
 
 [Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
-
 
 </div>
 <div>
