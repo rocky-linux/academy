@@ -10,6 +10,7 @@ backgroundColor: #fff
 header: Learning Ansible with Rocky | 4 - Ansible Galaxy
 footer: Rocky Linux Academy - Ansible courses
 ---
+
 <style>
 img[alt~="center"] {
   display: block;
@@ -53,7 +54,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-} 
+}
 
 .fa-twitter { color: aqua; }
 .fa-mastodon { color: purple; }
@@ -66,11 +67,14 @@ table {
   font-size: 10px;
 }
 </style>
+<!-- markdownlint-disable MD033 -->
 
 # 4 - Ansible Galaxy
+
 ## Learning Ansible with Rocky
 
 ---
+
 <br/>
 
 # <i class="fa-solid fa-trophy"></i> Objectives
@@ -81,6 +85,7 @@ In this chapter you will learn how to use, install, and manage Ansible roles and
 :heavy_check_mark: install and manage roles.
 
 ---
+
 <br/>
 
 # Plan
@@ -89,9 +94,10 @@ In this chapter you will learn how to use, install, and manage Ansible roles and
 * [Ansible Roles](#10)
 * [Ansible Collections](#42)
 
-
 ---
+
 #
+
 <br/>
 <br/>
 <br/>
@@ -101,6 +107,7 @@ Ansible Galaxy (https://galaxy.ansible.com) provides Ansible **Roles** and **Col
 The elements provided can be referenced in the playbooks and used out of the box
 
 ---
+
 <br/>
 <br/>
 <br/>
@@ -108,6 +115,7 @@ The elements provided can be referenced in the playbooks and used out of the box
 # `ansible-galaxy` command
 
 ---
+
 # `ansible-galaxy` command
 
 <br/>
@@ -121,11 +129,12 @@ table {
   font-size: 0.6em;
 }
 </style>
+
 # `ansible-galaxy` command
 
 To manage roles:
 
-```
+```bash
 ansible-galaxy role [import|init|install|login|remove|...]
 ```
 
@@ -144,11 +153,12 @@ table {
   font-size: 0.6em;
 }
 </style>
+
 # `ansible-galaxy` command
 
 To manage collections:
 
-```
+```bash
 ansible-galaxy collection [import|init|install|login|remove|...]
 ```
 
@@ -159,14 +169,15 @@ ansible-galaxy collection [import|init|install|login|remove|...]
 | `list`       | display the name and the version of installed collections. |
 
 ---
-<br/>
-<br/>
-<br/>
 
+<br/>
+<br/>
+<br/>
 
 # Questions ?
 
 ---
+
 <br/>
 <br/>
 <br/>
@@ -174,11 +185,13 @@ ansible-galaxy collection [import|init|install|login|remove|...]
 # Ansible Roles
 
 ---
+
 # Ansible Roles
 
 An Ansible role is a unit that promotes the reusability of playbooks.
 
 ---
+
 # Installing useful Roles
 
 In order to highlight the interest of using roles, I suggest you to use the `alemorvan/patchmanagement` role, which will allow you to perform a lot of tasks (pre-update or post-update for example) during your update process, in only a few lines of code.
@@ -186,20 +199,22 @@ In order to highlight the interest of using roles, I suggest you to use the `ale
 You can check the code in the github repo of the role [here](https://github.com/alemorvan/patchmanagement).
 
 ---
+
 # Installing useful Roles
 
 Install the role. This needs only one command:
 
-```
+```bash
 ansible-galaxy role install alemorvan.patchmanagement
 ```
 
 ---
+
 # Installing useful Roles
 
 Create a playbook to include the role:
 
-```
+```yml
 - name: Start a Patch Management
   hosts: ansible_clients
   vars:
@@ -213,6 +228,7 @@ Create a playbook to include the role:
 ```
 
 ---
+
 # Installing useful Roles
 
 With this role, you can add your own tasks for all your inventory or for only your targeted node.
@@ -220,20 +236,22 @@ With this role, you can add your own tasks for all your inventory or for only yo
 Let's create tasks that will be run before and after the update process.
 
 ---
+
 # Installing useful Roles
 
 Create the `custom_tasks` folder:
 
-```
+```bash
 mkdir custom_tasks
 ```
 
 ---
+
 # Installing useful Roles
 
 Create the `custom_tasks/pm_before_update_tasks_file.yml` (feel free to change the name and the content of this file)
 
-```
+```yml
 ---
 - name: sample task before the update process
   debug:
@@ -241,11 +259,12 @@ Create the `custom_tasks/pm_before_update_tasks_file.yml` (feel free to change t
 ```
 
 ---
+
 # Installing useful Roles
 
 Create the `custom_tasks/pm_after_update_tasks_file.yml` (feel free to change the name and the content of this file)
 
-```
+```yml
 ---
 - name: sample task after the update process
   debug:
@@ -253,13 +272,13 @@ Create the `custom_tasks/pm_after_update_tasks_file.yml` (feel free to change th
 ```
 
 ---
-And launch your first Patch Management:
 
+And launch your first Patch Management:
 
 <div class="columns">
 <div>
 
-```
+```bash
 ansible-playbook patchmanagement.yml
 
 PLAY [Start a Patch Management] *************************************************************************
@@ -298,10 +317,11 @@ changed: [192.168.1.11]
 TASK [alemorvan.patchmanagement : RHEL CENTOS | Ensure yum-utils is installed] **************************
 ok: [192.168.1.11]
 ```
+
 </div>
 <div>
 
-```
+```bash
 TASK [alemorvan.patchmanagement : RHEL CENTOS | Remove old kernels] *************************************
 skipping: [192.168.1.11]
 
@@ -340,29 +360,31 @@ PLAY RECAP *********************************************************************
 ```
 
 </div>
-
 </div>
 
 ---
+
 # Installing useful Roles
 
 Pretty easy for such a complex process, isn't it?
 
-This is just one example of what can be done using roles made available by the community. 
+This is just one example of what can be done using roles made available by the community.
 
 Have a look at [galaxy.ansible.com](https://galaxy.ansible.com/) to discover the roles that could be useful for you!
 
 ---
+
 # Installing useful Roles
 
 You can also create your own roles for your own needs and publish them on the Internet if you feel like it. This is what we will briefly cover in the next chapter.
 
 ---
+
 # Introduction to Role development
 
 A role skeleton, serving as a starting point for custom role development, can be generated by the `ansible-galaxy` command:
 
-```
+```bash
 $ ansible-galaxy role init rocky8
 - Role rocky8 was created successfully
 ```
@@ -375,7 +397,7 @@ code {
 </style>
 The command will generate the following tree structure to contain the `rocky8` role:
 
-```
+```bash
 tree rocky8/
 rocky8/
 ├── defaults
@@ -397,11 +419,13 @@ rocky8/
 ```
 
 ---
+
 # Introduction to Role development
 
 Roles allow you to do away with the need to include files. There is no need to specify file paths or `include` directives in playbooks. You just have to specify a task, and Ansible takes care of the inclusions.
 
 ---
+
 # Introduction to Role development
 
 The structure of a role is fairly obvious to understand.
@@ -411,26 +435,30 @@ Variables are simply stored either in `vars/main.yml` if the variables are not t
 The handlers, files, and templates needed for your code are stored in `handlers/main.yml`, `files` and `templates` respectively.
 
 ---
+
 # Introduction to Role development
 
 All that remains is to define the code for your role's tasks in `tasks/main.yml`.
 
 ---
+
 # Introduction to Role development
 
-Once all this is working well, you can use this role in your playbooks. 
+Once all this is working well, you can use this role in your playbooks.
 
 You will be able to use your role without worrying about the technical aspect of its tasks, while customizing its operation with variables.
 
 ---
+
 # Practical work: create a first simple role
 
 Let's implement this with a "go anywhere" role that will create a default user and install software packages. This role can be systematically applied to all your servers.
 
 ---
+
 We will create a `rockstar` user on all of our servers. As we don't want this user to be overridden, let's define it in the `vars/main.yml`:
 
-```
+```yml
 ---
 rocky8_default_group:
   name: rockstar
@@ -442,9 +470,10 @@ rocky8_default_user:
 ```
 
 ---
+
 We can now use those variables inside our `tasks/main.yml` without any inclusion.
 
-```
+```yml
 ---
 - name: Create default group
   group:
@@ -459,9 +488,10 @@ We can now use those variables inside our `tasks/main.yml` without any inclusion
 ```
 
 ---
+
 To test your new role, let's create a `test-role.yml` playbook in the same directory as your role:
 
-```
+```yml
 ---
 - name: Test my role
   hosts: localhost
@@ -476,7 +506,7 @@ To test your new role, let's create a `test-role.yml` playbook in the same direc
 ---
 and launch it:
 
-```
+```bash
 ansible-playbook test-role.yml
 
 PLAY [Test my role] ************************************************************************************
@@ -495,17 +525,19 @@ localhost                  : ok=3    changed=1    unreachable=0    failed=0    s
 ```
 
 ---
+
 <br/>
 <br/>
 <br/>
 Congratulations! You are now able to create great things with a playbook of only a few lines.
 
 ---
+
 Let's see the use of default variables.
 
 Create a list of packages to install by default on your servers and an empty list of packages to uninstall. Edit the `defaults/main.yml` files and add those two lists:
 
-```
+```yml
 rocky8_default_packages:
   - tree
   - vim
@@ -513,9 +545,10 @@ rocky8_remove_packages: []
 ```
 
 ---
+
 and use them in your `tasks/main.yml`:
 
-```
+```yml
 - name: Install default packages (can be overridden)
   package:
     name: "{{ rocky8_default_packages }}"
@@ -528,9 +561,10 @@ and use them in your `tasks/main.yml`:
 ```
 
 ---
+
 Test your role with the help of the playbook previously created:
 
-```
+```bash
 ansible-playbook test-role.yml
 
 PLAY [Test my role] ************************************************************************************
@@ -555,9 +589,10 @@ localhost                  : ok=5    changed=0    unreachable=0    failed=0    s
 ```
 
 ---
+
 You can now override the `rocky8_remove_packages` in your playbook and uninstall for example `cockpit`:
 
-```
+```yml
 ---
 - name: Test my role
   hosts: localhost
@@ -573,8 +608,10 @@ You can now override the `rocky8_remove_packages` in your playbook and uninstall
 ```
 
 ---
+
 #
-```
+
+```bash
 ansible-playbook test-role.yml
 
 PLAY [Test my role] ************************************************************************************
@@ -602,7 +639,7 @@ localhost                  : ok=5    changed=1    unreachable=0    failed=0    s
 
 Obviously, there is no limit to how much you can improve your role. Imagine that for one of your servers, you need a package that is in the list of those to be uninstalled. You could then, for example, create a new list that can be overridden and then remove from the list of packages to be uninstalled those in the list of specific packages to be installed by using the jinja `difference()` filter.
 
-```
+```yml
 - name: "Uninstall default packages (can be overridden) {{ rocky8_remove_packages }}"
   package:
     name: "{{ rocky8_remove_packages | difference(rocky8_specifics_packages) }}"
@@ -610,15 +647,16 @@ Obviously, there is no limit to how much you can improve your role. Imagine that
 ```
 
 ---
+
 # Ansible Roles
 
 > More information can be found at https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
 
 ---
-<br/>
-<br/>
-<br/>
 
+<br/>
+<br/>
+<br/>
 
 # Questions ?
 
@@ -628,26 +666,30 @@ Obviously, there is no limit to how much you can improve your role. Imagine that
 <br/>
 
 # Ansible Collections
+
 ---
+
 # Ansible Collections
 
 Collections are a distribution format for Ansible content that can include playbooks, roles, modules, and plugins.
 
 ---
+
 # Ansible Collections
 
 To install or upgrade a collection:
 
-```
+```bash
 ansible-galaxy collection install namespace.collection [--upgrade]
 ```
 
 ---
+
 # Ansible Collections
 
 You can then use the newly installed collection using its namespace and name before the module's name or role's name:
 
-```
+```yml
 - import_role:
     name: namespace.collection.rolename
 
@@ -656,16 +698,18 @@ You can then use the newly installed collection using its namespace and name bef
 ```
 
 ---
+
 # Ansible Collections
 
 > You can find a collection index at https://docs.ansible.com/ansible/latest/collections/index.html.
 
 ---
+
 # Ansible Collections
 
 Let's install the `community.general` collection:
 
-```
+```bash
 ansible-galaxy collection install community.general
 Starting galaxy collection install process
 Process install dependency map
@@ -681,9 +725,10 @@ code {
   font-size: 0.5em;
 }
 </style>
+
 We can now use the newly available module `yum_versionlock`:
 
-```
+```yml
 - name: Yum-VersionLock demo
   hosts: ansible_clients
   become: true
@@ -707,9 +752,10 @@ We can now use the newly available module `yum_versionlock`:
 ```
 
 ---
+
 #
 
-```
+```bash
 ansible-playbook versionlock.yml
 
 PLAY [Start a Patch Management] *************************************************************************
@@ -732,23 +778,24 @@ ok: [192.168.1.11] => {
 
 PLAY RECAP **********************************************************************************************
 192.168.1.11               : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-
 ```
 
 ---
+
 # Creating your own collection
 
 As with roles, you are able to create your own collection with the help of the `ansible-galaxy` command:
 
-```
+```bash
 ansible-galaxy collection init rocky8.rockstarcollection
 - Collection rocky8.rockstarcollection was created successfully
 ```
 
 ---
+
 # Creating your own collection
 
-```
+```bash
 tree rocky8/rockstarcollection/
 rocky8/rockstarcollection/
 ├── docs
@@ -765,13 +812,11 @@ You can then store your own plugins or roles inside this new collection.
 
 > More information can be found at https://docs.ansible.com/ansible/latest/user_guide/collections_using.html
 
-
 ---
 
 <br/>
 <br/>
 <br/>
-
 
 # Questions ?
 
@@ -789,7 +834,6 @@ You can then store your own plugins or roles inside this new collection.
 <br/>
 
 [Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
-
 
 </div>
 <div>
