@@ -10,6 +10,7 @@ backgroundColor: #fff
 header: Learning Ansible with Rocky | 2 - Ansible Intermediate
 footer: Rocky Linux Academy - Ansible courses
 ---
+<!-- markdownlint-disable MD033 -->
 <style>
 img[alt~="center"] {
   display: block;
@@ -53,7 +54,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-} 
+}
 
 .fa-twitter { color: aqua; }
 .fa-mastodon { color: purple; }
@@ -68,6 +69,7 @@ table {
 </style>
 
 # 2 - Ansible Intermediate
+
 ## Learning Ansible with Rocky
 
 ---
@@ -77,9 +79,9 @@ table {
 
 In this chapter you will continue to learn how to work with Ansible.
 
-:heavy_check_mark: work with variables;       
-:heavy_check_mark: use loops;   
-:heavy_check_mark: manage state changes and react to them;   
+:heavy_check_mark: work with variables;  
+:heavy_check_mark: use loops;  
+:heavy_check_mark: manage state changes and react to them;  
 :heavy_check_mark: manage asynchronous tasks.
 
 ---
@@ -87,12 +89,14 @@ In this chapter you will continue to learn how to work with Ansible.
 
 # Plan
 
-* [The variables](#5)
-* [Loop management](#17)
-* [Conditionnals](#27)
+* [The variables](#the-variables)
+* [Loop management](#loop-management)
+* [Conditionnals](#conditionals)
 * [Managing changes: the `handlers`](#36)
 * [Asynchronous tasks](#43)
+
 ---
+
 #
 
 In the previous chapter, you learned how to install Ansible, use it on the command line, or how to write playbooks to promote the re-usability of your code.
@@ -107,6 +111,7 @@ In this chapter, we can start to discover some more advanced notions of how to u
 # The variables
 
 ---
+
 # The variables
 
 Under Ansible, there are different types of primitive variables:
@@ -137,9 +142,9 @@ A variable can be defined in different places, like in a playbook, in a role or 
 
 For example, from a playbook:
 
-```
+```yml
 ---
-- hosts: apache1
+- hosts: apache
   vars:
     port_http: 80
     service:
@@ -152,8 +157,8 @@ For example, from a playbook:
 
 or from the command line:
 
-```
-$ ansible-playbook deploy-http.yml --extra-vars "service=httpd"
+```bash
+ansible-playbook deploy-http.yml --extra-vars "service=httpd"
 ```
 
 ---
@@ -176,7 +181,7 @@ Once defined, a variable can be used by calling it between double braces:
 <div>
 For example:
 
-```
+```yml
 - name: make sure apache is started
   ansible.builtin.systemd:
     name: "{{ service['rhel'] }}"
@@ -186,13 +191,14 @@ For example:
 </div>
 </div>
 
-
 ---
+
 # The variables
 
 Of course, it is also possible to access the global variables (the **facts**) of Ansible (OS type, IP addresses, VM name, etc.).
 
 ---
+
 # Outsourcing variables
 
 Variables can be included in a file external to the playbook, in which case this file must be defined in the playbook with the `vars_files` directive:
@@ -200,9 +206,9 @@ Variables can be included in a file external to the playbook, in which case this
 <div class="columns">
 <div>
 
-```
+```yml
 ---
-- hosts: apache1
+- hosts: apache
   vars_files:
     - myvariables.yml
 ```
@@ -212,10 +218,10 @@ Variables can be included in a file external to the playbook, in which case this
 
 The `myvariables.yml` file:
 
-```
+```yml
 ---
 port_http: 80
-ansible.builtin.systemd::
+service:
   debian: apache2
   rhel: httpd
 ```
@@ -228,30 +234,32 @@ ansible.builtin.systemd::
 
 It can also be added dynamically with the use of the module `include_vars`:
 
-```
+```yml
 - name: Include secrets.
   ansible.builtin.include_vars:
     file: vault.yml
 ```
 
 ---
+
 # Display a variable
 
 To display a variable, you have to activate the `debug` module as follows:
 
-```
+```yml
 - ansible.builtin.debug:
-    var: "{{ service['debian'] }}"
+    var: service['debian']
 ```
 
 You can also use the variable inside a text:
 
-```
+```yml
 - ansible.builtin.debug:
     msg: "Print a variable in a message : {{ service['debian'] }}"
 ```
 
 ---
+
 # Save the return of a task
 
 <div class="columns">
@@ -263,7 +271,7 @@ To save the return of a task and to be able to access it later, you have to use 
 <div>
 Use of a stored variable:
 
-```
+```yml
 - name: /home content
   shell: ls /home
   register: homes
@@ -276,6 +284,7 @@ Use of a stored variable:
   ansible.builtin.debug:
     var: homes.stdout_lines[1]
 ```
+
 </div>
 </div>
 
@@ -283,7 +292,6 @@ Use of a stored variable:
 <br/>
 <br/>
 <br/>
-
 
 # Questions ?
 
@@ -295,6 +303,7 @@ Use of a stored variable:
 # Loop management
 
 ---
+
 # Loop management
 
 With the help of loop, you can iterate a task over a list, a hash, or dictionary for example.
@@ -302,11 +311,12 @@ With the help of loop, you can iterate a task over a list, a hash, or dictionary
 More information can be at https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html
 
 ---
+
 # Loop management
 
 Simple example of use, creation of 4 users:
 
-```
+```yml
 - name: add users
   user:
     name: "{{ item }}"
@@ -320,11 +330,13 @@ Simple example of use, creation of 4 users:
 ```
 
 ---
+
 # Loop management
 
 At each iteration of the loop, the value of the list used is stored in the `item` variable, accessible in the loop code.
 
 ---
+
 # Loop management
 
 Of course, a list can be defined in an external file and be used inside the task like this (after having include the vars file):
@@ -332,7 +344,7 @@ Of course, a list can be defined in an external file and be used inside the task
 <div class="columns">
 <div>
 
-```
+```yml
 users:
   - antoine
   - patrick
@@ -343,7 +355,7 @@ users:
 </div>
 <div>
 
-```
+```yml
 - name: add users
   user:
     name: "{{ item }}"
@@ -356,11 +368,12 @@ users:
 </div>
 
 ---
+
 #
 
 We can use the example seen during the study of stored variables to improve it. Use of a stored variable:
 
-```
+```yml
 - name: /home content
   shell: ls /home
   register: homes
@@ -372,7 +385,8 @@ We can use the example seen during the study of stored variables to improve it. 
 ```
 
 ---
-# 
+
+#
 
 A dictionary can also be used in a loop.
 
@@ -381,6 +395,7 @@ In this case, you will have to transform the dictionary into an item with what i
 In the loop, it becomes possible to use `item.key` which corresponds to the dictionary key, and `item.value` which corresponds to the values of the key.
 
 ---
+
 <style scoped>
 code {
   font-size: 0.45em;
@@ -388,7 +403,7 @@ code {
 </style>
 Let's see this through a concrete example:
 
-```
+```yml
 ---
 - hosts: rocky8
   become: true
@@ -413,7 +428,8 @@ Let's see this through a concrete example:
 ```
 
 ---
-# 
+
+#
 
 Many things can be done with the loops. You will discover the possibilities offered by loops when your use of Ansible pushes you to use them in a more complex way.
 
@@ -421,7 +437,6 @@ Many things can be done with the loops. You will discover the possibilities offe
 <br/>
 <br/>
 <br/>
-
 
 # Questions ?
 
@@ -433,6 +448,7 @@ Many things can be done with the loops. You will discover the possibilities offe
 # Conditionals
 
 ---
+
 # Conditionals
 
 The `when` statement is very useful in many cases: not performing certain actions on certain types of servers, if a file or a user does not exist, etc.
@@ -440,22 +456,24 @@ The `when` statement is very useful in many cases: not performing certain action
 > More information can be at https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html.
 
 ---
+
 # Conditionals
 
 Behind the `when` statement the variables do not need double braces (they are in fact Jinja2 expressions...).
 
-```
+```yml
 - name: "Reboot only Debian servers"
   reboot:
   when: ansible_os_family == "Debian"
 ```
 
 ---
+
 # Conditionals
 
 Conditions can be grouped with parentheses:
 
-```
+```yml
 - name: "Reboot only CentOS version 6 and Debian version 7"
   reboot:
   when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "6") or
@@ -463,11 +481,12 @@ Conditions can be grouped with parentheses:
 ```
 
 ---
+
 # Conditionals
 
 The conditions corresponding to a logical AND can be provided as a list:
 
-```
+```yml
 - name: "Reboot only CentOS version 6"
   reboot:
   when:
@@ -476,7 +495,9 @@ The conditions corresponding to a logical AND can be provided as a list:
 ```
 
 ---
+
 # Conditionals
+
 <style scoped>
 code {
   font-size: 0.55em;
@@ -484,7 +505,7 @@ code {
 </style>
 You can test the value of a boolean and verify that it is true:
 
-```
+```yml
 - name: check if directory exists
   stat:
     path: /home/ansible
@@ -501,31 +522,32 @@ You can test the value of a boolean and verify that it is true:
 ```
 
 ---
+
 # Conditionals
 
 You can also test that it is not true:
 
-```
+```yml
   when:
     - file.stat.exists
     - not file.stat.isdir
 ```
 
 ---
+
 # Conditionals
 
 You will probably have to test that a variable exists to avoid execution errors:
 
-```
+```yml
   when: myboolean is defined and myboolean
 ```
 
-
 ---
-<br/>
-<br/>
-<br/>
 
+<br/>
+<br/>
+<br/>
 
 # Questions ?
 
@@ -537,16 +559,16 @@ You will probably have to test that a variable exists to avoid execution errors:
 # Managing changes: the `handlers`
 
 ---
+
 # Managing changes: the `handlers`
 
 Handlers allow to launch operations, like restarting a service, when changes occur.
 
 > More information can be at https://docs.ansible.com/ansible/latest/user_guide/playbooks_handlers.html.
 
-
 ---
 
-A module, being idempotent, a playbook can detect that there has been a significant change on a remote system, and thus trigger an operation in reaction to this change. 
+A module, being idempotent, a playbook can detect that there has been a significant change on a remote system, and thus trigger an operation in reaction to this change.
 
 <center>
 
@@ -561,7 +583,7 @@ A notification is sent at the end of a playbook task block, and the reaction ope
 
 For example, several tasks may indicate that the `httpd` service needs to be restarted due to a change in its configuration files. But the service will only be restarted once to avoid multiple unnecessary starts.
 
-```
+```yml
 - name: template configuration file
   template:
     src: template-site.j2
@@ -572,6 +594,7 @@ For example, several tasks may indicate that the `httpd` service needs to be res
 ```
 
 ---
+
 #
 
 A handler is a kind of task referenced by a unique global name:
@@ -580,11 +603,12 @@ A handler is a kind of task referenced by a unique global name:
 * It does not start immediately, but waits until all tasks are complete to run.
 
 ---
+
 #
 
 Example of handlers:
 
-```
+```yml
 handlers:
 
   - name: restart memcached
@@ -599,7 +623,9 @@ handlers:
 ```
 
 ---
+
 #
+
 <style scoped>
 code {
   font-size: 0.5em;
@@ -607,7 +633,7 @@ code {
 </style>
 Since version 2.2 of Ansible, handlers can listen directly as well:
 
-```
+```yml
 handlers:
 
   - name: restart memcached
@@ -618,7 +644,7 @@ handlers:
 
   - name: restart apache
     systemd:
-      name: apache
+      name: httpd
       state: restarted
     listen: "web services restart"
 
@@ -629,6 +655,7 @@ tasks:
 ```
 
 ---
+
 # Asynchronous tasks
 
 By default, SSH connections to hosts remain open during the execution of various playbook tasks on all nodes.
@@ -639,11 +666,13 @@ This can cause some problems, especially:
 * if the connection is interrupted during the action (server reboot for example)
 
 ---
+
 # Asynchronous tasks
 
 In this case, you will have to switch to asynchronous mode and specify a maximum execution time as well as the frequency (by default 10s) with which you will check the host status.
 
 ---
+
 # Asynchronous tasks
 
 By specifying a poll value of 0, Ansible will execute the task and continue without worrying about the result.
@@ -656,7 +685,7 @@ code {
 </style>
 Here's an example using asynchronous tasks, which allows you to restart a server and wait for port 22 to be reachable again:
 
-```
+```yml
 # Wait 2s and launch the reboot
 - name: Reboot system
   shell: sleep 2 && shutdown -r now "Ansible reboot triggered"
@@ -678,20 +707,22 @@ Here's an example using asynchronous tasks, which allows you to restart a server
 ```
 
 ---
+
 # Asynchronous tasks
 
 You can also decide to launch a long-running task and forget it (fire and forget) because the execution does not matter in the playbook.
 
 ---
+
 # Asynchronous tasks
 
 > More information can be at https://docs.ansible.com/ansible/latest/user_guide/playbooks_async.html.
 
 ---
-<br/>
-<br/>
-<br/>
 
+<br/>
+<br/>
+<br/>
 
 # Questions ?
 
@@ -709,7 +740,6 @@ You can also decide to launch a long-running task and forget it (fire and forget
 <br/>
 
 [Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
-
 
 </div>
 <div>

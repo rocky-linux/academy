@@ -53,7 +53,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-} 
+}
 
 .fa-twitter { color: aqua; }
 .fa-mastodon { color: purple; }
@@ -66,8 +66,10 @@ table {
   font-size: 10px;
 }
 </style>
+<!-- markdownlint-disable MD033 -->
 
 # 5 - Ansible deployments with Ansistrano
+
 ## Learning Ansible with Rocky
 
 ---
@@ -78,9 +80,9 @@ table {
 In this chapter you will learn how to deploy applications with the Ansible role Ansistrano (https://ansistrano.com).
 
 :heavy_check_mark: Implement Ansistrano;
-:heavy_check_mark: Configure Ansistrano;       
-:heavy_check_mark: Use shared folders and files between deployed versions;       
-:heavy_check_mark: Deploying different versions of a site from git;        
+:heavy_check_mark: Configure Ansistrano;  
+:heavy_check_mark: Use shared folders and files between deployed versions;  
+:heavy_check_mark: Deploying different versions of a site from git;  
 :heavy_check_mark: React between deployment steps.  
 
 ---
@@ -92,7 +94,9 @@ In this chapter you will learn how to deploy applications with the Ansible role 
 * [Demo](./Learning_Ansible_with_Rocky-5-Ansible_deployments_with_ansistrano.html#10)
 
 ---
+
 #
+
 <br/>
 <br/>
 <br/>
@@ -109,6 +113,7 @@ It is based on the functionality of Capistrano (http://capistranorb.com/).
 # Introduction
 
 ---
+
 # Introduction
 
 Ansistrano requires the following to run:
@@ -124,6 +129,7 @@ li {
   font-size: 0.7em;
 }
 </style>
+
 # Introduction
 
 Ansistrano deploys applications by following these 5 steps:
@@ -140,6 +146,7 @@ Ansistrano deploys applications by following these 5 steps:
 * **Update Code**: downloading the new release to the targets;
 * **Symlink Shared** and **Symlink**: after deploying the new release, the `current` symbolic link is modified to point to this new release;
 * **Clean Up**: to do some clean up (remove old versions).
+
 </div>
 </div>
 
@@ -149,11 +156,12 @@ code {
   font-size: 0.6em;
 }
 </style>
+
 # Introduction
 
 The skeleton of a deployment with Ansistrano looks like this:
 
-```
+```bash
 /var/www/site/
 ├── current -> ./releases/20210718100000Z
 ├── releases
@@ -168,6 +176,7 @@ The skeleton of a deployment with Ansistrano looks like this:
 ```
 
 ---
+
 #
 
 <br/>
@@ -177,23 +186,24 @@ The skeleton of a deployment with Ansistrano looks like this:
 You can find all the Ansistrano documentation on its Github repository (https://github.com/ansistrano/deploy).
 
 ---
+
 # Deploying the software
 
 For this, we will use the `ansistrano.deploy` role in a playbook dedicated to application deployment.
 
 ---
+
 # Demo
 
 Install the `ansistrano.deploy` role:
 
-```
+```bash
 $ ansible-galaxy role install ansistrano.deploy
 Starting galaxy role install process
 - downloading role 'deploy', owned by ansistrano
 - downloading role from https://github.com/ansistrano/deploy/archive/3.10.0.tar.gz
 - extracting ansistrano.deploy to /home/ansible/.ansible/roles/ansistrano.deploy
 - ansistrano.deploy (3.10.0) was installed successfully
-
 ```
 
 ---
@@ -202,11 +212,12 @@ code {
   font-size: 0.6em;
 }
 </style>
+
 # Demo
 
 Create a playbook `playbook-deploy.yml` to manage deployments:
 
-```
+```yml
 ---
 - hosts: ansible_clients
   become: yes
@@ -222,8 +233,8 @@ Create a playbook `playbook-deploy.yml` to manage deployments:
 ```
 
 ---
-#
-```
+
+```bash
 $ ansible-playbook playbook-deploy.yml
 
 PLAY [ansible_clients] *********************************************************
@@ -254,11 +265,12 @@ PLAY RECAP *********************************************************************
 ```
 
 ---
+
 # Demo
 
 So many things done with only 11 lines of code!
 
-```
+```bash
 $ curl http://192.168.1.11
 <html>
 <head>
@@ -276,6 +288,7 @@ li {
   font-size: 0.8em;
 }
 </style>
+
 # Demo
 
 Checking on the remote server:
@@ -283,7 +296,7 @@ Checking on the remote server:
 <div class="columns">
 <div>
 
-```
+```bash
 $ tree /var/www/site/
 /var/www/site
 ├── current -> ./releases/20210722155312Z
@@ -311,7 +324,9 @@ Please note:
 </div>
 
 ---
+
 # Demo
+
 <style scoped>
 code {
   font-size: 0.4em;
@@ -322,7 +337,7 @@ Restart the deployment **3** times, then check on the client.
 <div class="columns">
 <div>
 
-```
+```bash
 $ tree /var/www/site/
 var/www/site
 ├── current -> ./releases/20210722160048Z
@@ -361,6 +376,7 @@ Please note:
 </div>
 
 ---
+
 # Limit the number of releases
 
 The `ansistrano_keep_releases` variable is used to specify the number of releases to keep.
@@ -373,7 +389,7 @@ code {
 </style>
 Using the `ansistrano_keep_releases` variable, keep only 3 releases of the project. Check.
 
-```
+```yml
 ---
 - hosts: ansible_clients
   become: yes
@@ -395,10 +411,12 @@ code {
   font-size: 0.4em;
 }
 </style>
+
 #
+
 On the remote server:
 
-```
+```bash
 $ tree /var/www/site/
 /var/www/site
 ├── current -> ./releases/20210722160318Z
@@ -427,9 +445,10 @@ code {
   font-size: 0.5em;
 }
 </style>
+
 # Using shared_paths and shared_files
 
-```
+```yml
 ---
 - hosts: ansible_clients
   become: yes
@@ -454,13 +473,13 @@ code {
 
 On the remote server, create the file `logs` in the `shared` directory:
 
-```
+```bash
 sudo touch /var/www/site/shared/logs
 ```
 
 Then execute the playbook:
 
-```
+```bash
 TASK [ansistrano.deploy : ANSISTRANO | Ensure shared paths targets are absent] *******************************************************
 ok: [192.168.10.11] => (item=img)
 ok: [192.168.10.11] => (item=css)
@@ -486,7 +505,7 @@ On the remote server:
 <div class="columns">
 <div>
 
-```
+```bash
 $  tree -F /var/www/site/
 /var/www/site/
 ├── current -> ./releases/20210722160631Z/
@@ -528,6 +547,7 @@ from `/var/www/site/releases/logs` to the `../../shared/logs` file.
 </div>
 
 ---
+
 #
 
 Therefore, the files contained in these 2 folders and the `logs` file are always accessible via the following paths:
@@ -539,6 +559,7 @@ Therefore, the files contained in these 2 folders and the `logs` file are always
 but above all they will be kept from one release to the next.
 
 ---
+
 # Managing git branch or tags
 
 The `ansistrano_git_branch` variable is used to specify a `branch` or `tag` to deploy.
@@ -551,7 +572,7 @@ code {
 </style>
 Deploy the `releases/v1.1.0` branch:
 
-```
+```yml
 ---
 - hosts: ansible_clients
   become: yes
@@ -570,11 +591,12 @@ Deploy the `releases/v1.1.0` branch:
 ```
 
 ---
+
 #
 
 > You can have fun, during the deployment, refreshing your browser, to see in 'live' the change.
 
-```
+```bash
 $ curl http://192.168.1.11
 <html>
 <head>
@@ -592,9 +614,10 @@ code {
   font-size: 0.6em;
 }
 </style>
+
 * Deploy the `v2.0.0` tag:
 
-```
+```yml
 ---
 - hosts: ansible_clients
   become: yes
@@ -613,9 +636,10 @@ code {
 ```
 
 ---
+
 #
 
-```
+```yml
 $ curl http://192.168.1.11
 <html>
 <head>
@@ -628,6 +652,7 @@ $ curl http://192.168.1.11
 ```
 
 ---
+
 # Actions between deployment steps
 
 A deployment with Ansistrano respects the following steps:
@@ -650,7 +675,8 @@ A deployment with Ansistrano respects the following steps:
 </div>
 
 ---
-# 
+
+#
 
 It is possible to intervene before and after each of these steps.
 
@@ -667,7 +693,7 @@ code {
 </style>
 Easy example: send an email (or whatever you want like Slack or Mattermost notification) at the beginning of the deployment:
 
-```
+```yml
 ---
 - hosts: ansible_clients
   become: yes
@@ -681,11 +707,14 @@ Easy example: send an email (or whatever you want like Slack or Mattermost notif
   roles:
      - { role: ansistrano.deploy }
 ```
+
 ---
-# 
+
+#
+
 Create the file `deploy/before-setup-tasks.yml`:
 
-```
+```yml
 ---
 - name: Send a mail
   mail:
@@ -693,7 +722,7 @@ Create the file `deploy/before-setup-tasks.yml`:
   delegate_to: localhost
 ```
 
-```
+```bash
 TASK [ansistrano.deploy : include] *************************************************************************************
 included: /home/ansible/deploy/before-setup-tasks.yml for 192.168.10.11
 
@@ -707,11 +736,12 @@ code {
   font-size: 0.6em;
 }
 </style>
+
 #
 
 You will probably have to restart some services at the end of the deployment, to flush caches for example. Let's restart Apache at the end of the deployment:
 
-```
+```yml
 ---
 - hosts: ansible_clients
   become: yes
@@ -728,11 +758,12 @@ You will probably have to restart some services at the end of the deployment, to
 ```
 
 ---
-# 
+
+#
 
 Create the file `deploy/after-symlink-tasks.yml`:
 
-```
+```yml
 ---
 - name: restart apache
   systemd:
@@ -740,7 +771,7 @@ Create the file `deploy/after-symlink-tasks.yml`:
     state: restarted
 ```
 
-```
+```bash
 TASK [ansistrano.deploy : include] *************************************************************************************
 included: /home/ansible/deploy/after-symlink-tasks.yml for 192.168.10.11
 
@@ -749,18 +780,17 @@ changed: [192.168.10.11]
 ```
 
 ---
+
 #
 
 As you have seen during this chapter, Ansible can greatly improve the life of the system administrator. Very intelligent roles like Ansistrano are "must haves" that quickly become indispensable.
 
 Using Ansistrano, ensures that good deployment practices are respected, reduces the time needed to put a system into production, and avoids the risk of potential human errors. The machine works fast, well, and rarely makes mistakes!
 
-
 ---
 <br/>
 <br/>
 <br/>
-
 
 # Questions ?
 
@@ -778,7 +808,6 @@ Using Ansistrano, ensures that good deployment practices are respected, reduces 
 <br/>
 
 [Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
-
 
 </div>
 <div>
