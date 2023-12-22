@@ -2,6 +2,22 @@
 @theme rocky-theme 
 */
 
+header {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  background-color: #10b981;
+  align-content: right;
+  font-size: 1em;
+  padding: 20px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  background-color: #10b981;
+  align-content: right;
+}
+
 kbd {
     background-color: #fafafa;
     border: .05rem solid #0000008a;
