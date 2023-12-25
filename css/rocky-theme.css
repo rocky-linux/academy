@@ -31,6 +31,20 @@ kbd {
     word-break: break-word;
 }
 
+/* Styling page number */
+section::after {
+  font-weight: bold;
+  color: #fff;
+}
+
+section,h1 {
+  color:#10b981;
+}
+
+section,h2 {
+  color: #111827;
+}
+
 img[alt~="center"] {
   display: block;
 margin: 0 auto;
