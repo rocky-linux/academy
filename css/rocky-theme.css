@@ -52,6 +52,33 @@ section,h2 {
   padding: 0.3em;
 }
 
+.fa-warnings {
+  background-color: #fff4e5;
+  color: #ff1744;
+  padding: 0.3em;
+}
+
+.fa-danger {
+  background-color: #ff1744;
+  border-radius: 0.2em;
+  color: white;
+  padding: 0.3em;
+}
+
+.fa-note {
+  background-color: #e5f9f6;
+  border-radius: 0.2em;
+  color: #448aff;
+  padding: 0.3em;
+}
+
+.fa-tip {
+  background-color: #7fdfd2;
+  border-radius: 0.2em;
+  color: #fff;
+  padding: 0.3em;
+}
+
 img[alt~="center"] {
   display: block;
 margin: 0 auto;
@@ -105,7 +132,7 @@ footer {
 .fa-linkedin { color: blue; }
 .fa-window-maximize { color: skyblue; }
 .fa-circle-exclamation { color: red; }
-.fa-trophy { color: #10b981; }
+.fa-trophy { color: #fff; }
 
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
 
