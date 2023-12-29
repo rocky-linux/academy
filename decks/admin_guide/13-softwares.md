@@ -1,132 +1,76 @@
 ---
 marp: true
 theme: gaia
+style: |
+  :root {
+    --color-background: #fff !important;
+    --color-foreground: #111927 !important;
+    --color-highlight: #10b981 !important;
+    --color-dimmed: #10b981 !important;
+  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-
-backgroundColor: #fff
-
-header: Rocky Linux Admin Guide | X - 
+header: '![w:50](./assets/rocky_linux_logo_white.svg) **Software Management**'
 footer: Rocky Linux Academy - Admin Guide
 ---
+
 <style>
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
+header,footer
+{
+    color: #fff;
 }
-blockquote {
-  background: #ffedcc;
-  border-left: 10px solid #d1bf9d;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+section {
+  padding-top: 90px;
 }
-blockquote:before{
-  content: unset;
-}
-blockquote:after{
-  content: unset;
-}
-header {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-    font-size: 1em;
-    padding: 20px;
-}
-footer {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-}
-
-.columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-.columns3 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-} 
-
-.fa-twitter { color: aqua; }
-.fa-mastodon { color: purple; }
-.fa-linkedin { color: blue; }
-.fa-window-maximize { color: skyblue; }
-.fa-circle-exclamation { color: red; }
-.fa-trophy { color: #10b981; }
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
-table {
-  font-size: 10px;
-}
+@import url('./assets/css/rocky-theme.css');
+@import url('./assets/css/fontawesome.css');
+@import url('./assets/css//solid.css');
+@import url('./assets/css/brands.css');
 </style>
-
-# X - 
-## Rocky Linux Admin Guide
-
----
-<br/>
-
-# <i class="fa-solid fa-trophy"></i> Objectives
-
-In this chapter you will learn how to .
-
-:heavy_check_mark: ;
-:heavy_check_mark: ;
-:heavy_check_mark: .
-
----
-<br/>
-
-# Plan
-
-* [](#4)
-  
----
-
----
-title: Software Management
-author: Antoine Le Morvan
-contributors: Colussi Franco, Steven Spencer
-tested version: 8.5
-tags:
-  - education
-  - software
-  - software management
----
 
 # Software Management
 
-## Generalities
+---
+
+# <i class="fa-solid fa-bookmark"></i> Generalities
 
 On a Linux system, it is possible to install software in two ways:
 
 * Using an installation package;
 * Compiling from source files.
 
-!!! Note
+---
 
-    Installing from source is not covered here. As a rule, you should use the package method unless the software you want is not available via the package manager. The reason for this is that dependencies are generally managed by the package system, whereas with source, you need to manage the dependencies manually.
+### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
+
+Installing from source is not covered here. As a rule, you should use the package method unless the software you want is not available via the package manager. The reason for this is that dependencies are generally managed by the package system, whereas with source, you need to manage the dependencies manually.
+
+---
+
+# <i class="fa-solid fa-bookmark"></i> Generalities
 
 **The package**: This is a single file containing all the data needed to install the program. It can be executed directly on the system from a software repository.
 
 **The source files**: Some software is not provided in packages ready to be installed, but via an archive containing the source files. It is up to the administrator to prepare these files and compile them to install the program.
 
-## RPM: RedHat Package Manager
+---
+
+# <i class="fa-solid fa-gears"></i> RPM: RedHat Package Manager
 
 **RPM** (RedHat Package Manager) is a software management system. It is possible to install, uninstall, update or check software contained in packages.
 
 **RPM** is the format used by all RedHat based distributions (RockyLinux, Fedora, CentOS, SuSe, Mandriva, ...). Its equivalent in the Debian world is DPKG (Debian Package).
 
+---
+
+# <i class="fa-solid fa-gears"></i> RPM: RedHat Package Manager
+
 The name of an RPM package follows a specific nomenclature:
 
-![Illustration of a package name](images/software-001.png)
+![w:600](images/software-001.png)
+
+---
 
 ### `rpm` command
 
@@ -136,11 +80,15 @@ The rpm command allows you to install a package.
 rpm [-i][-U] package.rpm [-e] package
 ```
 
-Example (for a package named 'package'):
+<i class="fa fa-up-right-from-square"></i> Example (for a package named 'package'):
 
 ```bash
 rpm -ivh package.rpm
 ```
+
+---
+
+### `rpm` command
 
 | Option            | Description                                  |
 |-------------------|----------------------------------------------|
@@ -151,11 +99,17 @@ rpm -ivh package.rpm
 | `-v`              | Informs about the progress of the operation. |
 | `--test`          | Tests the command without executing it.      |
 
+---
+
+### `rpm` command
+
 The `rpm` command also allows you to query the system package database by adding the `-q` option.
 
 It is possible to execute several types of queries to obtain different information about the installed packages. The RPM database is located in the directory `/var/lib/rpm`.
 
-Example:
+---
+
+<i class="fa fa-up-right-from-square"></i> Example:
 
 ```bash
 rpm -qa
@@ -167,12 +121,18 @@ This command queries all the packages installed on the system.
 rpm -q [-a][-i][-l] package [-f] file
 ```
 
-Example:
+---
+
+### `rpm` command
+
+ <i class="fa fa-up-right-from-square"></i> Example:
 
 ```bash
 rpm -qil package
 rpm -qf /path/to/file
 ```
+
+---
 
 | Option           | Description                                                                                    |
 |------------------|------------------------------------------------------------------------------------------------|
@@ -182,15 +142,19 @@ rpm -qf /path/to/file
 | `-f`             | Shows the name of the package containing the specified file.                                   |
 | `--last`         | The list of packages is given by installation date (the last installed packages appear first). |
 
-!!! Warning
+---
 
-    After the `-q` option, the package name must be exact. Metacharacters (wildcards) are not supported.
+### <i class="fa-solid fa-warnings fa-exclamation-circle"> Warning</i>
 
-!!! Tip
+After the `-q` option, the package name must be exact. Metacharacters (wildcards) are not supported.
 
-    However, it is possible to list all installed packages and filter with the `grep` command.
+### <i class="fa-solid fa-tip fa-lightbulb"> Tip</i>
 
-Example: list the last installed packages:
+However, it is possible to list all installed packages and filter with the `grep` command.
+
+---
+
+<i class="fa fa-up-right-from-square"></i> Example: list the last installed packages:
 
 ```bash
 sudo rpm -qa --last | head
@@ -206,7 +170,9 @@ iwl7260-firmware-25.30.13.0-101.el8.1.noarch  Mon 24 May 2021 02:33:59 PM CEST
 iwl6050-firmware-41.28.5.1-101.el8.1.noarch   Mon 24 May 2021 02:33:59 PM CEST
 ```
 
-Example: list the installation history of the kernel:
+---
+
+<i class="fa fa-up-right-from-square"></i> Example: list the installation history of the kernel:
 
 ```bash
 sudo rpm -qa --last kernel
@@ -214,7 +180,9 @@ kernel-4.18.0-305.el8.x86_64                  Tue 25 May 2021 06:04:56 AM CEST
 kernel-4.18.0-240.22.1.el8.x86_64             Mon 24 May 2021 02:33:35 PM CEST
 ```
 
-Example: list all installed packages with a specific name using `grep`:
+---
+
+<i class="fa fa-up-right-from-square"></i> Example: list all installed packages with a specific name using `grep`
 
 ```bash
 sudo dnf list installed | grep httpd
@@ -224,13 +192,22 @@ httpd-filesystem.noarch             2.4.37-30.module_el8.3.0+561+97fdbbcc   @app
 httpd-tools.x86_64                  2.4.37-30.module_el8.3.0+561+97fdbbcc   @appstream
 ```
 
+---
+
 ## DNF: Dandified Yum
 
 **DNF** (**Dandified Yum**) is a software package manager, successor of **YUM** (**Y**ellow dog **U**pdater **M**odified). It works with **RPM** packages grouped in a local or remote repository (a directory for storing packages). For the most common commands, its usage is identical to that of `yum`.
 
+---
+
+## DNF: Dandified Yum
+
+
 The `dnf` command allows the management of packages by comparing those installed on the system with those in the repositories defined on the server. It also automatically installs dependencies, if they are also present in the repositories.
 
 `dnf` is the manager used by many RedHat based distributions (RockyLinux, Fedora, CentOS, ...). Its equivalent in the Debian world is **APT** (**A**dvanced **P**ackaging **T**ool).
+
+---
 
 ### `dnf` command
 
@@ -240,7 +217,7 @@ The `dnf` command allows you to install a package by specifying only the short n
 dnf [install][remove][list all][search][info] package
 ```
 
-Example:
+<i class="fa fa-up-right-from-square"></i> Example:
 
 ```bash
 dnf install tree
@@ -248,18 +225,38 @@ dnf install tree
 
 Only the short name of the package is required.
 
+---
+
+### `dnf` command
+
+
 | Option                     | Description                                                          |
 |----------------------------|----------------------------------------------------------------------|
 | `install`                  | Installs the package.                                                |
 | `remove`                   | Uninstall the package.                                               |
 | `list all`                 | Lists the packages already in the repository.                        |
 | `search`                   | Search for a package in the repository.                              |
+
+---
+
+
+### `dnf` command
+
+
+| Option                     | Description                                                          |
+|----------------------------|----------------------------------------------------------------------|
 | `provides */command_name`  | Search for a command.                                                |
 | `info`                     | Displays the package information.                                    |
 | `autoremove`               | Removes all packages installed as dependencies but no longer needed. |
 
 
+---
+
+### `dnf` command
+
 The `dnf install` command allows you to install the desired package without worrying about its dependencies, which will be resolved directly by `dnf` itself.
+
+---
 
 ```bash
 dnf install nginx
@@ -287,7 +284,13 @@ Installed size: 2.2 M
 Is this ok [y/N]:
 ```
 
+---
+
+### `dnf` command
+
 In case you don't remember the exact name of the package, you can search for it with the command `dnf search name`. As you can see, there is a section that contains the exact name and another one that contains the package correspondence, all of which are highlighted for easier searching.
+
+---
 
 ```bash
 dnf search nginx
@@ -309,6 +312,11 @@ pcp-pmda-nginx.aarch64 : Performance Co-Pilot (PCP) metrics for the Nginx Webser
 python3-certbot-nginx.noarch : The nginx plugin for certbot
 ```
 
+---
+
+### `dnf` command
+
+
 Another way to search for a package by entering an additional search key is to send the result of the `dnf` command through a pipe to the grep command with the desired key.
 
 ```bash
@@ -322,6 +330,7 @@ nginx-mod-mail.aarch64 : Nginx mail modules
 nginx-mod-stream.aarch64 : Nginx stream modules
 ```
 
+---
 
 The `dnf remove` command removes a package from the system and its dependencies. Below is an excerpt of the **dnf remove httpd** command.
 
@@ -342,11 +351,10 @@ Removing unused dependencies:
  apr-util                       aarch64         1.6.1-6.el8.1                                      @appstream         224 k
  apr-util-bdb                   aarch64         1.6.1-6.el8.1                                      @appstream          67 k
  apr-util-openssl               aarch64         1.6.1-6.el8.1                                      @appstream          68 k
- augeas-libs                    aarch64         1.12.0-6.el8                                       @baseos            1.4 M
- httpd-filesystem               noarch          2.4.37-43.module+el8.5.0+727+743c5577.1            @appstream         400
- httpd-tools                    aarch64         2.4.37-43.module+el8.5.0+727+743c5577.1
 ...
 ```
+
+---
 
 The `dnf list` command lists all the packages installed on the system and present in the repository. It accepts several parameters:
 
@@ -507,7 +515,7 @@ Repo-pkgs          : 1,650
 Repo-available-pkgs: 1,107
 Repo-size          : 6.4 G
 Repo-mirrors       : https://mirrors.rockylinux.org/mirrorlist?arch=aarch64&repo=PowerTools-8
-Repo-baseurl       : https://mirror2.sandyriver.net/pub/rocky/8.7/PowerTools/x86_64/os/ (30 more)
+Repo-baseurl       : https://example.com/pub/rocky/8.8/PowerTools/x86_64/os/ (30 more)
 Repo-expire        : 172,800 second(s) (last: Tue 22 Mar 2022 05:49:24 PM CET)
 Repo-filename      : /etc/yum.repos.d/Rocky-PowerTools.repo
 ...
@@ -1018,26 +1026,26 @@ Examples:
 * Download a `.repo` file and use it:
 
 ```
-dnf config-manager --add-repo https://packages._centreon_.com/rpm-standard/23.04/el8/_centreon_.repo
+dnf config-manager --add-repo https://packages.centreon.com/ui/native/rpm-standard/23.04/el8/centreon-23.04.repo
 ```
 
 * You can also set an url as a base url for a repo:
 
 ```
-dnf config-manager --add-repo https://repo.rocky.lan/repo
+dnf config-manager --add-repo https://repo.rocky.lan/repo
 ```
 
 * Enable or disable one or more repos:
 
 ```
-dnf config-manager --set-enabled epel centreon
-dnf config-manager --set-disabled epel centreon
+dnf config-manager --set-enabled epel centreon
+dnf config-manager --set-disabled epel centreon
 ```
 
 * Add a proxy to your config file:
 
 ```
-dnf config-manager --save --setopt=*.proxy=http://proxy.rocky.lan:3128/
+dnf config-manager --save --setopt=*.proxy=http://proxy.rocky.lan:3128/
 ```
 
 ### `copr` plugin
@@ -1055,19 +1063,19 @@ copr enable xxxx
 Download rpm package instead of installing it:
 
 ```
-dnf download ansible
+dnf download ansible
 ```
 
 If you just want to obtain the remote location url of the package:
 
 ```
-dnf download --url ansible
+dnf download --url ansible
 ```
 
 Or if you want to also download the dependencies:
 
 ```
-dnf download --resolv --alldeps ansible
+dnf download --resolv --alldeps ansible
 ```
 
 ### `needs-restarting` plugin
@@ -1102,7 +1110,7 @@ Examples:
 * Lock the ansible version:
 
 ```
-dnf versionlock add ansible
+dnf versionlock add ansible
 Adding versionlock on: ansible-0:6.3.0-2.el9.*
 ```
 
@@ -1112,25 +1120,3 @@ Adding versionlock on: ansible-0:6.3.0-2.el9.*
 dnf versionlock list
 ansible-0:6.3.0-2.el9.*
 ```
-
----
-#
-
-<div class="columns">
-<div>
-
-
-
-</div>
-<div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-[Next Chapter](./.html)
-
-</div>
-</div>
