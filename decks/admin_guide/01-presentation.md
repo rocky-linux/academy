@@ -24,8 +24,10 @@ header,footer
 section {
   padding-top: 8%;
 }
-@import url('../../css/rocky-theme.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
+@import url('./assets/css/rocky-theme.css');
+@import url('./assets/css/fontawesome.css');
+@import url('./assets/css//solid.css');
+@import url('./assets/css/brands.css');
 </style>
 
 ## Introduction to the Linux Operating System
@@ -92,7 +94,13 @@ As part of this management of resources, the operating system has to:
 
 # Generalities UNIX - GNU/Linux
 
-## History
+![w:700](./images/gnu_tux.jpeg)
+
+---
+
+# <i class="fa fa-copy"></i> History
+
+---
 
 # UNIX
 
@@ -101,11 +109,19 @@ As part of this management of resources, the operating system has to:
 
 ---
 
+# UNIX
+
 * **1969 — 1971**: After the withdrawal of Bell (1969) and then General Electric from the project, two developers, Ken Thompson and Dennis Ritchie (joined later by Brian Kernighan), judging MULTICS to be too complex, begin development of UNIX (UNiplexed Information and Computing Service). While it was originally created in Assembly language, the creators of UNIX eventually develop the B language and then the C language (1971) and completely rewrite UNIX. As it was developed in 1970, the reference (epoch) date for the start of time of UNIX/Linux systems is set at January 01, 1970.
 
 ---
 
+# UNIX
+
 The C language remains one of the most popular programming languages today. A low-level language, close to the hardware, it allows the adaptation of the operating system to any machine architecture having a C compiler.
+
+---
+
+# UNIX
 
 UNIX is an open and evolving operating system that has played a major role in the history of computing. It forms the basis for many other systems such as Linux, BSD, MacOS, and more.
 
@@ -155,11 +171,11 @@ UNIX is still relevant today (HP-UX, AIX, Solaris, etc.).
 
 * **1999**: The GNOME desktop environment is created. It is based on the GTK+ component library.
 
-* **2002**: The Arch distribution is created. Its distinctive is that it offers rolling release (continuous update).
-
 ---
 
 # Linux
+
+* **2002**: The Arch distribution is created. Its distinctive is that it offers rolling release (continuous update).
 
 * **2004**: Ubuntu is created by the Canonical company (Mark Shuttleworth). It is based on Debian but includes free and proprietary software.
 
@@ -167,11 +183,11 @@ UNIX is still relevant today (HP-UX, AIX, Solaris, etc.).
 
 ---
 
-> Dispute over the name: although people are accustomed to calling the Linux operating system verbally, Linux is strictly a kernel. We must not forget the development and contribution of the GNU project to the open source cause, so! I prefer to call it the GNU/Linux operating system.
+<i class="fa fa-quote-left fa-2x fa-pull-left"></i> Dispute over the name: although people are accustomed to calling the Linux operating system verbally, Linux is strictly a kernel. We must not forget the development and contribution of the GNU project to the open source cause, so! I prefer to call it the GNU/Linux operating system.
 
 ---
 
-# Market share
+# <i class="fa-solid fa-store"></i> Market share
 
 <!--
 TODO: graphics with market share for servers and pc.
@@ -184,13 +200,13 @@ Linux equips about **3% of personal computers** but more than **82% of smartphon
 ---
 <!-- TODO: review those stats -->
 
-# Market share
+#  <i class="fa-solid fa-store"></i> Market share
 
 Linux equips 100% of the top 500 supercomputers since 2018. A supercomputer is a computer designed to achieve the highest possible performance with the techniques known at the time of its design, especially with regard to computing speed.
 
 ---
 
-# Architectural design
+# <i class="fa-solid fa-layer-group"></i> Architectural design
 
 * The **kernel** is the first software component.
   * It is the heart of the Linux system.
@@ -199,14 +215,14 @@ Linux equips 100% of the top 500 supercomputers since 2018. A supercomputer is a
 
 ---
 
-# Architectural design
+# <i class="fa-solid fa-layer-group"></i> Architectural design
 
 * The **shell** is a utility that interprets user commands and ensures their execution.
   * Main shells: Bourne shell, C shell, Korn shell and Bourne-Again shell (bash).
 
 ---
 
-# Architectural design
+# <i class="fa-solid fa-layer-group"></i> Architectural design
 
 * **Applications** are user programs including but not limited to:
   * Internet browsers
@@ -215,7 +231,7 @@ Linux equips 100% of the top 500 supercomputers since 2018. A supercomputer is a
 
 ---
 
-# Multi-task
+# <i class="fa-solid fa-bars-progress"></i> Multi-task
 
 Linux belongs to the family of time-sharing operating systems. It divides processing time between several programs, switching from one to another in a transparent way for the user. This implies:
 
@@ -226,19 +242,19 @@ Linux belongs to the family of time-sharing operating systems. It divides proces
 
 ---
 
-# Multi-user
+# <i class="fa-solid fa-users"></i> Multi-user
 
 The purpose of MULTICS was to allow several users to work from several terminals (screen and keyboard) from a single computer (very expensive at the time). Linux, inspired by this operating system, kept this ability to work with several users simultaneously and independently, each one having their own user account with memory space and access rights to files and software.
 
 ---
 
-# Multi-processor
+# <i class="fa-solid fa-microchip"></i> Multi-processor
 
 Linux is able to work with multi-processor computers or with multi-core processors.
 
 ---
 
-# Multi-platform
+# <i class="fa-solid fa-layer-group"></i> Multi-platform
 
 Linux is written in a high-level language that can be adapted to different types of platforms during compilation. This allows it to run on:
 
@@ -248,7 +264,7 @@ Linux is written in a high-level language that can be adapted to different types
 
 ---
 
-# Multi-platform
+# <i class="fa-solid fa-layer-group"></i> Multi-platform
 
 Linux is written in a high-level language that can be adapted to different types of platforms during compilation. This allows it to run on:
 
@@ -258,13 +274,13 @@ Linux is written in a high-level language that can be adapted to different types
 
 ---
 
-# Open
+# <i class="fa-solid fa-lock-open"></i> Open
 
 Linux is based on recognized standards such as [POSIX](http://en.wikipedia.org/wiki/POSIX), [TCP/IP](https://en.wikipedia.org/wiki/Internet_protocol_suite), [NFS](https://en.wikipedia.org/wiki/Network_File_System), and [Samba](https://en.wikipedia.org/wiki/Samba_(software)), which allow it to share data and services with other application systems.
 
 ---
 
-# The UNIX/Linux Philosophy
+# <i class="fa-solid fa-users-rays"></i> The UNIX/Linux Philosophy
 
 * Treat everything as a file.
 * Value portability.
@@ -273,44 +289,44 @@ Linux is based on recognized standards such as [POSIX](http://en.wikipedia.org/w
 
 ---
 
-# The UNIX/Linux Philosophy
+# <i class="fa-solid fa-users-rays"></i> The UNIX/Linux Philosophy
 
 * "UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity." (**Dennis Ritchie**)
 * "Unix is user-friendly. It just isn't promiscuous about which users it's friendly with." (**Steven King**)
 
 ---
 
-# The GNU/Linux distributions
+# <i class="fa-solid fa-compact-disc"></i> The GNU/Linux distributions
 
 A Linux distribution is a **consistent set of software** assembled around the Linux kernel, ready to be installed along with the necessary components to manage itself (installation, removal, configuration). There are **associative** or **community** distributions (Debian, Rocky) and **commercial** distributions (Red Hat, Ubuntu).
 
 ---
 
-# The GNU/Linux distributions
+# <i class="fa-solid fa-compact-disc"></i> The GNU/Linux distributions
 
 Each distribution offers one or more **desktop environments**, and provides a set of pre-installed software and a library of additional software. Configuration options (kernel or services options for example) are specific to each distribution.
 
 ---
 
-# The GNU/Linux distributions
+# <i class="fa-solid fa-compact-disc"></i> The GNU/Linux distributions
 
 This principle allows distributions to be geared to **beginners** (Ubuntu, Linux Mint...) or fully customizable for **advanced users** (Gentoo, Arch);  distributions can also be more adept with **servers** (Debian, Red Hat) or **workstations** (Fedora).
 
 ---
 
-# Desktop environments
+# <i class="fa-solid fa-desktop"></i> Desktop environments
 
 There are many graphic environments such as **GNOME**, **KDE**, **LXDE**, **XFCE**, etc. There is something for everyone, and their **ergonomics** hold their own against Microsoft or Apple systems.
 
 ---
 
-# Desktop environments
+# <i class="fa-solid fa-desktop"></i> Desktop environments
 
 So why is there so little enthusiasm for Linux, when this system is practically **virus free**? Could it be because so many editors (Adobe) and manufacturers (Nvidia) do not play the free game and do not provide a version of their software or **drivers** for GNU/Linux? Perhaps it's fear of change, or the difficulty of finding where to buy a Linux computer, or too few games distributed under Linux. That last excuse at least shouldn't be true for long, with the advent of the game engine Steam for Linux.
 
 ---
 
-# Desktop environments
+# <i class="fa-solid fa-desktop"></i> Desktop environments
 
 The **GNOME 3** desktop environment no longer uses the concept of desktop but that of GNOME Shell (not to be confused with the command line shell). It serves as a desktop, a dashboard, a notification area and a window selector. The GNOME desktop environment is based on the **GTK+** component library.
 
@@ -320,7 +336,7 @@ The **GNOME 3** desktop environment no longer uses the concept of desktop but th
 
 ---
 
-# Desktop environments
+# <i class="fa-solid fa-desktop"></i> Desktop environments
 
 The **KDE** desktop environment is based on the **Qt** component library. It is traditionally recommended for users familiar with a Windows environment.
 
@@ -330,7 +346,7 @@ The **KDE** desktop environment is based on the **Qt** component library. It is 
 
 ---
 
-# ![w:55](images/tux.png) Free / Open Source
+# <i class="fa-solid fa-people-roof"></i> Free / Open Source
 
 A user of a Microsoft or Mac operating system must purchase a license to use the operating system. This license has a cost, although it is usually transparent (the price of the license is included in the price of the computer).
 
@@ -340,7 +356,7 @@ In the **GNU/Linux** world, the Free Software movement provides mostly free dist
 
 ---
 
-# ![w:55](images/tux.png) Free / Open Source
+# <i class="fa-solid fa-people-roof"></i> Free / Open Source
 
 **Open Source**: the source code is available, so it is possible to consult and modify it under certain conditions.
 
@@ -348,35 +364,31 @@ A free software is necessarily open-source, but the opposite is not true since o
 
 ---
 
-# GNU GPL (GNU General Public License)
+# <i class="fa-solid fa-id-badge"></i> GNU GPL
+## (GNU General Public License)
 
 The **GPL** guarantees the author of a software its intellectual property, but allows modification, redistribution or resale of software by third parties, provided that the source code is included with the software. The GPL is the license that came out of the **GNU** (GNU is Not UNIX) project, which was instrumental in creating Linux.
 
 ---
 
-# GNU GPL (GNU General Public License)
+# <i class="fa-solid fa-id-badge"></i> GNU GPL
 
 It implies:
 
 * The freedom to run the program, for any purpose.
 * The freedom to study how the program works and adapt it to your needs.
-
----
-
-# GNU GPL (GNU General Public License)
-
 * The freedom to redistribute copies.
 * The freedom to improve the program, and publish those improvements for the benefit of the whole community.
 
 ---
 
-# GNU GPL (GNU General Public License)
+# <i class="fa-solid fa-id-badge"></i> GNU GPL
 
 On the other hand, even products licensed under the GPL can have a cost. This is not for the product itself, but the **guarantee that a team of developers will continue to work on it to make it evolve and troubleshoot errors, or even provide support to users**.
 
 ---
 
-# Areas of use
+# <i class="fa-solid fa-chart-area"></i> Areas of use
 
 A Linux distribution excels for:
 
@@ -387,13 +399,13 @@ A Linux distribution excels for:
 
 ---
 
-# Areas of use
+# <i class="fa-solid fa-chart-area"></i> Areas of use
 
 Linux is a suitable choice for hosting databases or websites, or as a mail server, DNS or firewall. In short, Linux can do just about anything, which explains the quantity of specific distributions.
 
 ---
 
-# Shell
+# <i class="fa-solid fa-terminal"></i> Shell
 
 ## Generalities
 
@@ -401,13 +413,13 @@ The **shell**, known as _command interface_, allows users to send commands to th
 
 ---
 
-# Shell
+# <i class="fa-solid fa-terminal"></i> Shell
 
 It offers a real programming language including classical structures (loops, alternatives) and common constituents (variables, passing of parameters, and sub-programs). It allows the creation of scripts to automate certain actions (backups, creation of users, system monitoring, etc.).
 
 ---
 
-# Shell
+# <i class="fa-solid fa-terminal"></i> Shell
 
 There are several types of shells available and configurable on a platform or according to the user's preference. A few examples include:
 
@@ -417,7 +429,7 @@ There are several types of shells available and configurable on a platform or ac
 
 ---
 
-## Shell Functionalities
+## <i class="fa fa-terminal"></i> Shell Functionalities
 
 * Command execution (checks the command given and executes it).
 * Input/Output redirection (returns data to a file instead of writing it on the screen).
@@ -427,13 +439,13 @@ There are several types of shells available and configurable on a platform or ac
 
 ---
 
-## Shell Principle
+##  <i class="fa fa-terminal"></i> Shell Principle
 
 ![h:400](./images/shell-principle.png)
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: An operating system is a set of programs for managing the available resources of a computer:
 
@@ -442,7 +454,7 @@ There are several types of shells available and configurable on a platform or ac
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: The operating system is necessary to:
 
@@ -453,7 +465,7 @@ There are several types of shells available and configurable on a platform or ac
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: Among these personalities, which ones participated in the development of UNIX:
 
@@ -465,7 +477,7 @@ There are several types of shells available and configurable on a platform or ac
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: The original nationality of Linus Torvalds, creator of the Linux kernel, is:
 
@@ -477,7 +489,7 @@ There are several types of shells available and configurable on a platform or ac
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: Which of the following distributions is the oldest:
 
@@ -488,7 +500,7 @@ There are several types of shells available and configurable on a platform or ac
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: Is the Linux kernel:
 
@@ -501,7 +513,7 @@ There are several types of shells available and configurable on a platform or ac
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: Is free software necessarily open-source?
 
@@ -510,7 +522,7 @@ There are several types of shells available and configurable on a platform or ac
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: Is open-source software necessarily free?
 
@@ -519,7 +531,7 @@ There are several types of shells available and configurable on a platform or ac
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: Which of the following is not a shell:
 
