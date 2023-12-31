@@ -11,7 +11,7 @@ style: |
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:50](./assets/rocky_linux_logo_white.svg) **Introduction**'
+header: '![w:50](../assets/rocky_linux_logo_white.svg) **Introduction**'
 footer: Rocky Linux Academy - Admin Guide
 ---
 # Introduction to Linux
@@ -24,10 +24,12 @@ header,footer
 section {
   padding-top: 8%;
 }
-@import url('./assets/css/rocky-theme.css');
-@import url('./assets/css/fontawesome.css');
-@import url('./assets/css/solid.css');
-@import url('./assets/css/brands.css');
+
+@import url('../assets/css/rocky-theme.css');
+@import url('../assets/css/fontawesome.css');
+@import url('../assets/css//solid.css');
+@import url('../assets/css/brands.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
 </style>
 
 ## Introduction to the Linux Operating System

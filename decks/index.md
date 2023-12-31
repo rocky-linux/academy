@@ -1,62 +1,36 @@
 ---
 marp: true
 theme: gaia
+style: |
+  :root {
+    --color-background: #fff !important;
+    --color-foreground: #111927 !important;
+    --color-highlight: #10b981 !important;
+    --color-dimmed: #10b981 !important;
+  }
 _class: lead
-paginate: false
+paginate: true
 markdown.marp.enableHtml: true
 backgroundColor: #fff
-header: Learning with Rocky Linux
+header: '![w:50](./assets/rocky_linux_logo_white.svg) **Learning with Rocky Linux**'
 footer: Rocky Linux Academy
 ---
-# Welcome to the Rocky Linux Academy
 
 <style>
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
+header,footer
+{
+    color: #fff;
 }
-blockquote {
-  background: #ffedcc;
-  border-left: 10px solid #d1bf9d;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+section {
+  padding-top: 90px;
 }
-blockquote:before{
-  content: unset;
-}
-blockquote:after{
-  content: unset;
-}
-header {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-    font-size: 1em;
-    padding: 20px;
-}
-footer {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-}
-.columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-.columns3 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
+@import url('./assets/css/rocky-theme.css');
+@import url('./assets/css/fontawesome.css');
+@import url('./assets/css//solid.css');
+@import url('./assets/css/brands.css');
 </style>
 
-<br/>
+# Welcome to the Rocky Linux Academy
 
 ![right:50% w:200](./assets/rocky_linux_logo.svg)
 

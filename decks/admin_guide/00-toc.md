@@ -11,7 +11,7 @@ style: |
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:50](./assets/rocky_linux_logo_white.svg) **Introduction**'
+header: '![w:50](../assets/rocky_linux_logo_white.svg) **Introduction**'
 footer: Rocky Linux Academy - Admin Guide
 ---
 
@@ -23,7 +23,7 @@ header,footer
 section {
   padding-top: 8%;
 }
-@import url('../../css/rocky-theme.css');
+@import url('../assets/css/rocky-theme.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
 </style>
 
@@ -32,7 +32,7 @@ section {
 
 ---
 
-# ![right:20% w:50](./assets/rocky_linux_logo.svg) Introduction
+# ![right:20% w:50](../assets/rocky_linux_logo.svg) Introduction
 
 We start with Introduction to Linux, which outlines Linux, distributions, and the whole ecosystem around our operating system.
 

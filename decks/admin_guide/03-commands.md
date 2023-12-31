@@ -11,7 +11,7 @@ style: |
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:50](./assets/rocky_linux_logo_white.svg) **Commands**'
+header: '![w:50](../assets/rocky_linux_logo_white.svg) **Commands**'
 footer: Rocky Linux Academy - Admin Guide
 ---
 
@@ -23,10 +23,11 @@ header,footer
 section {
   padding-top: 90px;
 }
-@import url('./assets/css/rocky-theme.css');
-@import url('./assets/css/fontawesome.css');
-@import url('./assets/css/solid.css');
-@import url('./assets/css/brands.css');
+
+@import url('../assets/css/rocky-theme.css');
+@import url('../assets/css/fontawesome.css');
+@import url('../assets/css//solid.css');
+@import url('../assets/css/brands.css');
 </style>
 
 # Linux Commands
