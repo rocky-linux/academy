@@ -36,7 +36,9 @@ section::after {
   font-weight: bold;
   color: #fff;
 }
-
+section a,a:link,a:visited {
+  text-decoration: none;
+}
 section,h1 {
   color:#10b981;
 }
@@ -60,8 +62,9 @@ section header,a:hover {
   background-color: #0c9467;
   color: white;
 }
-.hbutton {
-  background-color: white;
+section a:hover {
+  background-color: #fff8e1;
+  text-decoration-line: underline;
 }
 
 .fa-solid {
