@@ -4,8 +4,8 @@ theme: gaia
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../index.html)'
-footer: '**Rocky Linux Academy > Admin Guide > Program**'
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../)'
+footer: '**Rocky Linux Academy > Ansible courses > Program**'
 ---
 
 <style>
