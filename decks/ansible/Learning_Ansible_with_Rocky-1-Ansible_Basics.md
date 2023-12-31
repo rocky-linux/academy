@@ -1,79 +1,31 @@
 ---
 marp: true
 theme: gaia
+style: |
+  @import url('../assets/css/rocky-theme.css');
+  header,footer{
+    color: #fff;
+  }
+  section header a {
+    color: inherit;
+  }
+  section {
+    padding-top: 90px;
+  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-
-backgroundColor: #fff
-
-header: Learning Ansible with Rocky | 1 - Ansible Basics
-footer: Rocky Linux Academy - Ansible courses
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
+footer: '**Rocky Linux Academy > Ansible courses > 1 - Ansible Basics**'
 ---
-<style>
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
-}
-blockquote {
-  background: #ffedcc;
-  border-left: 10px solid #d1bf9d;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-}
-blockquote:before{
-  content: unset;
-}
-blockquote:after{
-  content: unset;
-}
-header {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-    font-size: 1em;
-    padding: 20px;
-}
-footer {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-}
-
-.columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-.columns3 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-} 
-
-.fa-twitter { color: aqua; }
-.fa-mastodon { color: purple; }
-.fa-linkedin { color: blue; }
-.fa-window-maximize { color: skyblue; }
-.fa-circle-exclamation { color: red; }
-.fa-trophy { color: #10b981; }
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
-table {
-  font-size: 10px;
-}
-</style>
 
 # 1 - Ansible Basics
+
 ## Learning Ansible with Rocky
 
 ---
-<br/>
 
-# <i class="fa-solid fa-trophy"></i> Objectives
+## <i class="fa-solid fa-trophy"></i> Objectives
 
 In this chapter you will learn how to work with Ansible.
 
@@ -82,9 +34,8 @@ In this chapter you will learn how to work with Ansible.
 :heavy_check_mark: Create first Ansible playbooks;
 
 ---
-<br/>
 
-# Plan
+## Plan
 
 * [Generalities](#4)
 * [Installation](#12)
@@ -92,8 +43,10 @@ In this chapter you will learn how to work with Ansible.
 * [Deployment](#30)
 * [The modules](#46)
 * [Playbooks](#59)
+  
 ---
-#
+
+## Generalities
 
 Ansible centralizes and automates administration tasks. It is:
 
@@ -102,18 +55,14 @@ Ansible centralizes and automates administration tasks. It is:
 * SSH Protocol (Linux), WinRM Protocol (Windows), API calls
 
 ---
-#
 
-<br/>
-<br/>
-<br/>
+## Generalities
 
 <i class="fa-solid fa-circle-exclamation"></i> The opening of SSH or WinRM flows to all clients from the Ansible server, makes it a **critical element of the architecture** that must be carefully monitored.
 
-
-
 ---
-#
+
+## Generalities
 
 Ansible can manage differents OS, network equipments, and even containers!
 

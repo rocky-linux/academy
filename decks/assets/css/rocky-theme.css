@@ -1,6 +1,9 @@
-/*
-@theme rocky-theme 
-*/
+/* @theme rocky-theme */
+
+@import url('fontawesome.css');
+@import url('solid.css');
+@import url('brands.css');
+
 
 header {
   display: grid;
@@ -9,6 +12,7 @@ header {
   align-content: right;
   font-size: 1em;
   padding: 20px;
+  color: #fff;
 }
 
 footer {
@@ -16,6 +20,7 @@ footer {
   grid-template-columns: 1fr max-content;
   background-color: #10b981;
   align-content: right;
+  color: #fff;
 }
 
 kbd {
@@ -29,6 +34,14 @@ kbd {
     padding: 0 .6666666667em;
     vertical-align: text-top;
     word-break: break-word;
+}
+
+section header a {
+  color: inherit;
+}
+
+section {
+  padding-top: 90px;
 }
 
 /* Styling page number */
@@ -155,4 +168,3 @@ footer {
 .fa-window-maximize { color: skyblue; }
 .fa-circle-exclamation { color: red; }
 .fa-trophy { color: #fff; }
-
