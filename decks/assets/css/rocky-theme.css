@@ -53,14 +53,18 @@ section header a {
   text-decoration: none;
   border: 2px solid #f5f5f5;
   border-radius: .2rem;
-
 }
-section header,a:link a{
+section header a:link {
+  background-color: #10b981;
   color: white;
+  text-decoration: none;
 }
-section header,a:hover {
+section header a:hover {
   background-color: #0c9467;
   color: white;
+}
+section a,a:link,a:visited {
+  background-color: #fff8e1;
 }
 section a:hover {
   background-color: #fff8e1;
@@ -142,6 +146,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+  text-align: left;
 }
 .columns3 {
   display: grid;
