@@ -1,11 +1,10 @@
 ---
 marp: true
 theme: gaia
-_class: lead
 paginate: true
 markdown.marp.enableHtml: true
 header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../index.html)'
-footer: '**Rocky Linux Academy > Admin Guide > Program**'
+footer: '**Rocky Linux Academy > Admin Guide > Index**'
 ---
 
 <style>
@@ -16,6 +15,9 @@ header,footer
 section header a {
   color: inherit;
 }
+section a,a:link,a:visited {
+    color: inherit;
+}
 section {
   padding-top: 90px;
 }
@@ -25,28 +27,29 @@ section {
 @import url('../assets/css/brands.css');
 </style>
 
-# Learning Linux Administration with Rocky Linux
+# <i class="fa-brands fa-black-tie"></i> Linux Administration with Rocky
 
 <div class="columns">
 <div>
 
-:heavy_check_mark: [Introduction](./00-toc.html)
-:heavy_check_mark: [Introduction to Linux](./01-presentation.html)
-:heavy_check_mark: [Commands](./03-commands.html)
-:heavy_check_mark: [Advanced commands](./03-advanced-commands.html)
-:heavy_check_mark: [VI](./05-vi.html)
-:heavy_check_mark: [Users](./06-users.html)
+<i class="fa fa-book"></i> [Introduction](./00-toc.html)
+<i class="fa fa-book"></i> [Introduction to Linux](./01-presentation.html)
+<i class="fa fa-book"></i> [Commands](./03-commands.html)
+<i class="fa fa-book"></i> [VI](./05-vi.html)
+<i class="fa fa-book"></i> [Users](./06-users.html)
+<i class="fa fa-book"></i> [File Systems](./07-file-systems.html)
+<i class="fa fa-book"></i> [Process](./08-process.html)
 
 </div>
 <div>
 
-:heavy_check_mark: [File Systems](./07-file-systems.html)
-:heavy_check_mark: [Process](./08-process.html)
-:heavy_check_mark: [Backups](./09-backups.html)
-:heavy_check_mark: [Boot](./10-boot.html)
-:heavy_check_mark: [Tasks](./11-tasks.html)
-:heavy_check_mark: [Network](./12-network.html)
-:heavy_check_mark: [Softwares](./13-softwares.html)
+<i class="fa fa-book"></i> [Backups](./09-backups.html)
+<i class="fa fa-book"></i> [Boot](./10-boot.html)
+<i class="fa fa-book"></i> [Tasks](./11-tasks.html)
+<i class="fa fa-book"></i> [Network](./12-network.html)
+<i class="fa fa-book"></i> [Softwares](./13-softwares.html)
+<i class="fa fa-book"></i> [Special Authority](./14-special-authority.html)
+
 </div>
 
 </div>
