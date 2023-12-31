@@ -2,59 +2,27 @@
 marp: true
 theme: gaia
 _class: lead
-paginate: false
+paginate: true
 markdown.marp.enableHtml: true
-
-backgroundColor: #fff
-
-header: <img src='./assets/rocky_linux_logo.svg'> Learning Ansible with Rocky | Introduction
-footer: Rocky Linux Academy - Ansible courses
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
+footer: '**Rocky Linux Academy > Ansible courses > Introduction**'
 ---
+
 <style>
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
+header,footer
+{
+    color: #fff;
 }
-blockquote {
-  background: #ffedcc;
-  border-left: 10px solid #d1bf9d;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+section header a {
+  color: inherit;
 }
-blockquote:before{
-  content: unset;
+section {
+  padding-top: 90px;
 }
-blockquote:after{
-  content: unset;
-}
-header {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-    font-size: 1em;
-    padding: 20px;
-}
-footer {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-}
-
-.columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-.columns3 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-} 
-
+@import url('../assets/css/rocky-theme.css');
+@import url('../assets/css/fontawesome.css');
+@import url('../assets/css/solid.css');
+@import url('../assets/css/brands.css');
 </style>
 
 ![right:20% w:100](./assets/rocky_linux_logo.svg)

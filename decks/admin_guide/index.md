@@ -30,23 +30,23 @@ section {
 <div class="columns">
 <div>
 
-:heavy_check_mark: [Introduction](./admin_guide/00-toc.html)
-:heavy_check_mark: [Introduction to Linux](./admin_guide/01-presentation.html)
-:heavy_check_mark: [Commands](./admin_guide/03-commands.html)
-:heavy_check_mark: [Advanced commands](./admin_guide/03-advanced-commands.html)
-:heavy_check_mark: [VI](./admin_guide/05-vi.html)
-:heavy_check_mark: [Users](./admin_guide/06-users.html)
+:heavy_check_mark: [Introduction](./00-toc.html)
+:heavy_check_mark: [Introduction to Linux](./01-presentation.html)
+:heavy_check_mark: [Commands](./03-commands.html)
+:heavy_check_mark: [Advanced commands](./03-advanced-commands.html)
+:heavy_check_mark: [VI](./05-vi.html)
+:heavy_check_mark: [Users](./06-users.html)
 
 </div>
 <div>
 
-:heavy_check_mark: [File Systems](./admin_guide/07-file-systems.html)
-:heavy_check_mark: [Process](./admin_guide/08-process.html)
-:heavy_check_mark: [Backups](./admin_guide/09-backups.html)
-:heavy_check_mark: [Boot](./admin_guide/10-boot.html)
-:heavy_check_mark: [Tasks](./admin_guide/11-tasks.html)
-:heavy_check_mark: [Network](./admin_guide/12-network.html)
-:heavy_check_mark: [Softwares](./admin_guide/13-softwares.html)
+:heavy_check_mark: [File Systems](./07-file-systems.html)
+:heavy_check_mark: [Process](./08-process.html)
+:heavy_check_mark: [Backups](./09-backups.html)
+:heavy_check_mark: [Boot](./10-boot.html)
+:heavy_check_mark: [Tasks](./11-tasks.html)
+:heavy_check_mark: [Network](./12-network.html)
+:heavy_check_mark: [Softwares](./13-softwares.html)
 </div>
 
 </div>
