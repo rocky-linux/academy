@@ -1,18 +1,11 @@
 ---
 marp: true
 theme: gaia
-style: |
-  :root {
-    --color-background: #fff !important;
-    --color-foreground: #111927 !important;
-    --color-highlight: #10b981 !important;
-    --color-dimmed: #10b981 !important;
-  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:50](../assets/rocky_linux_logo_white.svg) **Commands**'
-footer: Rocky Linux Academy - Admin Guide
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../index.md)'
+footer: '**Rocky Linux Academy -> Admin Guide -> Commands**'
 ---
 
 <style>
@@ -20,13 +13,15 @@ header,footer
 {
     color: #fff;
 }
+section header a {
+  color: inherit;
+}
 section {
   padding-top: 90px;
 }
-
 @import url('../assets/css/rocky-theme.css');
 @import url('../assets/css/fontawesome.css');
-@import url('../assets/css//solid.css');
+@import url('../assets/css/solid.css');
 @import url('../assets/css/brands.css');
 </style>
 
@@ -56,7 +51,7 @@ In this chapter, future Linux administrators will learn how to:
 
 ---
 
-# Generalities
+# <i class="fa-solid fa-arrow-right-to-bracket"></i> Generalities
 
 Current Linux systems have graphical utilities dedicated to the work of an administrator. However, it is important to be able to use the interface in command line mode for several reasons:
 
@@ -65,7 +60,7 @@ Current Linux systems have graphical utilities dedicated to the work of an admin
 
 ---
 
-# Generalities
+# <i class="fa-solid fa-arrow-right-to-bracket"></i> Generalities
 
 * Remote administration is done on the command line with an SSH terminal.
 * In order to preserve server resources, the graphical interface is either not installed or launched on demand.
@@ -73,13 +68,13 @@ Current Linux systems have graphical utilities dedicated to the work of an admin
 
 ---
 
-# Generalities
+# <i class="fa-solid fa-arrow-right-to-bracket"></i> Generalities
 
 Learning these commands allows the administrator to connect to a Linux terminal, to manage its resources and files, to identify the station, the terminal, and the connected users, etc.
 
 ---
 
-# The users
+# <i class="fa-solid fa-users"></i> The users
 
 The user of a Linux system will be defined in the `/etc/passwd` file, by:
 
@@ -91,7 +86,7 @@ The user of a Linux system will be defined in the `/etc/passwd` file, by:
 
 ---
 
-# The users
+# <i class="fa-solid fa-users"></i> The users
 
 In other files the user will be defined by:
 
@@ -100,7 +95,7 @@ In other files the user will be defined by:
 
 ---
 
-# The users
+# <i class="fa-solid fa-users"></i> The users
 
 Depending on the security policy implemented on the system, the password will require a certain number of characters and meet certain complexity requirements.
 
@@ -108,19 +103,19 @@ Among the existing command interpreters, the **Bourne-Again Shell** (`/bin/bash`
 
 ---
 
-# The users
+# <i class="fa-solid fa-users"></i> The users
 
 The user's login directory is by convention stored in the `/home` directory of the workstation. It will contain the user's personal data and the configuration files of his applications. By default, at login, the login directory is selected as the current directory.
 
 ---
 
-# The users
+# <i class="fa-solid fa-users"></i> The users
 
 A workstation-type installation (with graphical interface) starts this interface on terminal 1. Linux being multi-user, it is possible to connect several users several times, on different **physical terminals** (TTY) or **virtual terminals** (PTS). Virtual terminals are available within a graphical environment. A user switches from one physical terminal to another using <kbd>Alt</kbd> + <kbd>Fx</kbd> from the command line or using <kbd>CTRL</kbd> + <kbd>Alt</kbd> + <kbd>Fx</kbd>.
 
 ---
 
-# The shell
+# <i class="fa-solid fa-terminal"></i> The shell
 
 Once the user is connected to a console, the shell displays the **command prompt**. It then behaves like an infinite loop, repeating the same pattern with each statement entered:
 
@@ -131,7 +126,7 @@ Once the user is connected to a console, the shell displays the **command prompt
 
 ---
 
-# The Shell
+# <i class="fa-solid fa-terminal"></i> The shell
 
 * Executes the command.
 * Displays the command prompt.
@@ -139,13 +134,13 @@ Once the user is connected to a console, the shell displays the **command prompt
 
 ---
 
-# The Shell
+# <i class="fa-solid fa-terminal"></i> The shell
 
 The key sequence <kbd>CTRL</kbd> + <kbd>C</kbd> is used to interrupt a running command.
 
 ---
 
-# The Shell
+# <i class="fa-solid fa-terminal"></i> The shell
 
 The use of a command generally follows this sequence:
 
@@ -159,14 +154,14 @@ A space separates each item.
 
 ---
 
-# The Shell
+# <i class="fa-solid fa-terminal"></i> The shell
 
 **Short options** begin with a dash (`-l`), while **long options** begin with two dashes (`--list`).
 A double dash (`--`) indicates the end of the option list.
 
 ---
 
-# The Shell
+# <i class="fa-solid fa-terminal"></i> The shell
 
 It is possible to group some short options together:
 
@@ -182,7 +177,7 @@ $ ls -lia
 
 ---
 
-# The Shell
+# <i class="fa-solid fa-terminal"></i> The shell
 
 There can be several arguments after an option:
 
@@ -194,7 +189,9 @@ In the literature, the term "option" is equivalent to the term "parameter," whic
 
 ---
 
-# General commands
+# <i class="fa-solid fa-keyboard"></i> General commands
+
+---
 
 ### `apropos`, `whatis` and `man` commands
 
@@ -254,7 +251,7 @@ The `whatis` command displays the description of the command passed as argument:
 whatis clear
 ```
 
-Example:
+<i class="fa fa-pen-to-square"></i> Example:
 
 ```bash
 $ whatis clear
@@ -336,7 +333,7 @@ To force an immediate stop, use the word `now` in place of the time. In this cas
 
 #### `shutdown` command
 
-Examples:
+<i class="fa fa-pen-to-square"></i> Example:
 
 ```bash
 [root]# shutdown -h 0:30 "Server shutdown at 0:30"
@@ -367,7 +364,7 @@ The commands are stored in the `.bash_history` file in the user's login director
 
 #### `history` command
 
-Example of a history command
+<i class="fa fa-pen-to-square"></i> Example of a history command
 
 ```bash
 $ history
@@ -388,7 +385,7 @@ $ history
 
 #### `history` command
 
-* Manipulating history:
+<i class="fa fa-pen-to-square"></i> Manipulating history:
 
 To manipulate the history, the following commands entered from the command prompt will:
 
@@ -396,6 +393,15 @@ To manipulate the history, the following commands entered from the command promp
 | ------------------ | --------------------------------------------------------- |
 | <kbd>!!</kbd>      | Recalls the last command placed.                           |
 | <kbd>!n</kbd>      | Recalls the command by its number in the list.             |
+
+---
+
+#### `history` command
+
+<i class="fa fa-pen-to-square"></i> Manipulating history:
+
+| Keys               | Function                                                  |
+| ------------------ | --------------------------------------------------------- |
 | <kbd>!string</kbd> | Recalls the most recent command beginning with the string. |
 | <kbd>↑</kbd>       | Navigates through your history working backward in time from the most recent command. |
 | <kbd>↓</kbd>       | Navigates through your history working forward in time. |
@@ -418,7 +424,9 @@ If double-pressing the <kbd>TAB</kbd> key presents no options, then there is no 
 
 ---
 
-# Display and Identification
+# <i class="fa-solid fa-desktop"></i> Display and Identification
+
+---
 
 #### `clear` command
 
@@ -483,7 +491,7 @@ date [-d yyyyMMdd] [format]
 
 ### `date` command
 
-Examples:
+<i class="fa fa-pen-to-square"></i> Example:
 
 ```bash
 $ date
@@ -598,14 +606,14 @@ root     pts/0  2021-05-24 10:31
 
 Since Linux is multi-user, it is possible that multiple sessions are open on the same station, either physically or over the network. It is interesting to know which users are logged in, if only to communicate with them by sending messages.
 
-* tty: represents a terminal.
-* pts/: represents a virtual console in a graphical environment with the number after representing the instance of the virtual console (0, 1, 2...)
+<i class="fa fa-arrow-right-from-bracket"></i> tty: represents a terminal.
+<i class="fa fa-arrow-right-from-bracket"></i>  pts/: represents a virtual console in a graphical environment with the number after representing the instance of the virtual console (0, 1, 2...)
 
 The `-r` option also displays the runlevel (see chapter "startup").
 
 ---
 
-# File Tree
+# <i class="fa-solid fa-folder-tree"></i> File Tree
 
 In Linux, the file tree is an inverted tree, called a **single hierarchical tree**, whose root is the directory `/`.
 
@@ -615,27 +623,27 @@ The **connection directory** is the working directory associated with the user. 
 
 ---
 
-# File Tree
+# <i class="fa-solid fa-folder-tree"></i> File Tree
 
 When the user logs in, the current directory is the login directory.
 
 An **absolute path** references a file from the root by traversing the entire tree to the file level:
 
-* `/home/groupA/alice/file`
+<i class="fa fa-folder-open"></i> **/home/groupA/alice/file**
 
 ---
 
-# File Tree
+# <i class="fa-solid fa-folder-tree"></i> File Tree
 
 The **relative path** references that same file by traversing the entire tree from the current directory:
 
-* `../alice/file`
+<i class="fa fa-folder-open"></i> **../alice/file**
 
 In the above example, the "`..`" refers to the parent directory of the current directory.
 
 ---
 
-# File Tree
+# <i class="fa-solid fa-folder-tree"></i> File Tree
 
 A directory, even if it is empty, will necessarily contain at least **two references**:
 
@@ -644,37 +652,37 @@ A directory, even if it is empty, will necessarily contain at least **two refere
 
 ---
 
-# File Tree
+# <i class="fa-solid fa-folder-tree"></i> File Tree
 
 A relative path can thus start with `./` or `../`. When the relative path refers to a subdirectory or file in the current directory, then the `./` is often omitted. Mentioning the first `./` in the tree will only really be required to run an executable file.
 
 ---
 
-# File Tree
+# <i class="fa-solid fa-folder-tree"></i> File Tree
 
 Errors in paths can cause many problems: creating folders or files in the wrong places, unintentional deletions, etc. It is therefore strongly recommended to use auto-completion when entering paths.
 
 ---
 
-# File Tree
+# <i class="fa-solid fa-folder-tree"></i> File Tree
 
 ![h:400](./images/commands-pathabsolute.png)
 
 ---
 
-# File Tree
+# <i class="fa-solid fa-folder-tree"></i> File Tree
 
 In the above example, we are looking to give the location of the file `myfile` from the directory of bob.
 
 ---
 
-# File Tree
+# <i class="fa-solid fa-folder-tree"></i> File Tree
 
 * By an **absolute path**, the current directory does not matter. We start at the root, and work our way down to the directories `home`, `groupA`, `alice` and finally the file `myfile`: `/home/groupA/alice/myfile`.
 
 ---
 
-# File Tree
+# <i class="fa-solid fa-folder-tree"></i> File Tree
 
 * By a **relative path**, our starting point being the current directory `bob`, we go up one level through `..` (i.e., into the `groupA` directory), then down into the alice directory, and finally the `myfile` file: `../alice/myfile`.
 
@@ -865,6 +873,8 @@ $ ls -lhR /var/ | grep ^\- | grep -E "[1-9]*\.[0-9]*M"
 
 ---
 
+### `ls` command
+
 Of course, we highly recommend that you use the `find` command.
 
 ```bash
@@ -872,6 +882,8 @@ $ find /var -size +1M -a -size -1024M  -a -type f  -exec ls -lh {} \;
 ```
 
 ---
+
+### `ls` command
 
 <i class="fa fa-share-from-square"></i> Show the rights on a folder:
 
@@ -883,11 +895,12 @@ total 1332
 -rw-r--r--.  1 root root     44 18 nov.  17:04 adjtime
 -rw-r--r--.  1 root root   1512 12 janv.  2010 aliases
 -rw-r--r--.  1 root root  12288 17 nov.  17:41 aliases.db
-drwxr-xr-x.  2 root root   4096 17 nov.  17:48 alternatives
 ...
 ```
 
 ---
+
+### `ls` command
 
 The above command will display the contents of the folder (inside) by default. For the folder itself, you can use the `-d` option.
 
@@ -897,6 +910,8 @@ drwxr-xr-x. 69 root root 4096 18 nov.  17:05 /etc
 ```
 
 ---
+
+### `ls` command
 
 <i class="fa fa-share-from-square"></i> Sort by file size, largest first:
 
@@ -915,6 +930,8 @@ dr-xr-xr-x. 5 root root 1024 2014-11-23 11-23 05:29 boot
 
 ---
 
+### `ls` command
+
 <i class="fa fa-share-from-square"></i> Add the _trailing slash_ to the end of folders:
 
 By default, the `ls` command does not display the last slash of a folder.
@@ -926,6 +943,8 @@ $ ls -dF /etc
 ```
 
 ---
+
+### `ls` command
 
 <i class="fa fa-share-from-square"></i> Hide some extensions:
 
@@ -943,7 +962,7 @@ The `mkdir` command creates a directory or directory tree.
 mkdir [-p] directory [directory] [...]
 ```
 
-Example:
+<i class="fa fa-share-from-square"></i> Example:
 
 ```bash
 $ mkdir /home/rockstar/work
@@ -973,7 +992,7 @@ The `touch` command changes the timestamp of a file or creates an empty file if 
 touch [-t date] file
 ```
 
-Example:
+<i class="fa fa-share-from-square"></i> Example:
 
 ```bash
 $ touch /home/rockstar/myfile
@@ -1001,7 +1020,7 @@ The `touch` command is primarily used to create an empty file, but it can be use
 
 The `rmdir` command deletes an empty directory.
 
-Example:
+<i class="fa fa-share-from-square"></i> Example:
 
 ```bash
 $ rmdir /home/rockstar/work
@@ -1033,6 +1052,8 @@ Any deletion of a file or directory is final.
 
 ---
 
+### `rm` command
+
 | Options | Information                              |
 | ------- | ---------------------------------------- |
 | `-f`    | Do not ask whether to delete. |
@@ -1047,13 +1068,17 @@ The `rm` command itself does not ask for confirmation when deleting files. Howev
 
 ---
 
+### `rm` command
+
 Deleting a folder with the `rm` command, whether the folder is empty or not, will require the `-r` option to be added.
 
 The end of the options is signaled to the shell by a double dash `--`.
 
 ---
 
-In the example:
+### `rm` command
+
+<i class="fa fa-share-from-square"></i> In the example:
 
 ```bash
 $ >-hard-hard # To create an empty file called -hard-hard
@@ -1074,7 +1099,7 @@ The `mv` command moves and renames a file.
 mv file [file ...] destination
 ```
 
-Examples:
+<i class="fa fa-share-from-square"></i> Examples:
 
 ```bash
 $ mv /home/rockstar/file1 /home/rockstar/file2
@@ -1144,7 +1169,7 @@ The `cp` command copies a file.
 cp file [file ...] destination
 ```
 
-Example:
+<i class="fa fa-share-from-square"></i> Examples:
 
 ```bash
 $ cp -r /home/rockstar /tmp
@@ -1162,6 +1187,8 @@ $ cp -r /home/rockstar /tmp
 
 ---
 
+### `cp` command
+
 ```bash
 cp file1 /repexist/file2
 ```
@@ -1175,6 +1202,8 @@ $ cp file1 file2
 `file1` is copied as `file2` to this directory.
 
 ---
+
+### `cp` command
 
 ```bash
 $ cp file1 /repexist
@@ -1190,7 +1219,9 @@ If the destination directory does not exist, `file1` is copied under the name `w
 
 ---
 
-## Visualization
+# <i class="fa-solid fa-file-lines"></i> Visualization
+
+---
 
 ### `file` command
 
@@ -1200,11 +1231,7 @@ The `file` command displays the type of a file.
 file file1 [files]
 ```
 
----
-
-### `file` command
-
-Example:
+<i class="fa fa-share-from-square"></i> Examples:
 
 ```bash
 $ file /etc/passwd /etc
@@ -1222,17 +1249,17 @@ The `more` command displays the contents of one or more files screen by screen.
 more file1 [files]
 ```
 
----
-
-### `more` command
-
-Example:
+<i class="fa fa-share-from-square"></i> Examples:
 
 ```bash
 $ more /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 ...
 ```
+
+---
+
+### `more` command
 
 Using the <kbd>ENTER</kbd> key, the move is line by line. Using the <kbd>SPACE</kbd> key, the move is page by page. `/text` allows you to search for the occurrence in the file.
 
@@ -1248,6 +1275,8 @@ less file1 [files]
 
 ---
 
+### `less` command
+
 The commands specific to `less` are:
 
 | Command           | Action                                          |
@@ -1256,14 +1285,16 @@ The commands specific to `less` are:
 | <kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd><kbd>←</kbd>         | Move up, down a line, or to the right or left.  |
 | <kbd>Enter</kbd>           | Move down one line.                             |
 | <kbd>Space</kbd>           | Move down one page.                             |
-| <kbd>PgUp</kbd> and <kbd>PgDn</kbd> | Move up or down one page.                       |
 
 ---
+
+### `less` command
 
 The commands specific to `less` are:
 
 | Command           | Action                                          |
 | ----------------- | ----------------------------------------------- |
+| <kbd>PgUp</kbd> and <kbd>PgDn</kbd> | Move up or down one page.                       |
 | <kbd>gg</kbd> and <kbd>G</kbd> | Move to the first and last pages         |
 | `/text`           | Search for text.                                |
 | <kbd>q</kbd>               | Quit the `less` command.                        |
@@ -1282,13 +1313,13 @@ cat file1 [files]
 
 ### `cat` command
 
-Example 1 - Displaying the contents of a file to the standard output:
+<i class="fa fa-share-from-square"></i> Example 1 - Displaying the contents of a file to the standard output:
 
 ```bash
 $ cat /etc/passwd
 ```
 
-Example 2 - Displaying the contents of multiple files to standard output:
+<i class="fa fa-share-from-square"></i> Example 2 - Displaying the contents of multiple files to standard output:
 
 ```bash
 $ cat /etc/passwd /etc/group
@@ -1298,7 +1329,7 @@ $ cat /etc/passwd /etc/group
 
 ### `cat` command
 
-Example 3 - Combining the contents of multiple files into one file using output redirection:
+<i class="fa fa-share-from-square"></i> Example 3 - Combining the contents of multiple files into one file using output redirection:
 
 ```bash
 $ cat /etc/passwd /etc/group > usersAndGroups.txt
@@ -1308,7 +1339,7 @@ $ cat /etc/passwd /etc/group > usersAndGroups.txt
 
 ### `cat` command
 
-Example 4 - Displaying the line numbering:
+<i class="fa fa-share-from-square"></i> Example 4 - Displaying the line numbering:
 
 ```bash
 $ cat -n /etc/profile
@@ -1325,7 +1356,7 @@ $ cat -n /etc/profile
 
 ### `cat` command
 
-Example 5 - Shows the numbering of non-empty lines:
+<i class="fa fa-share-from-square"></i> Example 5 - Shows the numbering of non-empty lines:
 
 ```bash
 $ cat -b /etc/profile
@@ -1344,7 +1375,7 @@ $ cat -b /etc/profile
 
 The `tac` command does almost the opposite of the `cat` command. It displays the contents of a file starting from the end (which is particularly interesting for reading logs!).
 
-Example: Display a log file by displaying the last line first:
+<i class="fa fa-share-from-square"></i> Example: Display a log file by displaying the last line first:
 
 ```bash
 [root]# tac /var/log/messages | less
@@ -1385,7 +1416,7 @@ tail [-f] [-n x] file
 
 ### `tail` command
 
-Example:
+<i class="fa fa-share-from-square"></i> Example:
 
 ```bash
 tail -n 3 /etc/passwd
@@ -1418,7 +1449,7 @@ sort [-k] [-n] [-u] [-o file] [-t] file
 
 ### `sort` command
 
-Example:
+<i class="fa fa-share-from-square"></i> Example:
 
 ```bash
 $ sort -k 3,4 -t ":" -n /etc/passwd
@@ -1428,17 +1459,22 @@ adm:x:3:4:adm:/var/adm/:/sbin/nologin
 
 ---
 
+### `sort` command
+
 | Option    | Description                              |
 | --------- | ------------------------------------------- |
 | `-k`     | Specify the columns to be separated. You can specify multiple columns.         |
 | `-n`      | Requests a numeric sort.                     |
 | `-o file` | Saves the sort to the specified file.        |
-| `-t`     | Specify a delimiter, which requires that the contents of the corresponding file must be regularly delimited column contents, otherwise they cannot be sorted properly. |
+
 
 ---
 
+### `sort` command
+
 | Option    | Description                              |
 | --------- | ------------------------------------------- |
+| `-t`     | Specify a delimiter, which requires that the contents of the corresponding file must be regularly delimited column contents, otherwise they cannot be sorted properly. |
 | `-r`      | Reverse the order of the result. Used in conjunction with the `-n` option to sort in order from largest to smallest.             |
 | `-u`     | Remove duplicates after sorting. Equivalent to `sort file | uniq`.                   |
 
@@ -1451,6 +1487,8 @@ The `sort` command sorts the file only on the screen. The file is not modified b
 By default, the numbers are sorted according to their character. Thus, "110" will be before "20", which will itself be before "3". The `-n` option must be specified so that the numeric character blocks are sorted by their value.
 
 ---
+
+### `sort` command
 
 The `sort` command reverses the order of the results, with the `-r` option:
 
@@ -1469,7 +1507,7 @@ In this example, the `sort` command will sort the contents of the `/etc/passwd` 
 
 Some advanced examples of using the `sort` command:
 
-* Shuffling values
+<i class="fa fa-share-from-square"></i> Shuffling values
 
 The `sort` command also allows you to shuffle values with the `-R` option:
 
@@ -1480,11 +1518,13 @@ $ sort -R /etc/passwd
 
 ### `sort` command
 
-* Sorting IP addresses
+<i class="fa fa-share-from-square"></i> Sorting IP addresses
 
 A system administrator is quickly confronted with the processing of IP addresses from the logs of his services such as SMTP, VSFTP or Apache. These addresses are typically extracted with the `cut` command.
 
 ---
+
+### `sort` command
 
 Here is an example with the file `dns-client.txt`:
 
@@ -1495,6 +1535,10 @@ Here is an example with the file `dns-client.txt`:
 208.128.150.98
 208.128.150.99
 ```
+
+---
+
+### `sort` command
 
 ```bash
 $ sort -nr dns-client.txt
@@ -1507,12 +1551,11 @@ $ sort -nr dns-client.txt
 
 ---
 
-* Sorting file by removing duplicates
+### `sort` command
+
+<i class="fa fa-share-from-square"></i> Sorting file by removing duplicates
 
 The `sort` command knows how to remove the duplicates from the file output using `-u` as option.
-
----
-
 Here is an example with the file `colours.txt`:
 
 ```
@@ -1522,6 +1565,11 @@ Blue
 Red
 Pink
 ```
+
+---
+
+### `sort` command
+
 ```
 $ sort -u colours.txt
 Blue
@@ -1532,11 +1580,15 @@ Red
 
 ---
 
-* Sorting file by sizes
+### `sort` command
+
+<i class="fa fa-share-from-square"></i> Sorting file by sizes
 
 The `sort` command knows how to recognize file sizes, from commands like `ls` with the `-h` option.
 
 ---
+
+### `sort` command
 
 Here is an example with the file `size.txt`:
 
@@ -1555,7 +1607,7 @@ Here is an example with the file `size.txt`:
 
 ---
 
-Here is an example with the file `size.txt`:
+### `sort` command
 
 ```bash
 $ sort -hr size.txt
@@ -1594,7 +1646,9 @@ wc [-l] [-m] [-w] file [files]
 
 ---
 
-## Search
+# <i class="fa-solid fa-magnifying-glass"></i> Search
+
+---
 
 ### `find` command
 
@@ -1606,9 +1660,11 @@ find directory [-name name] [-type type] [-user login] [-date date]
 
 Since there are so many options to the `find` command, it is best to refer to the `man`.
 
+If the search directory is not specified, the `find` command will search from the current directory.
+
 ---
 
-If the search directory is not specified, the `find` command will search from the current directory.
+### `find` command
 
 | Option              | Description                            |
 | ------------------- | -------------------------------------- |
@@ -1629,7 +1685,7 @@ The previous command searches for all files in the `/tmp` directory named `*.txt
 
 ---
 
-### <i class="fa-solid fa-tip"> Tip "Understand the `-exec` option"</i>
+### <i class="fa-solid fa-tip fa-lightbulb"> Understand the `-exec` option</i>
 
 In the example above, the `find` command will construct a string representing the command to be executed.
 
@@ -1645,7 +1701,7 @@ rm -f /tmp/log1.txt ; rm -f /tmp/log2.txt ; rm -f /tmp/log3.txt ;
 
 The `;` character is a special shell character that must be protected by a `\` to prevent it from being interpreted too early by the `find` command (and not in the `-exec`).
 
-### <i class="fa-solid fa-tip"> Tip</i>
+### <i class="fa-solid fa-tip fa-lightbulb"> Tip</i>
 
 `$ find /tmp -name *.txt -delete` does the same thing.
 
@@ -1659,7 +1715,7 @@ The `whereis` command searches for files related to a command.
 whereis [-b] [-m] [-s] command
 ```
 
-Example:
+<i class="fa fa-share-from-square"></i> Example:
 
 ```bash
 $ whereis -b ls
@@ -1686,7 +1742,7 @@ The `grep` command searches for a string in a file.
 grep [-w] [-i] [-v] "string" file
 ```
 
-Example:
+<i class="fa fa-share-from-square"></i> Example:
 
 ```bash
 $ grep -w "root:" /etc/passwd
@@ -1694,6 +1750,8 @@ root:x:0:0:root:/root:/bin/bash
 ```
 
 ---
+
+### `grep` command
 
 | Option                                                                                  | Description                             |
 | --------------------------------------------------------------------------------------- | --------------------------------------- |
@@ -1705,8 +1763,8 @@ The `grep` command returns the complete line containing the string you are looki
 
 ---
 
-* The `^` special character is used to search for a string at the beginning of a line.
-* The special character `$` searches for a string at the end of a line.
+<i class="fa fa-arrow-right-from-bracket"></i> The `^` special character is used to search for a string at the beginning of a line.
+<i class="fa fa-arrow-right-from-bracket"></i> The special character `$` searches for a string at the end of a line.
 
 ```bash
 $ grep -w "^root" /etc/passwd
@@ -1726,15 +1784,17 @@ grep -R "Virtual" /etc/httpd
 
 ---
 
-### Meta-characters (wildcards)
+### <i class="fa fa-asterisk"></i> `Meta-characters` (wildcards)
 
 Meta-characters replace one or more characters (or even an absence of characters) during a search. These meta-characters are also known as wildcards.
 
 They can be combined.
 
+The `*` character replaces a string composed of any characters. The `*` character can also represent an absence of character.
+
 ---
 
-The `*` character replaces a string composed of any characters. The `*` character can also represent an absence of character.
+### <i class="fa fa-asterisk"></i> `Meta-characters` (wildcards)
 
 ```bash
 $ find /home -name "test*"
@@ -1749,6 +1809,8 @@ Meta-characters allow more complex searches by replacing all or part of a word. 
 
 ---
 
+### <i class="fa fa-asterisk"></i> `Meta-characters` (wildcards)
+
 The character `?` replaces a single character, whatever it is.
 
 ```bash
@@ -1756,6 +1818,10 @@ $ find /home -name "test?"
 /home/rockstar/test1
 /home/rockstar/tests
 ```
+
+---
+
+### <i class="fa fa-asterisk"></i> `Meta-characters` (wildcards)
 
 The square brackets `[` and `]` are used to specify the values that a single character can take.
 
@@ -1778,9 +1844,9 @@ Do not confuse shell meta-characters with regular expression meta-characters. Th
 
 ---
 
-## Redirects and pipes
+# <i class="fa-solid fa-outdent"></i> Redirects and pipes
 
-### Standard input and output
+## Standard input and output
 
 On UNIX and Linux systems, there are three standard streams. They allow programs, via the `stdio.h` library, to input or output information.
 
@@ -1788,14 +1854,18 @@ These streams are called X channel or X file descriptor.
 
 ---
 
+## Standard input and output
+
 By default:
 
-* the keyboard is the input device for channel 0, called **stdin** ;
-* the screen is the output device for channels 1 and 2, called **stdout** and **stderr**.
+<i class="fa fa-arrow-right-from-bracket"></i> the keyboard is the input device for channel 0, called **stdin** ;
+<i class="fa fa-arrow-right-from-bracket"></i> the screen is the output device for channels 1 and 2, called **stdout** and **stderr**.
 
-![w:900](./images/input-output.png)
+![w:750](./images/input-output.png)
 
 ---
+
+## <i class="fa fa-arrow-right-arrow-left"></i> Standard input and output
 
 **stderr** receives the error streams returned by a command. The other streams are directed to **stdout**.
 
@@ -1803,7 +1873,7 @@ These streams point to peripheral files, but since everything is a file in UNIX/
 
 ---
 
-### Input redirection
+## Input redirection
 
 It is possible to redirect the input stream from another file with the character `<` or `<<`. The command will read the file instead of the keyboard:
 
@@ -1821,6 +1891,8 @@ Input redirection can also be used to simulate user interactivity. The command w
 
 ---
 
+## Input redirection
+
 This feature is used to script interactive commands:
 
 ```bash
@@ -1832,6 +1904,8 @@ END
 ```
 
 ---
+
+## Input redirection
 
 The keyword `END` can be replaced by any word.
 
@@ -1855,6 +1929,8 @@ The standard input redirection is rarely used because most commands accept a fil
 
 ---
 
+## Input redirection
+
 The command `wc` could be used like this:
 
 ```bash
@@ -1866,7 +1942,7 @@ $ wc -l < .bash_profile
 
 ---
 
-### Output redirection
+## Output redirection
 
 Standard output can be redirected to other files using the `>` or `>>` characters.
 
@@ -1878,6 +1954,8 @@ $ date +%F > date_file
 
 ---
 
+## Output redirection
+
 When the `>>` character is used, it indicates that the output result of the command is appended to the file content.
 
 ```bash
@@ -1888,6 +1966,8 @@ In both cases, the file is automatically created when it does not exist.
 
 ---
 
+## Output redirection
+
 The standard error output can also be redirected to another file. This time it will be necessary to specify the channel number (which can be omitted for channels 0 and 1):
 
 ```bash
@@ -1897,15 +1977,15 @@ $ ls -R / 2>> errors_file
 
 ---
 
-# Examples of redirection
+## Examples of redirection
 
-Redirection of 2 outputs to 2 files:
+<i class="fa fa-share-from-square"></i> Redirection of 2 outputs to 2 files:
 
 ```bash
 $ ls -R / >> ok_file 2>> nok_file
 ```
 
-Redirection of the 2 outputs to a single file:
+<i class="fa fa-share-from-square"></i> Redirection of the 2 outputs to a single file:
 
 ```bash
 $ ls -R / >> log_file 2>&1
@@ -1913,7 +1993,9 @@ $ ls -R / >> log_file 2>&1
 
 ---
 
-Redirection of *stderr* to a "bottomless pit" (`/dev/null`):
+## Examples of redirection
+
+<i class="fa fa-share-from-square"></i> Redirection of *stderr* to a "bottomless pit" (`/dev/null`):
 
 ```bash
 $ ls -R / 2>> /dev/null
@@ -1923,7 +2005,7 @@ When both output streams are redirected, no information is displayed on the scre
 
 ---
 
-# Pipes
+## Pipes
 
 A **pipe** is a mechanism allowing you to link the standard output of a first command to the standard input of a second command.
 
@@ -1933,13 +2015,17 @@ This communication is uni directional and is done with the `|` symbol. The pipe 
 
 ---
 
+## Pipes
+
 All data sent by the control on the left of the pipe through the standard output channel is sent to the standard input channel of the control on the right.
 
 The commands particularly used after a pipe are filters.
 
 ---
 
-* Examples:
+## Pipes
+
+<i class="fa fa-share-from-square"></i> Examples:
 
 Display only the beginning:
 
@@ -1955,6 +2041,8 @@ $ ls -lia / | tail
 
 ---
 
+## Pipes
+
 Sort the result:
 
 ```bash
@@ -1969,6 +2057,8 @@ $ ls -lia / | wc
 
 ---
 
+## Pipes
+
 Search for a string in the result:
 
 ```bash
@@ -1977,13 +2067,13 @@ $ ls -lia / | grep fichier
 
 ---
 
-# Special Points
+# <i class="fa-solid fa-hand-point-right"></i> Special Points
+
+---
 
 ### `tee` command
 
 The `tee` command is used to redirect the standard output of a command to a file while maintaining the screen display.
-
----
 
 It is combined with the `|` pipe to receive as input the output of the command to be redirected:
 
@@ -1996,11 +2086,11 @@ The `-a` option adds to the file instead of overwriting it.
 
 ---
 
-### `alias` and `unalias` commands
+## `alias` and `unalias` commands
 
 Using **alias** is a way to ask the shell to remember a particular command with its options and give it a name.
 
-For example:
+<i class="fa fa-share-from-square"></i> For example:
 
 ```bash
 $ ll
@@ -2014,6 +2104,8 @@ $ ls -l
 
 ---
 
+## `alias` and `unalias` commands
+
 The `alias` command lists the aliases for the current session. Aliases are set by default on Linux distributions. Here, the aliases for a Rocky server:
 
 ```bash
@@ -2025,9 +2117,11 @@ alias vi='vim'
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 ```
 
-The aliases are only defined temporarily, for the time of the user session.
-
 ---
+
+## `alias` and `unalias` commands
+
+The aliases are only defined temporarily, for the time of the user session.
 
 For permanent use, they must be created in the:
 
@@ -2046,6 +2140,8 @@ alias cd='rm -Rf'
 
 ---
 
+## `alias` and `unalias` commands
+
 The `unalias` command allows you to delete aliases.
 
 To delete a single alias:
@@ -2061,6 +2157,8 @@ $ unalias -a
 ```
 
 ---
+
+## `alias` and `unalias` commands
 
 To disable an alias temporarily, the combination is `\<alias name>`.
 
@@ -2078,6 +2176,8 @@ ls is an alias to « ls -rt »
 
 ---
 
+## `alias` and `unalias` commands
+
 Now that this is known, we can see the results of using the alias or disabling it one time with the `\` by executing the following:
 
 ```bash
@@ -2089,33 +2189,33 @@ file1.txt  file2.txt  file3.txt
 
 ---
 
-# Aliases and Useful Functions
+## Aliases and Useful Functions
 
-* `grep` alias.
+<i class="fa fa-arrow-right-from-bracket"></i> `grep` alias.
 
 Colorize the result of the `grep` command: `alias grep='grep --color=auto'`
 
-* `mcd` function
+<i class="fa fa-arrow-right-from-bracket"></i> `mcd` function
 
 It is common to create a folder and then move around in it: `mcd() { mkdir -p "$1"; cd "$1"; }`
 
 ---
 
-# Aliases and Useful Functions
+## Aliases and Useful Functions
 
-* `cls` function
+<i class="fa fa-arrow-right-from-bracket"></i> `cls` function
 
 Move to a folder and list its contents: `cls() { cd "$1"; ls; }`
 
-* `backup` function
+<i class="fa fa-arrow-right-from-bracket"></i> `backup` function
 
 Create a backup copy of a file: `backup() { cp "$1"{,.bak}; }`
 
 ---
 
-# Aliases and Useful Functions
+## Aliases and Useful Functions
 
-* `extract` function
+<i class="fa fa-arrow-right-from-bracket"></i> `extract` function
 
 Extract any type of archive:
 
@@ -2148,7 +2248,13 @@ extract () {
 
 ---
 
-* If `alias cmount` returns the following: `alias cmount="mount | column -t"`
+## Aliases and Useful Functions
+
+<i class="fa fa-arrow-right-from-bracket"></i> If `alias cmount` returns the following: `alias cmount="mount | column -t"`
+
+---
+
+## Aliases and Useful Functions
 
 Then we can use `cmount` to show all of the system mounts in columns like this: `[root]# cmount`
 
@@ -2166,7 +2272,7 @@ none        on  /proc/sys/fs/binfmt_misc                   type  binfmt_misc  (r
 
 ---
 
-### The character `;`
+## The character `;`
 
 The `;` character strings the commands.
 
@@ -2178,7 +2284,7 @@ $ ls /; cd /home; ls -lia; cd /
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: What defines a user under Linux? (7 answers)
 
@@ -2186,7 +2292,7 @@ $ ls /; cd /home; ls -lia; cd /
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: Which commands allow you to search for help on a command?
 
@@ -2198,13 +2304,13 @@ $ ls /; cd /home; ls -lia; cd /
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: Which command allows you to view a user's history?
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: Which command allows you to search for text in a file?
 
@@ -2213,7 +2319,7 @@ $ ls /; cd /home; ls -lia; cd /
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: Which command allows you to search for a file?
 
@@ -2222,7 +2328,7 @@ $ ls /; cd /home; ls -lia; cd /
 
 ---
 
-## Check your Knowledge
+## <i class="fa fa-user-check"></i> Check your Knowledge
 
 :heavy_check_mark: Which command redirects the error stream of a command to a new `errors.log` file?
 
