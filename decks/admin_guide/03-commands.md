@@ -4,8 +4,8 @@ theme: gaia
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../index.md)'
-footer: '**Rocky Linux Academy -> Admin Guide -> Commands**'
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
+footer: '**Rocky Linux Academy > Admin Guide > Commands**'
 ---
 
 <style>
@@ -26,6 +26,7 @@ section {
 </style>
 
 # Linux Commands
+
 ## Commands for Linux Users
 
 In this chapter you will learn Linux commands and how to use them.
