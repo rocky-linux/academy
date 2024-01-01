@@ -3,6 +3,7 @@
 @import url('fontawesome.css');
 @import url('solid.css');
 @import url('brands.css');
+@import url('regular.css');
 
 
 header {
@@ -78,7 +79,22 @@ section a:hover {
   background-color: #fff8e1;
   text-decoration-line: underline;
 }
-
+.button a {
+  background-color: #fdf6e2;
+  padding: 0em 0.6em 0em 0.6em;
+  text-decoration: none;
+  color: #6b7280;
+  border: 2px solid #6b7280;
+  border-radius: .6rem;
+  text-decoration: none;
+}
+.button a:hover {
+  background-color: #fefbf2;
+  text-decoration: none;
+}
+.h1lead h1 {
+  color: #096f4d;
+}
 .fa-solid {
   background-color: #10b981;
   border-radius: 0.2em;
