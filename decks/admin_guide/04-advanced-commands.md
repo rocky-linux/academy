@@ -231,7 +231,15 @@ $ find /var/log -name "*.old" "*.log"
 find: paths must precede expression: *.log
 ```
 
-In this case, the `xargs` command must be forced to execute the `find` command several times (once per line entered as standard input). The `-L` option followed by an **integer** allows you to specify the maximum number of entries to be processed with the command at one time:
+In this case, the `xargs` command must be forced to execute the `find` command several times (once per line entered as standard input).
+
+---
+
+## `xargs` commands
+
+The `-L` option followed by an **integer** allows you to specify the maximum number of entries to be processed with the command at one time:
+
+---
 
 ```bash
 $ xargs -L 1 find /var/log -name
@@ -249,6 +257,8 @@ $ xargs -L 1 find /var/log -name
 /var/log/anaconda.program.log
 <CTRL+D>
 ```
+
+---
 
 To specify both arguments on the same line, use the `-n 1` option:
 
@@ -268,6 +278,8 @@ $ xargs -n 1 find /var/log -name
 <CTRL+D>
 ```
 
+---
+
 Case study of a backup with a `tar` based on a search:
 
 ```bash
@@ -279,6 +291,8 @@ $ tar tvfP /root/log.tar
 
 The special feature of the `xargs` command is that it places the input argument at the end of the called command. This works very well with the above example since the files passed in will form the list of files to be added to the archive.
 
+---
+
 Using the example of the `cp` command, to copy a list of files in a directory, this list of files will be added at the end of the command... but what the `cp` command expects at the end of the command is the destination. To do this,  use the `-I` option to put the input arguments somewhere else than at the end of the line.
 
 ```bash
@@ -287,31 +301,41 @@ find /var/log -type f -name "*.log" | xargs -I % cp % /root/backup
 
 The `-I` option allows you to specify a character (the `%` character in the above example) where the input files to `xargs` will be placed.
 
+---
+
 ## `yum-utils` package
 
 The `yum-utils` package is a collection of utilities, built for `yum` by various authors, which make it easier and more powerful to use.
 
-!!! Note
+---
 
-    While `yum` has been replaced by `dnf` in Rocky Linux 8, the package name has remained `yum-utils`, although it can be installed as `dnf-utils` as well. These are classic YUM utilities implemented as CLI shims on top of DNF to maintain backwards compatibility with `yum-3`.
+### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
+
+While `yum` has been replaced by `dnf` in Rocky Linux 8, the package name has remained `yum-utils`, although it can be installed as `dnf-utils` as well. These are classic YUM utilities implemented as CLI shims on top of DNF to maintain backwards compatibility with `yum-3`.
+
+---
 
 Here are some examples of these utilities:
 
-* `repoquery` command
+<i class="fa fa-arrow-right-from-bracket"></i> `repoquery` command
 
 The `repoquery` command is used to query the packages in the repository.
 
-Examples of use:
+---
 
-  * Display the dependencies of a package (it can be a software package that has been installed or not installed), equivalent to `dnf deplist <package-name>`
+<i class="fa fa-share-from-square"></i> Examples of use:
 
-    ```bash
-    repoquery --requires <package-name>
-    ```
+<i class="fa fa-arrow-right-from-bracket"></i> Display the dependencies of a package (it can be a software package that has been installed or not installed), equivalent to `dnf deplist <package-name>`
 
-  * Display the files provided by an installed package (does not work for packages that are not installed), equivalent to `rpm -ql <package-name>`
+```bash
+ repoquery --requires <package-name>
+```
 
-    ```bash
+---
+
+<i class="fa fa-arrow-right-from-bracket"></i> Display the files provided by an installed package (does not work for packages that are not installed), equivalent to `rpm -ql <package-name>`
+
+```bash
     $ repoquery -l yum-utils
     /etc/bash_completion.d
     /etc/bash_completion.d/yum-utils.bash
@@ -321,31 +345,22 @@ Examples of use:
     /usr/bin/package-cleanup
     /usr/bin/repo-graph
     /usr/bin/repo-rss
-    /usr/bin/repoclosure
-    /usr/bin/repodiff
-    /usr/bin/repomanage
-    /usr/bin/repoquery
-    /usr/bin/reposync
-    /usr/bin/repotrack
-    /usr/bin/show-changed-rco
-    /usr/bin/show-installed
-    /usr/bin/verifytree
-    /usr/bin/yum-builddep
-    /usr/bin/yum-config-manager
-    /usr/bin/yum-debug-dump
-    /usr/bin/yum-debug-restore
-    /usr/bin/yum-groups-manager
-    /usr/bin/yumdownloader
     …
-    ```
+```
 
-* `yumdownloader` command:
+---
+
+<i class="fa fa-arrow-right-from-bracket"></i> `yumdownloader` command
 
 The `yumdownloader` command downloads RPM packages from the repositories.  Equivalent to `dnf download --downloadonly --downloaddir ./  package-name`
 
-!!! Note
+### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
 
-    This command is very useful to quickly build a local repository of a few rpms!
+This command is very useful to quickly build a local repository of a few rpms!
+
+---
+
+<i class="fa fa-arrow-right-from-bracket"></i> `yumdownloader` command
 
 Example: `yumdownloader` will download the _samba_ rpm package and all its dependencies:
 
@@ -355,10 +370,16 @@ or
 $ dnf download --downloadonly --downloaddir /var/tmp  --resolve  samba
 ```
 
+---
+
+<i class="fa fa-arrow-right-from-bracket"></i> `yumdownloader` command
+
 | Options     |  Comments                                                       |
 |-------------|-----------------------------------------------------------------|
 | `--destdir` | The downloaded packages will be stored in the specified folder. |
 | `--resolve` | Also downloads the package dependencies.                        |
+
+---
 
 ## `psmisc` packages
 
@@ -368,7 +389,9 @@ The `psmisc` package contains utilities for managing system processes:
 * `killall`: the `killall` command sends a kill signal to all processes identified by name.
 * `fuser`: the `fuser` command identifies the `PID` of processes that use the specified files or file systems.
 
-Examples:
+---
+
+<i class="fa fa-share-from-square"></i> Examples:
 
 ```bash
 $ pstree
@@ -378,17 +401,15 @@ systemd─┬─NetworkManager───2*[{NetworkManager}]
         ├─crond
         ├─dbus-daemon───{dbus-daemon}
         ├─firewalld───{firewalld}
-        ├─lvmetad
-        ├─master─┬─pickup
-        │        └─qmgr
-        ├─polkitd───5*[{polkitd}]
-        ├─rsyslogd───2*[{rsyslogd}]
-        ├─sshd───sshd───bash───pstree
+        ...
+        ...
         ├─systemd-journal
         ├─systemd-logind
         ├─systemd-udevd
         └─tuned───4*[{tuned}]
 ```
+
+---
 
 ```bash
 # killall httpd
@@ -400,19 +421,23 @@ Kill processes (option `-k`) that access the `/etc/httpd/conf/httpd.conf` file:
 # fuser -k /etc/httpd/conf/httpd.conf
 ```
 
+---
+
 ## `watch` command
 
 The `watch` command regularly executes a command and displays the result in the terminal in full screen.
 
 The `-n` option allows you to specify the number of seconds between each execution of the command.
 
-!!! Note
+#### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
 
-    To exit the `watch` command, you must type the keys: <kbd>CTRL</kbd>+<kbd>C</kbd> to kill the process.
+To exit the `watch` command, you must type the keys: <kbd>CTRL</kbd>+<kbd>C</kbd> to kill the process.
 
-Examples:
+---
 
-* Display the end of the `/etc/passwd` file every 5 seconds:
+<i class="fa fa-share-from-square"></i> Examples:
+
+<i class="fa fa-arrow-right-from-bracket"></i> Display the end of the `/etc/passwd` file every 5 seconds:
 
 ```bash
 watch -n 5 tail -n 3 /etc/passwd
@@ -421,24 +446,27 @@ watch -n 5 tail -n 3 /etc/passwd
 Result:
 
 ```bash
-Every 5.0s: tail -n 3 /etc/passwd                                                                                                                                rockstar.rockylinux.lan: Thu Jul  1 15:43:59 2021
-
+Every 5.0s: tail -n 3 /etc/passwd                           rockstar.rockylinux.lan: Thu Jul  1 15:43:59 2021
 sssd:x:996:993:User for sssd:/:/sbin/nologin
 chrony:x:995:992::/var/lib/chrony:/sbin/nologin
 sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
 ```
 
-* Monitoring the number of files in a folder:
+---
+
+<i class="fa fa-arrow-right-from-bracket"></i> Monitoring the number of files in a folder:
 
 ```bash
 watch -n 1 'ls -l | wc -l'
 ```
 
-* Display a clock:
+<i class="fa fa-arrow-right-from-bracket"></i> Display a clock:
 
 ```bash
 watch -t -n 1 date
 ```
+
+---
 
 ## `install` command
 
@@ -452,7 +480,7 @@ install -t directory source [...]
 install -d directory
 ```
 
-Options:
+---
 
 | Options | Remarks                                                      |
 | ------- | ------------------------------------------------------------ |
@@ -461,14 +489,24 @@ Options:
 | `-D`    | create all leading components before copying SOURCE to DEST. |
 | `-g` and `-o`    | set ownership.                                      |
 | `-m`    | set permissions.                                             |
+
+---
+
+| Options | Remarks                                                      |
+| ------- | ------------------------------------------------------------ |
 | `-p`    | preserve the timestamps of sources files.                    |
 | `-t`    | copy all source arguments to directory.                      |
 
-!!! note
+#### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
 
-    There are options for managing the SELinux context (see the manual page).
+There are options for managing the SELinux context (see the manual page).
 
-Examples:
+
+---
+
+## `install` command
+
+<i class="fa fa-share-from-square"></i> Examples:
 
 Create a directory with the `-d` option:
 
@@ -482,6 +520,10 @@ Copy a file from a source location to a directory:
 install src/sample.txt ~/samples/
 ```
 
+---
+
+## `install` command
+
 These two orders could have been carried out with a single command:
 
 ```bash
@@ -490,15 +532,23 @@ install: creating directory '~/samples'
 'src/sample.txt' -> '~/samples/sample.txt'
 ```
 
+---
+
+## `install` command
+
 This command already saves time, now let's combine it with owner, owner group and rights management:
 
 ```bash
 sudo install -v -o rocky -g users -m 644 -D -t ~/samples/ src/sample.txt
 ```
 
- !!! note
+#### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
 
-     `sudo` is required in this case to make property changes.
+`sudo` is required in this case to make property changes.
+
+---
+
+## `install` command
 
 You can also create a backup of existing files thanks to the `-b` option:
 
@@ -508,6 +558,10 @@ $ install -v -b -D -t ~/samples/ src/sample.txt
 ```
 
 As you can see, the `install` command creates a backup file with a `~` tilde appended to the original file name.
+
+---
+
+## `install` command
 
 The suffix can be specified thanks to the `-S` option:
 
