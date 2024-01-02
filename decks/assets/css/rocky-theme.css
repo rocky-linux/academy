@@ -93,33 +93,8 @@ section a:hover {
   text-decoration: none;
 }
 
-.navigation {
+.button {
   float: right;
-}
-
-.navigation {
-  color: #fff;
-}
-
-.navigation a {
-  background-color: #10b981;
-  padding: 0.6em 0.6em 0.6em 0.6em;
-  text-decoration: none;
-  color: white;
-  border: 1px solid #f5f5f5;
-  border-radius: .2rem;
-  text-decoration: none;
-  font-size: 66%;
-  line-height: 50px;
-}
-
-.navigation a:visited {
-  color: inherit;
-}
-
-.navigation a:hover {
-  background-color: #0c9467;
-  text-decoration: none;
 }
 
 .h1lead h1 {
