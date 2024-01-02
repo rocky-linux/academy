@@ -103,9 +103,16 @@ section a:hover {
 }
 
 .fa-warnings {
-  background-color: #fff4e5;
+  background-color: #ffe7ec;
+  border-radius: 0.8em;
+  border-style: solid;
+  border-width: 0.1em;
+  border-color: #6b7280;
+  color: #000;
+  padding: 0.1em 0.6em 0.6em 0.6em;
+}
+.fa-warnings h2 {
   color: #ff1744;
-  padding: 0.3em;
 }
 
 .fa-danger {
@@ -123,10 +130,13 @@ section a:hover {
 }
 
 .fa-tip {
-  background-color: #7fdfd2;
-  border-radius: 0.2em;
-  color: #fff;
-  padding: 0.3em;
+  background-color: #e5f8f6;
+  border-radius: 0.8em;
+  border-style: solid;
+  border-width: 0.1em;
+  border-color: #6b7280;
+  color: #000;
+  padding: 0.1em 0.6em 0.6em 0.6em;
 }
 
 img[alt~="center"] {

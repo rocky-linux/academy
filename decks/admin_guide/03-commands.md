@@ -440,9 +440,13 @@ On a physical terminal, the display will be permanently hidden, whereas in a gra
 
 ---
 
-### <i class="fa-solid fa-tip fa-lightbulb"> Tip</i>
+<div class="fa-tip">
+
+## <i class="fa-regular fa-lightbulb"></i> Tip
 
 <kbd>CTRL</kbd> + <kbd>L</kbd> will have the same effect as the `clear` command
+
+</div>
 
 ---
 
@@ -1842,9 +1846,13 @@ $ find /home -name "test[123]*"
 
 Always surround words containing meta-characters with `"` to prevent them from being replaced by the names of files that meet the criteria.
 
-### <i class="fa-solid fa-warnings fa-exclamation-circle"> Warning</i>
+<div class="fa-warnings">
+
+## <i class="fa-regular fa-bell"></i> Warning
 
 Do not confuse shell meta-characters with regular expression meta-characters. The `grep` command uses regular expression meta-characters.
+
+</div>
 
 ---
 
