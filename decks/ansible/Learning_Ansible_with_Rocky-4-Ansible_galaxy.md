@@ -19,7 +19,7 @@ header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Ansible courses > 4 - Ansible Galaxy**'
 ---
 
-# 4 - Ansible Galaxy
+# ![right:20% w:50](../assets/rocky_linux_logo.svg) 4 - Ansible Galaxy
 
 ## Learning Ansible with Rocky
 

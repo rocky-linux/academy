@@ -19,7 +19,7 @@ header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Ansible courses > 3 - Management of Files**'
 ---
 
-# 3 - Management of Files
+# ![right:20% w:50](../assets/rocky_linux_logo.svg) 3 - Management of Files
 
 ## Learning Ansible with Rocky
 
