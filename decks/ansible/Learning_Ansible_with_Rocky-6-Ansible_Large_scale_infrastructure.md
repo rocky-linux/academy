@@ -19,7 +19,7 @@ header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Ansible courses > 6 - Large scale infrastructure**'
 ---
 
-# 6 - Large scale infrastructure
+# ![right:20% w:50](../assets/rocky_linux_logo.svg) 6 - Large scale infrastructure
 
 ## Learning Ansible with Rocky
 

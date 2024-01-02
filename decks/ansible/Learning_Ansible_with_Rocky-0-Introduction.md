@@ -18,15 +18,17 @@ markdown.marp.enableHtml: true
 header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Ansible courses > Introduction**'
 ---
+# Ansible
 
-![right:20% w:100](./assets/rocky_linux_logo.svg)
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
-Ansible is a simple, yet powerful, automation engine for Linux.
+**Ansible is a simple, yet powerful, automation engine for Linux.**
+
 <br/>
 
 <div class="columns">
 <div>
-This tutorial will guide you through the concepts of using Ansible to automate your IT tasks in a way that is (hopefully) fun and informative. 
+This tutorial will guide you through the concepts of using Ansible to automate your IT tasks in a way that is (hopefully) fun and informative.
 </div>
 <div>
 Using the exercises throughout these chapters, will help you gain a comfort level with Ansible in real-world applications.
@@ -36,7 +38,7 @@ Using the exercises throughout these chapters, will help you gain a comfort leve
 
 ---
 
-# Table of contents
+## ![right:20% w:50](../assets/rocky_linux_logo.svg) Table of contents
 
 :heavy_check_mark: [Introduction](Learning_Ansible_with_Rocky-0-Introduction.html)
 :heavy_check_mark: [Ansible Basics](Learning_Ansible_with_Rocky-1-Ansible_Basics.html)
@@ -49,23 +51,11 @@ Using the exercises throughout these chapters, will help you gain a comfort leve
 :heavy_check_mark: [Management server optimizations](ansible/Learning_Ansible_with_Rocky-8-Ansible_Management_server_optimizations.html)
 
 ---
-#
 
-<div class="columns">
-<div>
+## Next steps
 
-
-
-</div>
-<div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<div class="navigation">
 
 [Next Chapter](./Learning_Ansible_with_Rocky-1-Ansible_Basics.html)
 
-</div>
 </div>
