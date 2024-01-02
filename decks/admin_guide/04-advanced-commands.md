@@ -1,113 +1,54 @@
 ---
 marp: true
 theme: gaia
-_class: lead
 paginate: true
+_class: lead
 markdown.marp.enableHtml: true
-
-backgroundColor: #fff
-
-header: Rocky Linux Admin Guide | X - 
-footer: Rocky Linux Academy - Admin Guide
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../index.html)'
+footer: '**Rocky Linux Academy > Admin Guide > Advanced Commands**'
 ---
+
 <style>
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
+header,footer
+{
+    color: #fff;
 }
-blockquote {
-  background: #ffedcc;
-  border-left: 10px solid #d1bf9d;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+section header a {
+  color: inherit;
 }
-blockquote:before{
-  content: unset;
+section a,a:link,a:visited {
+    color: inherit;
 }
-blockquote:after{
-  content: unset;
+section {
+  padding-top: 90px;
 }
-header {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-    font-size: 1em;
-    padding: 20px;
-}
-footer {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-}
-
-.columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-.columns3 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-} 
-
-.fa-twitter { color: aqua; }
-.fa-mastodon { color: purple; }
-.fa-linkedin { color: blue; }
-.fa-window-maximize { color: skyblue; }
-.fa-circle-exclamation { color: red; }
-.fa-trophy { color: #10b981; }
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
-table {
-  font-size: 10px;
-}
+@import url('../assets/css/rocky-theme.css');
 </style>
 
-# X - 
-## Rocky Linux Admin Guide
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
----
-<br/>
+<div class="h1lead">
 
-# <i class="fa-solid fa-trophy"></i> Objectives
+# Advanced Linux Commands
 
-In this chapter you will learn how to .
+</div>
 
-:heavy_check_mark: ;
-:heavy_check_mark: ;
-:heavy_check_mark: .
-
----
-<br/>
-
-# Plan
-
-* [](#4)
-  
----
-
----
-title: Advanced Linux Commands
----
-
-# Advanced Commands for Linux users
+## Advanced Commands for Linux users
 
 Advanced commands provide greater customization and controls in more specialized situations once you become familiar with basic commands.
 
-****
+---
 
-**Objectives**: In this chapter, future Linux administrators will learn:
+# <i class="fa-solid fa-trophy"></i> Objectives
 
-:heavy_check_mark: some useful commands not covered in the previous chapter.   
+In this chapter, future Linux administrators will learn:
+
+:heavy_check_mark: some useful commands not covered in the previous chapter.
 :heavy_check_mark: some advanced commands.
 
 :checkered_flag: **user commands**, **Linux**
 
-**Knowledge**: :star:   
+**Knowledge**: :star:
 **Complexity**: :star: :star: :star:
 
 **Reading time**: 20 minutes
@@ -118,9 +59,13 @@ Advanced commands provide greater customization and controls in more specialized
 
 The `uniq` command is a very powerful command, used with the `sort` command, especially for log file analysis. It allows you to sort and display entries by removing duplicates.
 
-To illustrate how the `uniq` command works, let's use a `firstnames.txt` file containing a list of first names:
+---
 
-```
+## `uniq` command
+
+To illustrate how the `uniq` command works, let us use a `firstnames.txt` file containing a list of first names:
+
+```text
 antoine
 xavier
 steven
@@ -131,13 +76,17 @@ antoine
 steven
 ```
 
-!!! Note
+### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
 
-    `uniq` requires the input file to be sorted before running because it only compares consecutive lines.
+`uniq` requires the input file to be sorted before running because it only compares consecutive lines.
+
+---
+
+## `uniq` command
 
 With no argument, the `uniq` command will not display identical lines that follow each other in the `firstnames.txt` file:
 
-```
+```bash
 $ sort firstnames.txt | uniq
 antoine
 patrick
@@ -145,25 +94,37 @@ steven
 xavier
 ```
 
+---
+
+## `uniq` command
+
 To display only the rows that appear only once, use the `-u` option:
 
-```
+```bash
 $ sort firstnames.txt | uniq -u
 patrick
 ```
 
+---
+
+## `uniq` command
+
 Conversely, to display only the lines that appear at least twice in the file, use the `-d` option:
 
-```
+```bash
 $ sort firstnames.txt | uniq -d
 antoine
 steven
 xavier
 ```
 
+---
+
+## `uniq` command
+
 To simply delete lines that appear only once, use the `-D` option:
 
-```
+```bash
 $ sort firstnames.txt | uniq -D
 antoine
 antoine
@@ -174,9 +135,11 @@ xavier
 xavier
 ```
 
+---
+
 Finally, to count the number of occurrences of each line, use the `-c` option:
 
-```
+```bash
 $ sort firstnames.txt | uniq -c
       3 antoine
       1 patrick
@@ -184,12 +147,14 @@ $ sort firstnames.txt | uniq -c
       2 xavier
 ```
 
-```
+```bash
 $ sort firstnames.txt | uniq -cd
       3 antoine
       2 steven
       2 xavier
 ```
+
+---
 
 ## `xargs` commands
 
@@ -197,9 +162,13 @@ The `xargs` command allows the construction and execution of command lines from 
 
 The `xargs` command reads whitespace or linefeed delimited arguments from standard input, and executes the command (`/bin/echo` by default) one or more times using the initial arguments followed by the arguments read from standard input.
 
+---
+
+## `xargs` commands
+
 A first and simplest example would be the following:
 
-```
+```bash
 $ xargs
 use
 of
@@ -208,18 +177,24 @@ xargs
 use of xargs
 ```
 
+---
+
+## `xargs` commands
+
 The `xargs` command waits for an input from the standard **stdin** input. Three lines are entered. The end of the user input is specified to `xargs` by the keystroke sequence <kbd>CTRL</kbd>+<kbd>D</kbd>. `xargs` then executes the default command `echo` followed by the three arguments corresponding to the user input, namely:
 
-```
+```bash
 $ echo "use" "of" "xargs"
 use of xargs
 ```
+
+---
 
 It is possible to specify a command to be run by `xargs`.
 
 In the following example, `xargs` will run the command `ls -ld` on the set of folders specified in the standard input:
 
-```
+```bash
 $ xargs ls -ld
 /home
 /tmp
@@ -230,27 +205,43 @@ dr-xr-x---. 2 root root 4096  5 avril 15:52 /root
 drwxrwxrwt. 3 root root 4096  6 avril 10:25 /tmp
 ```
 
+---
+
+## `xargs` commands
+
 In practice, the `xargs` command executed the `ls -ld /home /tmp /root` command.
 
 What happens if the command to be executed does not accept multiple arguments, such as with the `find` command?
 
-```
+```bash
 $ xargs find /var/log -name
 *.old
 *.log
 find: paths must precede expression: *.log
 ```
 
+---
+
+## `xargs` commands
+
 The `xargs` command attempted to execute the `find` command with multiple arguments behind the `-name` option, which caused `find` to generate an error:
 
-```
+```bash
 $ find /var/log -name "*.old" "*.log"
 find: paths must precede expression: *.log
 ```
 
-In this case, the `xargs` command must be forced to execute the `find` command several times (once per line entered as standard input). The `-L` option followed by an **integer** allows you to specify the maximum number of entries to be processed with the command at one time:
+In this case, the `xargs` command must be forced to execute the `find` command several times (once per line entered as standard input).
 
-```
+---
+
+## `xargs` commands
+
+The `-L` option followed by an **integer** allows you to specify the maximum number of entries to be processed with the command at one time:
+
+---
+
+```bash
 $ xargs -L 1 find /var/log -name
 *.old
 /var/log/dmesg.old
@@ -267,9 +258,11 @@ $ xargs -L 1 find /var/log -name
 <CTRL+D>
 ```
 
+---
+
 To specify both arguments on the same line, use the `-n 1` option:
 
-```
+```bash
 $ xargs -n 1 find /var/log -name
 *.old *.log
 /var/log/dmesg.old
@@ -285,9 +278,11 @@ $ xargs -n 1 find /var/log -name
 <CTRL+D>
 ```
 
+---
+
 Case study of a backup with a `tar` based on a search:
 
-```
+```bash
 $ find /var/log/ -name "*.log" -mtime -1 | xargs tar cvfP /root/log.tar
 $ tar tvfP /root/log.tar
 -rw-r--r-- root/root      1720 2017-04-05 15:43 /var/log/boot.log
@@ -296,38 +291,51 @@ $ tar tvfP /root/log.tar
 
 The special feature of the `xargs` command is that it places the input argument at the end of the called command. This works very well with the above example since the files passed in will form the list of files to be added to the archive.
 
+---
+
 Using the example of the `cp` command, to copy a list of files in a directory, this list of files will be added at the end of the command... but what the `cp` command expects at the end of the command is the destination. To do this,  use the `-I` option to put the input arguments somewhere else than at the end of the line.
 
-```
-$ find /var/log -type f -name "*.log" | xargs -I % cp % /root/backup
+```bash
+find /var/log -type f -name "*.log" | xargs -I % cp % /root/backup
 ```
 
 The `-I` option allows you to specify a character (the `%` character in the above example) where the input files to `xargs` will be placed.
+
+---
 
 ## `yum-utils` package
 
 The `yum-utils` package is a collection of utilities, built for `yum` by various authors, which make it easier and more powerful to use.
 
-!!! Note
+---
 
-    While `yum` has been replaced by `dnf` in Rocky Linux 8, the package name has remained `yum-utils`, although it can be installed as `dnf-utils` as well. These are classic YUM utilities implemented as CLI shims on top of DNF to maintain backwards compatibility with `yum-3`.
+### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
+
+While `yum` has been replaced by `dnf` in Rocky Linux 8, the package name has remained `yum-utils`, although it can be installed as `dnf-utils` as well. These are classic YUM utilities implemented as CLI shims on top of DNF to maintain backwards compatibility with `yum-3`.
+
+---
 
 Here are some examples of these utilities:
 
-* `repoquery` command
+<i class="fa fa-arrow-right-from-bracket"></i> `repoquery` command
 
 The `repoquery` command is used to query the packages in the repository.
 
-Examples of use:
+---
 
-  * Display the dependencies of a package (it can be a software package that has been installed or not installed), equivalent to `dnf deplist <package-name>`
-    ```
-    repoquery --requires <package-name>
-    ```
-    
-  * Display the files provided by an installed package (does not work for packages that are not installed), equivalent to `rpm -ql <package-name>`
+<i class="fa fa-share-from-square"></i> Examples of use:
 
-    ```
+<i class="fa fa-arrow-right-from-bracket"></i> Display the dependencies of a package (it can be a software package that has been installed or not installed), equivalent to `dnf deplist <package-name>`
+
+```bash
+ repoquery --requires <package-name>
+```
+
+---
+
+<i class="fa fa-arrow-right-from-bracket"></i> Display the files provided by an installed package (does not work for packages that are not installed), equivalent to `rpm -ql <package-name>`
+
+```bash
     $ repoquery -l yum-utils
     /etc/bash_completion.d
     /etc/bash_completion.d/yum-utils.bash
@@ -337,44 +345,41 @@ Examples of use:
     /usr/bin/package-cleanup
     /usr/bin/repo-graph
     /usr/bin/repo-rss
-    /usr/bin/repoclosure
-    /usr/bin/repodiff
-    /usr/bin/repomanage
-    /usr/bin/repoquery
-    /usr/bin/reposync
-    /usr/bin/repotrack
-    /usr/bin/show-changed-rco
-    /usr/bin/show-installed
-    /usr/bin/verifytree
-    /usr/bin/yum-builddep
-    /usr/bin/yum-config-manager
-    /usr/bin/yum-debug-dump
-    /usr/bin/yum-debug-restore
-    /usr/bin/yum-groups-manager
-    /usr/bin/yumdownloader
     …
-    ```
+```
 
-* `yumdownloader` command:
+---
+
+<i class="fa fa-arrow-right-from-bracket"></i> `yumdownloader` command
 
 The `yumdownloader` command downloads RPM packages from the repositories.  Equivalent to `dnf download --downloadonly --downloaddir ./  package-name`
 
-!!! Note
+### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
 
-    This command is very useful to quickly build a local repository of a few rpms!
+This command is very useful to quickly build a local repository of a few rpms!
+
+---
+
+<i class="fa fa-arrow-right-from-bracket"></i> `yumdownloader` command
 
 Example: `yumdownloader` will download the _samba_ rpm package and all its dependencies:
 
-```
+```bash
 $ yumdownloader --destdir /var/tmp --resolve samba
 or
 $ dnf download --downloadonly --downloaddir /var/tmp  --resolve  samba
 ```
 
+---
+
+<i class="fa fa-arrow-right-from-bracket"></i> `yumdownloader` command
+
 | Options     |  Comments                                                       |
 |-------------|-----------------------------------------------------------------|
 | `--destdir` | The downloaded packages will be stored in the specified folder. |
 | `--resolve` | Also downloads the package dependencies.                        |
+
+---
 
 ## `psmisc` packages
 
@@ -384,9 +389,11 @@ The `psmisc` package contains utilities for managing system processes:
 * `killall`: the `killall` command sends a kill signal to all processes identified by name.
 * `fuser`: the `fuser` command identifies the `PID` of processes that use the specified files or file systems.
 
-Examples:
+---
 
-```
+<i class="fa fa-share-from-square"></i> Examples:
+
+```bash
 $ pstree
 systemd─┬─NetworkManager───2*[{NetworkManager}]
         ├─agetty
@@ -394,27 +401,27 @@ systemd─┬─NetworkManager───2*[{NetworkManager}]
         ├─crond
         ├─dbus-daemon───{dbus-daemon}
         ├─firewalld───{firewalld}
-        ├─lvmetad
-        ├─master─┬─pickup
-        │        └─qmgr
-        ├─polkitd───5*[{polkitd}]
-        ├─rsyslogd───2*[{rsyslogd}]
-        ├─sshd───sshd───bash───pstree
+        ...
+        ...
         ├─systemd-journal
         ├─systemd-logind
         ├─systemd-udevd
         └─tuned───4*[{tuned}]
 ```
 
-```
+---
+
+```bash
 # killall httpd
 ```
 
 Kill processes (option `-k`) that access the `/etc/httpd/conf/httpd.conf` file:
 
-```
+```bash
 # fuser -k /etc/httpd/conf/httpd.conf
 ```
+
+---
 
 ## `watch` command
 
@@ -422,58 +429,143 @@ The `watch` command regularly executes a command and displays the result in the 
 
 The `-n` option allows you to specify the number of seconds between each execution of the command.
 
-!!! Note
+#### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
 
-    To exit the `watch` command, you must type the keys: <kbd>CTRL</kbd>+<kbd>C</kbd> to kill the process.
+To exit the `watch` command, you must type the keys: <kbd>CTRL</kbd>+<kbd>C</kbd> to kill the process.
 
-Examples:
+---
 
-* Display the end of the `/etc/passwd` file every 5 seconds:
+<i class="fa fa-share-from-square"></i> Examples:
 
-```
-$ watch -n 5 tail -n 3 /etc/passwd
+<i class="fa fa-arrow-right-from-bracket"></i> Display the end of the `/etc/passwd` file every 5 seconds:
+
+```bash
+watch -n 5 tail -n 3 /etc/passwd
 ```
 
 Result:
 
-```
-Every 5.0s: tail -n 3 /etc/passwd                                                                                                                                rockstar.rockylinux.lan: Thu Jul  1 15:43:59 2021
-
+```bash
+Every 5.0s: tail -n 3 /etc/passwd                           rockstar.rockylinux.lan: Thu Jul  1 15:43:59 2021
 sssd:x:996:993:User for sssd:/:/sbin/nologin
 chrony:x:995:992::/var/lib/chrony:/sbin/nologin
 sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
 ```
 
-* Monitoring the number of files in a folder:
+---
 
-```
-$ watch -n 1 'ls -l | wc -l'
+<i class="fa fa-arrow-right-from-bracket"></i> Monitoring the number of files in a folder:
+
+```bash
+watch -n 1 'ls -l | wc -l'
 ```
 
-* Display a clock:
+<i class="fa fa-arrow-right-from-bracket"></i> Display a clock:
 
-```
-$ watch -t -n 1 date
+```bash
+watch -t -n 1 date
 ```
 
 ---
-#
 
-<div class="columns">
-<div>
+## `install` command
+
+Contrary to what its name might suggest, the `install` command is not used to install new packages.
+
+This command combines file copying (`cp`) and directory creation (`mkdir`), with rights management (`chmod`, `chown`) and other useful functionalities (like backups).
+
+```bash
+install source dest  
+install -t directory source [...]
+install -d directory
+```
+
+---
+
+| Options | Remarks                                                      |
+| ------- | ------------------------------------------------------------ |
+| `-b` or `--backup[=suffix]` | create a backup of destination file.     |
+| `-d`    | treat arguments as directory names.                          |
+| `-D`    | create all leading components before copying SOURCE to DEST. |
+| `-g` and `-o`    | set ownership.                                      |
+| `-m`    | set permissions.                                             |
+
+---
+
+| Options | Remarks                                                      |
+| ------- | ------------------------------------------------------------ |
+| `-p`    | preserve the timestamps of sources files.                    |
+| `-t`    | copy all source arguments to directory.                      |
+
+#### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
+
+There are options for managing the SELinux context (see the manual page).
 
 
+---
 
-</div>
-<div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+## `install` command
 
-[Next Chapter](./.html)
+<i class="fa fa-share-from-square"></i> Examples:
 
-</div>
-</div>
+Create a directory with the `-d` option:
+
+```bash
+install -d ~/samples
+```
+
+Copy a file from a source location to a directory:
+
+```bash
+install src/sample.txt ~/samples/
+```
+
+---
+
+## `install` command
+
+These two orders could have been carried out with a single command:
+
+```bash
+$ install -v -D -t ~/samples/ src/sample.txt
+install: creating directory '~/samples'
+'src/sample.txt' -> '~/samples/sample.txt'
+```
+
+---
+
+## `install` command
+
+This command already saves time, now let's combine it with owner, owner group and rights management:
+
+```bash
+sudo install -v -o rocky -g users -m 644 -D -t ~/samples/ src/sample.txt
+```
+
+#### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
+
+`sudo` is required in this case to make property changes.
+
+---
+
+## `install` command
+
+You can also create a backup of existing files thanks to the `-b` option:
+
+```bash
+$ install -v -b -D -t ~/samples/ src/sample.txt
+'src/sample.txt' -> '~/samples/sample.txt' (archive: '~/samples/sample.txt~')
+```
+
+As you can see, the `install` command creates a backup file with a `~` tilde appended to the original file name.
+
+---
+
+## `install` command
+
+The suffix can be specified thanks to the `-S` option:
+
+```bash
+$ install -v -b -S ".bak" -D -t ~/samples/ src/sample.txt
+'src/sample.txt' -> '~/samples/sample.txt' (archive: '~/samples/sample.txt.bak')
+```

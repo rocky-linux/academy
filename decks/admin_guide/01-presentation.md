@@ -1,36 +1,37 @@
 ---
 marp: true
 theme: gaia
-style: |
-  :root {
-    --color-background: #fff !important;
-    --color-foreground: #111927 !important;
-    --color-highlight: #10b981 !important;
-    --color-dimmed: #10b981 !important;
-  }
-_class: lead
 paginate: true
+_class: lead
 markdown.marp.enableHtml: true
-header: '![w:50](../assets/rocky_linux_logo_white.svg) **Introduction**'
-footer: Rocky Linux Academy - Admin Guide
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../index.html)'
+footer: '**Rocky Linux Academy > Admin Guide > Presentation**'
 ---
-# Introduction to Linux
 
 <style>
 header,footer
 {
     color: #fff;
 }
-section {
-  padding-top: 8%;
+section header a {
+  color: inherit;
 }
-
+section a,a:link,a:visited {
+    color: inherit;
+}
+section {
+  padding-top: 90px;
+}
 @import url('../assets/css/rocky-theme.css');
-@import url('../assets/css/fontawesome.css');
-@import url('../assets/css//solid.css');
-@import url('../assets/css/brands.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
 </style>
+
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
+
+<div class="h1lead">
+
+# Introduction to Linux
+
+</div>
 
 ## Introduction to the Linux Operating System
 
@@ -50,7 +51,7 @@ In this chapter you will learn about GNU/Linux distributions.
 
 ---
 
-# Plan
+# <i class="fa-solid fa-table-columns"></i> Plan
 
 * [What is an operating system?](#4)
 * [Generalities UNIX - GNU/Linux](#8)
@@ -61,13 +62,13 @@ In this chapter you will learn about GNU/Linux distributions.
 
 ---
 
-# What is an operating system?
+# <i class="fa-solid fa-question"></i> What is an operating system?
 
 Linux, UNIX, BSD, Windows, and MacOS are all **operating systems**.
 
-Abstract
+## Abstract
 
-    An operating system is a set of programs that manages the available resources of a computer.
+<i class="fa fa-quote-left fa-2x fa-pull-left"></i> An operating system is a set of programs that manages the available resources of a computer.
 
 ---
 
@@ -90,13 +91,11 @@ As part of this management of resources, the operating system has to:
 
 ---
 
-![w:400](images/operating_system.png)
+![w:500](images/operating_system.png)
 
 ---
 
-# Generalities UNIX - GNU/Linux
-
-![w:700](./images/gnu_tux.jpeg)
+# <i class="fa-solid fa-quote-right"></i> Generalities UNIX - GNU/Linux
 
 ---
 
@@ -113,11 +112,13 @@ As part of this management of resources, the operating system has to:
 
 # UNIX
 
-* **1969 — 1971**: After the withdrawal of Bell (1969) and then General Electric from the project, two developers, Ken Thompson and Dennis Ritchie (joined later by Brian Kernighan), judging MULTICS to be too complex, begin development of UNIX (UNiplexed Information and Computing Service). While it was originally created in Assembly language, the creators of UNIX eventually develop the B language and then the C language (1971) and completely rewrite UNIX. As it was developed in 1970, the reference (epoch) date for the start of time of UNIX/Linux systems is set at January 01, 1970.
+* **1969 — 1971**: After the withdrawal of Bell (1969) and then General Electric from the project, two developers, Ken Thompson and Dennis Ritchie (joined later by Brian Kernighan), judging MULTICS to be too complex, begin development of UNIX (UNiplexed Information and Computing Service). While it was originally created in Assembly language, the creators of UNIX eventually develop the B language and then the C language (1971) and completely rewrite UNIX. 
 
 ---
 
 # UNIX
+
+As it was developed in 1970, the reference (epoch) date for the start of time of UNIX/Linux systems is set at January 01, 1970.
 
 The C language remains one of the most popular programming languages today. A low-level language, close to the hardware, it allows the adaptation of the operating system to any machine architecture having a C compiler.
 
@@ -184,6 +185,8 @@ UNIX is still relevant today (HP-UX, AIX, Solaris, etc.).
 * **2021**: Rocky Linux is created, based on Red Hat distribution.
 
 ---
+
+# Linux
 
 <i class="fa fa-quote-left fa-2x fa-pull-left"></i> Dispute over the name: although people are accustomed to calling the Linux operating system verbally, Linux is strictly a kernel. We must not forget the development and contribution of the GNU project to the open source cause, so! I prefer to call it the GNU/Linux operating system.
 
@@ -543,6 +546,6 @@ There are several types of shells available and configurable on a platform or ac
 [ ] C shell (csh)
 [ ] Korn shell (ksh)
 
----
+<i class="button">[Next Chapter](./03-command.html)</i>
 
-[Next Chapter](./03-command.html)
+---

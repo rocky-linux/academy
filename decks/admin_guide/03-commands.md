@@ -20,12 +20,15 @@ section {
   padding-top: 90px;
 }
 @import url('../assets/css/rocky-theme.css');
-@import url('../assets/css/fontawesome.css');
-@import url('../assets/css/solid.css');
-@import url('../assets/css/brands.css');
 </style>
 
-# Linux Commands
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
+
+<div class="h1lead">
+
+# Linux commands
+
+</div>
 
 ## Commands for Linux Users
 
