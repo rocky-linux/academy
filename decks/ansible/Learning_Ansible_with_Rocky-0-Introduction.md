@@ -52,9 +52,14 @@ Using the exercises throughout these chapters, will help you gain a comfort leve
 
 ---
 
-## Next steps
+## <i class="fa-regular fa-square-check"></i> Next steps
 
-<div class="navigation">
+</br>
+</br>
+</br>
+</br>
+
+<div class="button">
 
 [Next Chapter](./Learning_Ansible_with_Rocky-1-Ansible_Basics.html)
 
