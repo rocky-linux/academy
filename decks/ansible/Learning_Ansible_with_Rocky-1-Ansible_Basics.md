@@ -29,24 +29,24 @@ footer: '**Rocky Linux Academy > Ansible courses > 1 - Ansible Basics**'
 
 In this chapter you will learn how to work with Ansible.
 
-:heavy_check_mark: Implement Ansible;
-:heavy_check_mark: Apply configuration changes on a server;
-:heavy_check_mark: Create first Ansible playbooks;
+<i class="fa fa-check"></i> Implement Ansible;
+<i class="fa fa-check"></i> Apply configuration changes on a server;
+<i class="fa fa-check"></i> Create first Ansible playbooks;
 
 ---
 
 ## Plan
 
-* [Generalities](#4)
-* [Installation](#12)
-* [Ansible CLI](#20)
-* [Deployment](#30)
-* [The modules](#46)
-* [Playbooks](#59)
+<i class="fa fa-book"></i> [Generalities](#4)
+<i class="fa fa-book"></i> [Installation](#12)
+<i class="fa fa-book"></i> [Ansible CLI](#20)
+<i class="fa fa-book"></i> [Deployment](#30)
+<i class="fa fa-book"></i> [The modules](#46)
+<i class="fa fa-book"></i> [Playbooks](#59)
   
 ---
 
-## Generalities
+## Generalities 1/3
 
 Ansible centralizes and automates administration tasks. It is:
 
@@ -56,13 +56,13 @@ Ansible centralizes and automates administration tasks. It is:
 
 ---
 
-## Generalities
+## Generalities 2/3
 
 <i class="fa-solid fa-circle-exclamation"></i> The opening of SSH or WinRM flows to all clients from the Ansible server, makes it a **critical element of the architecture** that must be carefully monitored.
 
 ---
 
-## Generalities
+## Generalities 3/3
 
 Ansible can manage differents OS, network equipments, and even containers!
 
@@ -73,6 +73,7 @@ Ansible can manage differents OS, network equipments, and even containers!
 * ...
 
 ---
+
 ### Ansible functionalities
 
 <div class="columns">
@@ -95,11 +96,13 @@ Ansible is "push-based" (stateless).
 <div class="columns">
 
 <div>
+
 Optimize the work of all the teams:
 
-  * build
-  * run
-  * change
+* build
+* run
+* change
+  
 </div>
 <div>
 
@@ -1041,8 +1044,6 @@ test.yml
 ---
 #
 
-<div class="columns">
-<div>
 <br/>
 <br/>
 <br/>
@@ -1050,19 +1051,4 @@ test.yml
 <br/>
 <br/>
 
-[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
-
-
-</div>
-<div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-[Next Chapter >>](./Learning_Ansible_with_Rocky-2-Ansible_Advanced.html)
-
-</div>
-</div>
+<i class="button">[Next Chapter >>](./Learning_Ansible_with_Rocky-2-Ansible_Advanced.html)</i>

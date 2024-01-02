@@ -31,8 +31,8 @@ footer: '**Rocky Linux Academy > Ansible courses > 4 - Ansible Galaxy**'
 
 In this chapter you will learn how to use, install, and manage Ansible roles and collections.
 
-:heavy_check_mark: install and manage collections;
-:heavy_check_mark: install and manage roles.
+<i class="fa fa-check"></i> install and manage collections;
+<i class="fa fa-check"></i> install and manage roles.
 
 ---
 
@@ -40,9 +40,9 @@ In this chapter you will learn how to use, install, and manage Ansible roles and
 
 # Plan
 
-* [ansible-galaxy command](#5)
-* [Ansible Roles](#10)
-* [Ansible Collections](#42)
+<i class="fa fa-book"></i> [ansible-galaxy command](#5)
+<i class="fa fa-book"></i> [Ansible Roles](#10)
+<i class="fa fa-book"></i> [Ansible Collections](#42)
 
 ---
 
@@ -774,8 +774,6 @@ You can then store your own plugins or roles inside this new collection.
 
 #
 
-<div class="columns">
-<div>
 <br/>
 <br/>
 <br/>
@@ -783,18 +781,4 @@ You can then store your own plugins or roles inside this new collection.
 <br/>
 <br/>
 
-[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
-
-</div>
-<div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-[Next Chapter >>](./Learning_Ansible_with_Rocky-5-Ansible_deployments_with_ansistrano.html)
-
-</div>
-</div>
+<i class="button">[Next Chapter >>](./Learning_Ansible_with_Rocky-5-Ansible_deployments_with_ansistrano.html)</i>

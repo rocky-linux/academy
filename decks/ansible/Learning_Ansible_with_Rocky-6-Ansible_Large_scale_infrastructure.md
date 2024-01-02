@@ -30,19 +30,20 @@ footer: '**Rocky Linux Academy > Ansible courses > 6 - Large scale infrastructur
 
 In this chapter you will learn how to scale your configuration management system.
 
-:heavy_check_mark: Organize your code for large infrastructure;   
-:heavy_check_mark: Apply all or part of your configuration management to a group of nodes;   
+<i class="fa fa-check"></i> Organize your code for large infrastructure;   
+<i class="fa fa-check"></i> Apply all or part of your configuration management to a group of nodes;   
 
 ---
 <br/>
 
 # Plan
 
-* [Variables storage](#10)
-* [About Ansible tags](#18)
-* [About the directory layout](#24)
-* [Tests](#34)
-* [Benefits](#43)
+<i class="fa fa-book"></i> [Variables storage](#10)
+<i class="fa fa-book"></i> [About Ansible tags](#18)
+<i class="fa fa-book"></i> [About the directory layout](#24)
+<i class="fa fa-book"></i> [Tests](#34)
+<i class="fa fa-book"></i> [Benefits](#43)
+
 ---
 #
 <br/>
@@ -576,20 +577,8 @@ By following the advice given in the Ansible documentation, you will quickly obt
 ---
 #
 
-<div class="columns">
-<div>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
-
-
-</div>
-<div>
 <br/>
 <br/>
 <br/>
@@ -597,7 +586,4 @@ By following the advice given in the Ansible documentation, you will quickly obt
 <br/>
 <br/>
 
-[Next Chapter >>](./Learning_Ansible_with_Rocky-7-Ansible_Working_with_filters.html)
-
-</div>
-</div>
+<i class="button">[Next Chapter >>](./Learning_Ansible_with_Rocky-7-Ansible_Working_with_filters.html)</i>

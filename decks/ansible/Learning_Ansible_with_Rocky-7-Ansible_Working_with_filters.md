@@ -30,16 +30,15 @@ footer: '**Rocky Linux Academy > Ansible courses > 7 - Working with filters**'
 
 In this chapter you will learn how to transform data with jinja filters.
 
-:heavy_check_mark: Transform data structures as dictionaries or lists;  
-:heavy_check_mark: Transform variables.
+<i class="fa fa-check"></i> Transform data structures as dictionaries or lists;  
+<i class="fa fa-check"></i> Transform variables.
 
 ---
 <br/>
 
 # Plan
 
-* [Converting data](#9)
-
+<i class="fa fa-book"></i> [Converting data](#9)
 
 ---
 #
@@ -661,8 +660,6 @@ code {
 ---
 #
 
-<div class="columns">
-<div>
 <br/>
 <br/>
 <br/>
@@ -670,19 +667,4 @@ code {
 <br/>
 <br/>
 
-[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
-
-
-</div>
-<div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-[Next Chapter >>](./Learning_Ansible_with_Rocky-8-Ansible_Management_server_optimizations.html)
-
-</div>
-</div>
+<i class="button">[Next Chapter >>](./Learning_Ansible_with_Rocky-8-Ansible_Management_server_optimizations.html)</div>

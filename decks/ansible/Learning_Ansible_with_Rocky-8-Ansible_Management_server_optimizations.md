@@ -27,18 +27,18 @@ footer: '**Rocky Linux Academy > Ansible courses > 8 - Management server optimiz
 
 ## <i class="fa-solid fa-trophy"></i> Objectives
 
-In this chapter, we will review the configuration options that may be of interest to optimize our Ansible management server.
+<i class="fa fa-check"></i> In this chapter, we will review the configuration options that may be of interest to optimize our Ansible management server.
 
 ---
 
 ## Plan
 
-* [The `ansible.cfg` configuration file](#5)
-* [Caching the facts](#13)
-* [Using Vault](#18)
-* [Working with Windows servers](#27)
-* [Working with IP modules](#32)
-* [Generating a CMDB](#35)
+<i class="fa fa-book"></i> [The `ansible.cfg` configuration file](#5)
+<i class="fa fa-book"></i> [Caching the facts](#13)
+<i class="fa fa-book"></i> [Using Vault](#18)
+<i class="fa fa-book"></i> [Working with Windows servers](#27)
+<i class="fa fa-book"></i> [Working with IP modules](#32)
+<i class="fa fa-book"></i> [Generating a CMDB](#35)
 
 ---
 
@@ -430,9 +430,6 @@ If you prefer a web interface:
 ansible-cmdb -t html_fancy_split /var/www/ansible/cmdb/out/
 ```
 
-
-
-
 ---
 <br/>
 <br/>
@@ -442,7 +439,9 @@ ansible-cmdb -t html_fancy_split /var/www/ansible/cmdb/out/
 # Questions ?
 
 ---
+
 #
+
 <br/>
 <br/>
 <br/>

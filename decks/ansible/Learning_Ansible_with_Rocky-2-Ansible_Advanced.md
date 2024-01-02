@@ -30,21 +30,21 @@ footer: '**Rocky Linux Academy > Ansible courses > 2 - Ansible Intermediate**'
 
 In this chapter you will continue to learn how to work with Ansible.
 
-:heavy_check_mark: work with variables;  
-:heavy_check_mark: use loops;  
-:heavy_check_mark: manage state changes and react to them;  
-:heavy_check_mark: manage asynchronous tasks.
+<i class="fa fa-check"></i> work with variables;  
+<i class="fa fa-check"></i> use loops;  
+<i class="fa fa-check"></i> manage state changes and react to them;  
+<i class="fa fa-check"></i> manage asynchronous tasks.
 
 ---
 <br/>
 
 # Plan
 
-* [The variables](#the-variables)
-* [Loop management](#loop-management)
-* [Conditionnals](#conditionals)
-* [Managing changes: the `handlers`](#36)
-* [Asynchronous tasks](#43)
+<i class="fa fa-book"></i> [The variables](#the-variables)
+<i class="fa fa-book"></i> [Loop management](#loop-management)
+<i class="fa fa-book"></i> [Conditionnals](#conditionals)
+<i class="fa fa-book"></i> [Managing changes: the `handlers`](#36)
+<i class="fa fa-book"></i> [Asynchronous tasks](#43)
 
 ---
 
@@ -681,8 +681,6 @@ You can also decide to launch a long-running task and forget it (fire and forget
 
 #
 
-<div class="columns">
-<div>
 <br/>
 <br/>
 <br/>
@@ -690,18 +688,4 @@ You can also decide to launch a long-running task and forget it (fire and forget
 <br/>
 <br/>
 
-[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
-
-</div>
-<div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-[Next Chapter >>](./Learning_Ansible_with_Rocky-3-Working_with_files.html)
-
-</div>
-</div>
+<i class="button">[Next Chapter >>](./Learning_Ansible_with_Rocky-3-Working_with_files.html)</i>

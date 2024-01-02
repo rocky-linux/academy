@@ -30,19 +30,19 @@ footer: '**Rocky Linux Academy > Ansible courses > 5 - Ansible deployments with 
 
 In this chapter you will learn how to deploy applications with the Ansible role Ansistrano (https://ansistrano.com).
 
-:heavy_check_mark: Implement Ansistrano;
-:heavy_check_mark: Configure Ansistrano;  
-:heavy_check_mark: Use shared folders and files between deployed versions;  
-:heavy_check_mark: Deploying different versions of a site from git;  
-:heavy_check_mark: React between deployment steps.  
+<i class="fa fa-check"></i> Implement Ansistrano;
+<i class="fa fa-check"></i> Configure Ansistrano;  
+<i class="fa fa-check"></i> Use shared folders and files between deployed versions;  
+<i class="fa fa-check"></i> Deploying different versions of a site from git;  
+<i class="fa fa-check"></i> React between deployment steps.  
 
 ---
 <br/>
 
 # Plan
 
-* [Introduction](./Learning_Ansible_with_Rocky-5-Ansible_deployments_with_ansistrano.html#5)
-* [Demo](./Learning_Ansible_with_Rocky-5-Ansible_deployments_with_ansistrano.html#10)
+<i class="fa fa-book"></i> [Introduction](./Learning_Ansible_with_Rocky-5-Ansible_deployments_with_ansistrano.html#5)
+<i class="fa fa-book"></i> [Demo](./Learning_Ansible_with_Rocky-5-Ansible_deployments_with_ansistrano.html#10)
 
 ---
 
@@ -749,8 +749,6 @@ Using Ansistrano, ensures that good deployment practices are respected, reduces 
 
 #
 
-<div class="columns">
-<div>
 <br/>
 <br/>
 <br/>
@@ -758,18 +756,4 @@ Using Ansistrano, ensures that good deployment practices are respected, reduces 
 <br/>
 <br/>
 
-[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
-
-</div>
-<div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-[Next Chapter >>](./Learning_Ansible_with_Rocky-6-Ansible_Large_scale_infrastructure.html)
-
-</div>
-</div>
+<i class="button">[Next Chapter >>](./Learning_Ansible_with_Rocky-6-Ansible_Large_scale_infrastructure.html)</i>

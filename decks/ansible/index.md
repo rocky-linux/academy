@@ -19,11 +19,7 @@ header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../)'
 footer: '**Rocky Linux Academy > Ansible courses > Program**'
 ---
 
-<div class="h1lead">
-
 # <i class="fa-brands fa-black-tie"></i> Learning Ansible with Rocky Linux
-
-</div>
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 

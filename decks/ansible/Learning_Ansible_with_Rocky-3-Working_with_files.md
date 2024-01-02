@@ -29,21 +29,21 @@ footer: '**Rocky Linux Academy > Ansible courses > 3 - Management of Files**'
 
 In this chapter you will learn how to manage files with Ansible.
 
-:heavy_check_mark: modify the content of file;
-:heavy_check_mark: upload files to the targeted servers;
-:heavy_check_mark: retrieve files from the targeted servers.
+<i class="fa fa-check"></i> modify the content of file;
+<i class="fa fa-check"></i> upload files to the targeted servers;
+<i class="fa fa-check"></i> retrieve files from the targeted servers.
 
 ---
 <br/>
 
 # Plan
 
-* [ini_file module](#5)
-* [lineinfile module](#11)
-* [copy module](#16)
-* [fetch module](#21)
-* [template module](#26)
-* [get_url module](#32)
+<i class="fa fa-book"></i> [ini_file module](#5)
+<i class="fa fa-book"></i> [lineinfile module](#11)
+<i class="fa fa-book"></i> [copy module](#16)
+<i class="fa fa-book"></i> [fetch module](#21)
+<i class="fa fa-book"></i> [template module](#26)
+<i class="fa fa-book"></i> [get_url module](#32)
 
 ---
 
@@ -335,19 +335,7 @@ By providing a checksum of the file, the file will not be re-downloaded if it is
 
 #
 
-<div class="columns">
-<div>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-[Index](./Learning_Ansible_with_Rocky-0-Introduction.html)
-
-</div>
-<div>
 <br/>
 <br/>
 <br/>
@@ -355,7 +343,5 @@ By providing a checksum of the file, the file will not be re-downloaded if it is
 <br/>
 <br/>
 
-[Next Chapter >>](./Learning_Ansible_with_Rocky-4-Ansible_galaxy.html)
+<i class="button">[Next Chapter >>](./Learning_Ansible_with_Rocky-4-Ansible_galaxy.html)</i>
 
-</div>
-</div>
