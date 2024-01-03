@@ -11,15 +11,15 @@ By following these guidelines, we aim to :
 
 To achieve this, we recommend that you install a linter such as markdownlinter (available under vscode) and follow good practice in resolving any problems that the linter brings to your attention. Normally, the necessary exceptions will already have been added to the configuration file (`.markdownlint.yml`).
 
-In this document, we won't be dwelling on the syntax of markdown code itself, but on how to build successful slides.
+In this document, we will not be dwelling on the syntax of markdown code itself, but on how to build successful slides.
 
 ## Managing the header
 
 Each deck should start with a header in yaml format.
 
-This header is used to specify that we'll be using **marp** and to define it's main options (theme, pagination, etc.).
+This header is used to specify that we will be using **marp** and to define its main options (theme, pagination, etc.).
 
-You'll also need to specify any additional css styles for the entire deck. Putting the styles in the header avoids overloading the first slide and avoids using html code in the markdown.
+You will also need to specify any additional css styles for the entire deck. Putting the styles in the header avoids overloading the first slide and avoids using html code in the markdown.
 
 ```yaml
 ---
@@ -50,7 +50,7 @@ The header and footer tags have to be customized. The header contains a link to 
 
 ## Creating the first page
 
-Once the header has been defined, it's time to create the first page of our presentation. This may not be the most important page, but it's the one that will be visible to users for the longest: we might as well make it as pretty as possible, don't you think?
+Once the header has been defined, it is time to create the first page of our presentation. This may not be the most important page, but it is the one that will be visible to users for the longest: we might as well make it as pretty as possible.
 
 The first page must begin with a level 1 heading (`#`), and this will be the only level one heading in your entire document.
 
@@ -77,7 +77,7 @@ Remember to add `---` at the end of your diapositive to start a new one (with on
 
 ## Talking about objectives
 
-In terms of pedagogy, it's important to define the objectives to be achieved with the learner. These objectives must be quantifiable and measurable (with a quiz at the end to check that the objectives have been achieved). Believe me, it's not that easy to define these kinds of objectives.
+In terms of pedagogy, it is important to define the objectives to be achieved with the learner. These objectives must be quantifiable and measurable (with a quiz at the end to check that the objectives have been achieved). Believe me, it is not that easy to define these kinds of objectives.
 
 ```markdown
 
@@ -94,7 +94,7 @@ In this chapter, future Linux administrators will learn how to:
 
 Note that the title of this slide is level 2! There is obviously a blank line before and after the title.
 
-Please don't skip this important step for our learners.
+Please do not skip this important step for our learners.
 
 ## Adding a plan
 
@@ -113,7 +113,7 @@ A plan is important so that the user can project himself into the chapter he is 
 
 ## Last slide
 
-Let's talk about the last slide right away: this slide should enable the trainer to take stock of the chapter before moving on to the next chapter or returning to the main menu. A button is therefore created to go directly to the next chapter.
+Let us talk about the last slide right away: this slide should enable the trainer to take stock of the chapter before moving on to the next chapter or returning to the main menu. A button is therefore created to go directly to the next chapter.
 
 ```markdown
 ---
@@ -165,7 +165,7 @@ Second column
 </div>
 ```
 
-Don't forget to leave a blank line before and after the `div` HTML tags.
+Do not forget to leave a blank line before and after the `div` HTML tags.
 
 ## Questions pages
 
@@ -178,7 +178,7 @@ At the end of each chapter, you should introduce a special slide allowing the tr
 
 ```
 
-Next chapter is introduce with a blank slide like bellow:
+Next chapter is introduced with a blank slide like bellow:
 
 ```markdown
 ---
