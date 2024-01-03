@@ -21,6 +21,8 @@ footer: '**Rocky Linux Academy > Ansible courses > 3 - Management of Files**'
 
 # ![right:20% w:50](../assets/rocky_linux_logo.svg) 3 - Management of Files
 
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
+
 ## Learning Ansible with Rocky
 
 ---
