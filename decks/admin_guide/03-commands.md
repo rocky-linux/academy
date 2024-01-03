@@ -1,36 +1,33 @@
 ---
 marp: true
 theme: gaia
+style: |
+  @import url('../assets/css/rocky-theme.css');
+  header,footer{
+    color: #fff;
+  }
+  section header a {
+    color: inherit;
+  }
+  section {
+    padding-top: 90px;
+  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../)'
 footer: '**Rocky Linux Academy > Admin Guide > Commands**'
 ---
 
-<style>
-header,footer
-{
-    color: #fff;
-}
-section header a {
-  color: inherit;
-}
-section {
-  padding-top: 90px;
-}
-@import url('../assets/css/rocky-theme.css');
-</style>
+# Linux commands
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
-
-# Linux commands
 
 ## Commands for Linux Users
 
 In this chapter you will learn Linux commands and how to use them.
 
-****
+---
 
 ## <i class="fa fa-trophy"></i> Objectives
 
@@ -270,20 +267,29 @@ Once found by `apropos` or `whatis`, the manual is read by `man` ("Man is your f
 
 This set of manuals is divided into 8 sections, grouping information by topic, the default section being 1:
 
+---
+
+<div class="columns"a>
+<div>
+    
 1. Executable programs or commands.
 2. System calls (functions given by the kernel).
 3. Library calls (functions given by the library).
 4. Special files (usually found in /dev).
+
+</div>
+<div>
+
 5. File Formats and conventions (configuration files such as etc/passwd).
-
----
-
-#### `man` command
-
 6. Games (such as character-based applications).
 7. Miscellaneous (e.g. man (7)).
 8. System administration commands (usually only for root).
 9. Kernel routines (non-standard).
+
+</div>
+</div>
+
+---
 
 Information about each section can be accessed by typing `man x intro`, where `x` is the section number.
 
@@ -385,6 +391,12 @@ $ history
 
 #### `history` command
 
+<style scoped>
+table {
+  font-size: 0.6em;
+}
+</style>
+
 <i class="fa fa-pen-to-square"></i> Manipulating history:
 
 To manipulate the history, the following commands entered from the command prompt will:
@@ -393,15 +405,6 @@ To manipulate the history, the following commands entered from the command promp
 | ------------------ | --------------------------------------------------------- |
 | <kbd>!!</kbd>      | Recalls the last command placed.                           |
 | <kbd>!n</kbd>      | Recalls the command by its number in the list.             |
-
----
-
-#### `history` command
-
-<i class="fa fa-pen-to-square"></i> Manipulating history:
-
-| Keys               | Function                                                  |
-| ------------------ | --------------------------------------------------------- |
 | <kbd>!string</kbd> | Recalls the most recent command beginning with the string. |
 | <kbd>↑</kbd>       | Navigates through your history working backward in time from the most recent command. |
 | <kbd>↓</kbd>       | Navigates through your history working forward in time. |
@@ -438,7 +441,7 @@ On a physical terminal, the display will be permanently hidden, whereas in a gra
 
 <div class="fa-tip">
 
-<i class="fa-regular fa-tip-icon fa-lightbulb fa-2x"></i> <kbd>CTRL</kbd> + <kbd>L</kbd> will have the same effect as the `clear` command
+<i class="fa-regular fa-tip-icon fa-lightbulb fa-pull-left fa-2x"></i> <kbd>CTRL</kbd> + <kbd>L</kbd> will have the same effect as the `clear` command
 
 </div>
 
@@ -514,6 +517,12 @@ In this last example, the `-d` option displays a given date. The `+%j` option fo
 
 ---
 
+<style scoped>
+table {
+  font-size: 0.5em;
+}
+</style>
+
 ### `date` command
 
 The date display can follow the following formats:
@@ -524,13 +533,6 @@ The date display can follow the following formats:
 | `+%B`   | Locale's full month name (e.g., January)                  |
 | `+%c`   | Locale's date and time (e.g., Thu Mar  3 23:05:25 2005)   |
 | `+%d`   | Day of month (e.g., 01)                                   |
-
----
-
-### `date` command
-
-| Option  | Format                                                    |
-| --------| --------------------------------------------------------- |
 | `+%F`   | Date in `YYYY-MM-DD` format                               |
 | `+%G`   | Year                                                      |
 | `+%H`   | Hour (00..23)                                             |
@@ -539,6 +541,12 @@ The date display can follow the following formats:
 | `+%M`   | Minute  (00..59)                                          |
 
 ---
+
+<style scoped>
+table {
+  font-size: 0.7em;
+}
+</style>
 
 ### `date` command
 
@@ -549,13 +557,6 @@ The date display can follow the following formats:
 | `+%S`   | Second (00..60)                                           |
 | `+%T`   | Time in `hh:mm:ss` format                                 |
 | `+%u`   | Day of the week (`1` for Monday)                          |
-
----
-
-### `date` command
-
-| Option  | Format                                                    |
-| --------| --------------------------------------------------------- |
 | `+%V`   | Week number (`+%V`)                                       |
 | `+%x`   | Date in format `DD/MM/YYYY`                               |
 
@@ -761,6 +762,12 @@ The main options of the `ls` command are:
 
 ---
 
+<style scoped>
+table {
+  font-size: 0.6em;
+}
+</style>
+
 The `ls` command, however, has a lot of options (see `man`):
 
 | Option                                                       | Information                                                                                                                          |
@@ -768,22 +775,13 @@ The `ls` command, however, has a lot of options (see `man`):
 | `-d`                                                         | Displays information about a directory instead of listing its contents.                                                              |
 | `-g`                                                         | Like -l option, but do not list owner.                                                                                               |
 | `-h`                                                         | Displays file sizes in the most appropriate format (byte, kilobyte, megabyte, gigabyte, ...). `h` stands for Human Readable. Needs to be used with -l option.         |
-
----
-
-| Option                                                       | Information                                                                                                                          |
-| ------                                                       | ------------                                                                                                                         |
 |
 `-s`                                                         | Displays the allocated size of each file, in blocks. In the GNU/Linux operating system, "block" is the smallest unit of storage in the file system, one block equals 4096Byte. |
 | `-A`                                                         | Displays all files in the directory except `.` and `..`                                                                              |
 | `-R`                                                         | Displays the contents of subdirectories recursively.                                                                                 |
 | `-F`                                                         | Displays the type of files. Prints a `/` for a directory, `*` for executables, `@` for a symbolic link, and nothing for a text file. |
-
----
-
-| Option                                                       | Information                                                                                                                          |
-| ------                                                       | ------------                                                                                                                         |
 | `-X`                                                         | Sorts files according to their extensions.                                                                                           |
+
 ---
 
 ### `ls` command
@@ -798,6 +796,12 @@ $ ls -lia /home
 
 ---
 
+<style scoped>
+table {
+  font-size: 0.6em;
+}
+</style>
+
 ### `ls` command
 
 | Value           | Information                                                                                                   |
@@ -805,22 +809,8 @@ $ ls -lia /home
 | `78489`         | Inode Number.                                                                                                 |
 | `drwx------`    | File type (`d`) and rights (`rwx------`).                                                                     |
 | `4`             | Number of subdirectories (`.` and `..` included). For a file, it represents the number of hard links, and 1 represents itself. |
-
----
-
-### `ls` command
-
-| Value           | Information                                                                                                   |
-| --------------- | ------------------------------------------------------------------------------------------------------------- |
 | `rockstar`      | User ownership.                                                                                               |
-| `rockstar`      | Group ownership.                                                                                              |
-
----
-
-### `ls` command
-
-| Value           | Information                                                                                                   |
-| --------------- | ------------------------------------------------------------------------------------------------------------- |
+| `rockstar`      | Group ownership.                                        
 | `4096`          | For files, it shows the size of the file. For directories, it shows the fixed value of 4096 bytes occupied by the file naming. To calculate the total size of a directory, use `du -sh rockstar/` |
 | `25 oct. 08:10` | Last modified date.                                                                                           |
 | `rockstar`      | The name of the file (or directory).                                                                          |
@@ -1065,6 +1055,7 @@ rm [-f] [-r] file [file] [...]
 <div class="fa-danger">
 
 <i class="fa fa-danger-icon fa-exclamation-triangle fa-pull-left fa-2x"></i> Any deletion of a file or directory is final.
+</br>
 
 </div>
 
@@ -1081,7 +1072,10 @@ rm [-f] [-r] file [file] [...]
 ---
 
 <div class="fa-note">
-<i class="fa fa-note-icon fa-sticky-note fa-pull-left fa-2x"></i> The `rm` command itself does not ask for confirmation when deleting files. However, with a Red Hat/Rocky distribution, `rm` does ask for confirmation of deletion because the `rm` command is an `alias` of the `rm -i` command. Don't be surprised if on another distribution, like Debian for example, you don't get a confirmation request.
+
+<i class="fa fa-note-icon fa-clipboard fa-pull-left fa-2x"></i> The `rm` command itself does not ask for confirmation when deleting files. However, with a Red Hat/Rocky distribution, `rm` does ask for confirmation of deletion because the `rm` command is an `alias` of the `rm -i` command. Don't be surprised if on another distribution, like Debian for example, you don't get a confirmation request.
+
+</div>
 
 ---
 
@@ -1292,6 +1286,12 @@ less file1 [files]
 
 ---
 
+<style scoped>
+table {
+  font-size: 0.65em;
+}
+</style>
+
 ### `less` command
 
 The commands specific to `less` are:
@@ -1302,15 +1302,6 @@ The commands specific to `less` are:
 | <kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd><kbd>←</kbd>         | Move up, down a line, or to the right or left.  |
 | <kbd>Enter</kbd>           | Move down one line.                             |
 | <kbd>Space</kbd>           | Move down one page.                             |
-
----
-
-### `less` command
-
-The commands specific to `less` are:
-
-| Command           | Action                                          |
-| ----------------- | ----------------------------------------------- |
 | <kbd>PgUp</kbd> and <kbd>PgDn</kbd> | Move up or down one page.                       |
 | <kbd>gg</kbd> and <kbd>G</kbd> | Move to the first and last pages         |
 | `/text`           | Search for text.                                |
@@ -1476,6 +1467,12 @@ adm:x:3:4:adm:/var/adm/:/sbin/nologin
 
 ---
 
+<style scoped>
+table {
+  font-size: 0.7em;
+}
+</style>
+
 ### `sort` command
 
 | Option    | Description                              |
@@ -1483,14 +1480,6 @@ adm:x:3:4:adm:/var/adm/:/sbin/nologin
 | `-k`     | Specify the columns to be separated. You can specify multiple columns.         |
 | `-n`      | Requests a numeric sort.                     |
 | `-o file` | Saves the sort to the specified file.        |
-
-
----
-
-### `sort` command
-
-| Option    | Description                              |
-| --------- | ------------------------------------------- |
 | `-t`     | Specify a delimiter, which requires that the contents of the corresponding file must be regularly delimited column contents, otherwise they cannot be sorted properly. |
 | `-r`      | Reverse the order of the result. Used in conjunction with the `-n` option to sort in order from largest to smallest.             |
 | `-u`     | Remove duplicates after sorting. Equivalent to `sort file | uniq`.                   |
@@ -1702,11 +1691,17 @@ The previous command searches for all files in the `/tmp` directory named `*.txt
 
 ---
 
-### <i class="fa-solid fa-tip fa-lightbulb"> Understand the `-exec` option</i>
+<div class="fa-tip">
+
+<i class="fa fa-tip-icon fa-lightbulb fa-pull-left fa-2x"></i>
+
+**Understand the `-exec` option**
 
 In the example above, the `find` command will construct a string representing the command to be executed.
 
 If the `find` command finds three files named `log1.txt`, `log2.txt`, and `log3.txt`, then the `find` command will construct the string by replacing in the string `rm -f {} \;` the braces with one of the results of the search, and do this as many times as there are results.
+
+</div>
 
 ---
 
@@ -1718,9 +1713,16 @@ rm -f /tmp/log1.txt ; rm -f /tmp/log2.txt ; rm -f /tmp/log3.txt ;
 
 The `;` character is a special shell character that must be protected by a `\` to prevent it from being interpreted too early by the `find` command (and not in the `-exec`).
 
-### <i class="fa-solid fa-tip fa-lightbulb"> Tip</i>
+</br>
+
+<div class="fa-tip">
+
+<i class="fa fa-tip-icon fa-lightbulb fa-pull-left fa-2x"></i>
 
 `$ find /tmp -name *.txt -delete` does the same thing.
+</br>
+
+</div>
 
 ---
 
@@ -1789,7 +1791,9 @@ $ grep -w "^root" /etc/passwd
 
 ---
 
-### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
+<div class="fa-note">
+
+<i class="fa fa-note-icon fa-clipboard fa-pull-left fa-2x"></i>
 
 This command is very powerful and it is highly recommended to consult its manual. It has many derivatives.
 
@@ -1798,6 +1802,7 @@ It is possible to search for a string in a file tree with the `-R` option.
 ```bash
 grep -R "Virtual" /etc/httpd
 ```
+</div>
 
 ---
 
@@ -1851,13 +1856,17 @@ $ find /home -name "test[123]*"
 
 ---
 
-### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
+<div class="fa-note">
+
+<i class="fa fa-note-icon fa-sticky-note fa-pull-left fa-2x"></i>
 
 Always surround words containing meta-characters with `"` to prevent them from being replaced by the names of files that meet the criteria.
 
-<div class="fa-warnings">
+</div>
 
-## <i class="fa-regular fa-bell"></i> Warning
+<div class="fa-warning">
+
+<i class="fa fa-warning-icon fa-bell fa-pull-left fa-2x"></i>
 
 Do not confuse shell meta-characters with regular expression meta-characters. The `grep` command uses regular expression meta-characters.
 
@@ -1865,7 +1874,7 @@ Do not confuse shell meta-characters with regular expression meta-characters. Th
 
 ---
 
-# <i class="fa-solid fa-outdent"></i> Redirects and pipes
+## <i class="fa fa-outdent"></i> Redirects and pipes
 
 ## Standard input and output
 
@@ -1904,11 +1913,15 @@ $ ftp -in serverftp << ftp-commands.txt
 
 ---
 
-### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
+<div class="fa-note">
+
+<i class="fa fa-note-icon fa-sticky-note fa-pull-left fa-2x"></i>
 
 Only commands that require keyboard input will be able to handle input redirection.
 
 Input redirection can also be used to simulate user interactivity. The command will read the input stream until it encounters the defined keyword after the input redirection.
+
+</div>
 
 ---
 
@@ -1942,9 +1955,13 @@ The shell exits the `ftp` command when it receives a line containing only the ke
 
 ---
 
-### <i class="fa-solid fa-warnings fa-exclamation-circle"> Warning</i>
+<div class="fa-warning">
+
+<i class="fa fa-warning-icon fa-exclamation-circle fa-pull-left fa-2x"></i>
 
 The ending keyword, here `END` or `STOP`, must be the only word on the line and must be at the beginning of the line.
+
+</div>
 
 The standard input redirection is rarely used because most commands accept a filename as an argument.
 
@@ -2088,7 +2105,7 @@ $ ls -lia / | grep fichier
 
 ---
 
-# <i class="fa-solid fa-hand-point-right"></i> Special Points
+# <i class="fa fa-hand-point-right"></i> Special Points
 
 ---
 
@@ -2151,13 +2168,17 @@ For permanent use, they must be created in the:
 
 ---
 
-### <i class="fa-solid fa-warnings fa-exclamation-circle"> Warning</i>
+<div class="fa-warning">
+
+<i class="fa fa-warning-icon fa-exclamation-circle fa-pull-left fa-2x"></i>
 
 Special care must be taken when using aliases which can be potentially dangerous! For example, an alias set up without the administrator's knowledge:
 
 ```bash
 alias cd='rm -Rf'
 ```
+
+</div>
 
 ---
 

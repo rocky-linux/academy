@@ -90,6 +90,7 @@ section a:hover {
   border: 2px solid #6b7280;
   border-radius: .6rem;
   text-decoration: none;
+  float: right;
 }
 .button a:hover {
   background-color: #fefbf2;
@@ -111,7 +112,7 @@ section a:hover {
   padding: 0.3em;
 }
 /* Styling admonitions */
-.fa-warn,
+.fa-warning,
 .fa-danger,
 .fa-note,
 .fa-tip {
@@ -120,12 +121,12 @@ section a:hover {
   border-width: 0.1em;
   padding: 0em 0.6em 0.6em 0.6em;
 }
-.fa-warn {
+.fa-warning {
   background-color: #ffe9cc;
   border-color: #ffd399;
   color: #000;
 }
-.fa-warn-icon {
+.fa-warning-icon {
   color: #ffb24c;
 
 }
