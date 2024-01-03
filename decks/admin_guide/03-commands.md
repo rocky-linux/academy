@@ -24,11 +24,7 @@ section {
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
-<div class="h1lead">
-
 # Linux commands
-
-</div>
 
 ## Commands for Linux Users
 
@@ -36,7 +32,7 @@ In this chapter you will learn Linux commands and how to use them.
 
 ****
 
-# <i class="fa-solid fa-trophy"></i> Objectives
+## <i class="fa fa-trophy"></i> Objectives
 
 In this chapter, future Linux administrators will learn how to:
 
@@ -55,7 +51,7 @@ In this chapter, future Linux administrators will learn how to:
 
 ---
 
-# <i class="fa-solid fa-arrow-right-to-bracket"></i> Generalities
+## <i class="fa fa-arrow-right-to-bracket"></i> Generalities
 
 Current Linux systems have graphical utilities dedicated to the work of an administrator. However, it is important to be able to use the interface in command line mode for several reasons:
 
@@ -64,7 +60,7 @@ Current Linux systems have graphical utilities dedicated to the work of an admin
 
 ---
 
-# <i class="fa-solid fa-arrow-right-to-bracket"></i> Generalities
+## <i class="fa fa-arrow-right-to-bracket"></i> Generalities
 
 * Remote administration is done on the command line with an SSH terminal.
 * In order to preserve server resources, the graphical interface is either not installed or launched on demand.
@@ -72,13 +68,13 @@ Current Linux systems have graphical utilities dedicated to the work of an admin
 
 ---
 
-# <i class="fa-solid fa-arrow-right-to-bracket"></i> Generalities
+## <i class="fa fa-arrow-right-to-bracket"></i> Generalities
 
 Learning these commands allows the administrator to connect to a Linux terminal, to manage its resources and files, to identify the station, the terminal, and the connected users, etc.
 
 ---
 
-# <i class="fa-solid fa-users"></i> The users
+## <i class="fa fa-users"></i> The users
 
 The user of a Linux system will be defined in the `/etc/passwd` file, by:
 
@@ -90,7 +86,7 @@ The user of a Linux system will be defined in the `/etc/passwd` file, by:
 
 ---
 
-# <i class="fa-solid fa-users"></i> The users
+## <i class="fa fa-users"></i> The users
 
 In other files the user will be defined by:
 
@@ -99,7 +95,7 @@ In other files the user will be defined by:
 
 ---
 
-# <i class="fa-solid fa-users"></i> The users
+## <i class="fa fa-users"></i> The users
 
 Depending on the security policy implemented on the system, the password will require a certain number of characters and meet certain complexity requirements.
 
@@ -107,19 +103,19 @@ Among the existing command interpreters, the **Bourne-Again Shell** (`/bin/bash`
 
 ---
 
-# <i class="fa-solid fa-users"></i> The users
+## <i class="fa fa-users"></i> The users
 
 The user's login directory is by convention stored in the `/home` directory of the workstation. It will contain the user's personal data and the configuration files of his applications. By default, at login, the login directory is selected as the current directory.
 
 ---
 
-# <i class="fa-solid fa-users"></i> The users
+## <i class="fa fa-users"></i> The users
 
 A workstation-type installation (with graphical interface) starts this interface on terminal 1. Linux being multi-user, it is possible to connect several users several times, on different **physical terminals** (TTY) or **virtual terminals** (PTS). Virtual terminals are available within a graphical environment. A user switches from one physical terminal to another using <kbd>Alt</kbd> + <kbd>Fx</kbd> from the command line or using <kbd>CTRL</kbd> + <kbd>Alt</kbd> + <kbd>Fx</kbd>.
 
 ---
 
-# <i class="fa-solid fa-terminal"></i> The shell
+## <i class="fa fa-terminal"></i> The shell
 
 Once the user is connected to a console, the shell displays the **command prompt**. It then behaves like an infinite loop, repeating the same pattern with each statement entered:
 
@@ -130,7 +126,7 @@ Once the user is connected to a console, the shell displays the **command prompt
 
 ---
 
-# <i class="fa-solid fa-terminal"></i> The shell
+## <i class="fa fa-terminal"></i> The shell
 
 * Executes the command.
 * Displays the command prompt.
@@ -138,13 +134,13 @@ Once the user is connected to a console, the shell displays the **command prompt
 
 ---
 
-# <i class="fa-solid fa-terminal"></i> The shell
+## <i class="fa fa-terminal"></i> The shell
 
 The key sequence <kbd>CTRL</kbd> + <kbd>C</kbd> is used to interrupt a running command.
 
 ---
 
-# <i class="fa-solid fa-terminal"></i> The shell
+## <i class="fa fa-terminal"></i> The shell
 
 The use of a command generally follows this sequence:
 
@@ -158,14 +154,14 @@ A space separates each item.
 
 ---
 
-# <i class="fa-solid fa-terminal"></i> The shell
+## <i class="fa fa-terminal"></i> The shell
 
 **Short options** begin with a dash (`-l`), while **long options** begin with two dashes (`--list`).
 A double dash (`--`) indicates the end of the option list.
 
 ---
 
-# <i class="fa-solid fa-terminal"></i> The shell
+## <i class="fa fa-terminal"></i> The shell
 
 It is possible to group some short options together:
 
@@ -181,7 +177,7 @@ $ ls -lia
 
 ---
 
-# <i class="fa-solid fa-terminal"></i> The shell
+## <i class="fa fa-terminal"></i> The shell
 
 There can be several arguments after an option:
 
@@ -193,7 +189,7 @@ In the literature, the term "option" is equivalent to the term "parameter," whic
 
 ---
 
-# <i class="fa-solid fa-keyboard"></i> General commands
+## <i class="fa fa-keyboard"></i> General commands
 
 ---
 
@@ -428,7 +424,7 @@ If double-pressing the <kbd>TAB</kbd> key presents no options, then there is no 
 
 ---
 
-# <i class="fa-solid fa-desktop"></i> Display and Identification
+## <i class="fa fa-desktop"></i> Display and Identification
 
 ---
 
@@ -442,9 +438,7 @@ On a physical terminal, the display will be permanently hidden, whereas in a gra
 
 <div class="fa-tip">
 
-## <i class="fa-regular fa-lightbulb"></i> Tip
-
-<kbd>CTRL</kbd> + <kbd>L</kbd> will have the same effect as the `clear` command
+<i class="fa-regular fa-tip-icon fa-lightbulb fa-2x"></i> <kbd>CTRL</kbd> + <kbd>L</kbd> will have the same effect as the `clear` command
 
 </div>
 
@@ -512,9 +506,11 @@ In this last example, the `-d` option displays a given date. The `+%j` option fo
 
 ---
 
-### <i class="fa-solid fa-warnings fa-exclamation-circle"> Warning</i>
+<div class="fa-warn">
 
-The format of a date can change depending on the value of the language defined in the environment variable `$LANG`.
+<i class="fa fa-warn-icon fa-exclamation-circle fa-pull-left fa-2x"></i> The format of a date can change depending on the value of the language defined in the environment variable `$LANG`.
+
+</div>
 
 ---
 
@@ -621,7 +617,7 @@ The `-r` option also displays the runlevel (see chapter "startup").
 
 ---
 
-# <i class="fa-solid fa-folder-tree"></i> File Tree
+## <i class="fa fa-folder-tree"></i> File Tree
 
 In Linux, the file tree is an inverted tree, called a **single hierarchical tree**, whose root is the directory `/`.
 
@@ -631,7 +627,7 @@ The **connection directory** is the working directory associated with the user. 
 
 ---
 
-# <i class="fa-solid fa-folder-tree"></i> File Tree
+## <i class="fa fa-folder-tree"></i> File Tree
 
 When the user logs in, the current directory is the login directory.
 
@@ -641,7 +637,7 @@ An **absolute path** references a file from the root by traversing the entire tr
 
 ---
 
-# <i class="fa-solid fa-folder-tree"></i> File Tree
+## <i class="fa fa-folder-tree"></i> File Tree
 
 The **relative path** references that same file by traversing the entire tree from the current directory:
 
@@ -651,7 +647,7 @@ In the above example, the "`..`" refers to the parent directory of the current d
 
 ---
 
-# <i class="fa-solid fa-folder-tree"></i> File Tree
+## <i class="fa fa-folder-tree"></i> File Tree
 
 A directory, even if it is empty, will necessarily contain at least **two references**:
 
@@ -660,37 +656,37 @@ A directory, even if it is empty, will necessarily contain at least **two refere
 
 ---
 
-# <i class="fa-solid fa-folder-tree"></i> File Tree
+## <i class="fa fa-folder-tree"></i> File Tree
 
 A relative path can thus start with `./` or `../`. When the relative path refers to a subdirectory or file in the current directory, then the `./` is often omitted. Mentioning the first `./` in the tree will only really be required to run an executable file.
 
 ---
 
-# <i class="fa-solid fa-folder-tree"></i> File Tree
+## <i class="fa fa-folder-tree"></i> File Tree
 
 Errors in paths can cause many problems: creating folders or files in the wrong places, unintentional deletions, etc. It is therefore strongly recommended to use auto-completion when entering paths.
 
 ---
 
-# <i class="fa-solid fa-folder-tree"></i> File Tree
+## <i class="fa fa-folder-tree"></i> File Tree
 
 ![h:400](./images/commands-pathabsolute.png)
 
 ---
 
-# <i class="fa-solid fa-folder-tree"></i> File Tree
+## <i class="fa fa-folder-tree"></i> File Tree
 
 In the above example, we are looking to give the location of the file `myfile` from the directory of bob.
 
 ---
 
-# <i class="fa-solid fa-folder-tree"></i> File Tree
+## <i class="fa fa-folder-tree"></i> File Tree
 
 * By an **absolute path**, the current directory does not matter. We start at the root, and work our way down to the directories `home`, `groupA`, `alice` and finally the file `myfile`: `/home/groupA/alice/myfile`.
 
 ---
 
-# <i class="fa-solid fa-folder-tree"></i> File Tree
+## <i class="fa fa-folder-tree"></i> File Tree
 
 * By a **relative path**, our starting point being the current directory `bob`, we go up one level through `..` (i.e., into the `groupA` directory), then down into the alice directory, and finally the `myfile` file: `../alice/myfile`.
 
@@ -830,15 +826,17 @@ $ ls -lia /home
 | `rockstar`      | The name of the file (or directory).                                                                          |
 ---
 
-### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
+<div class="fa-note">
 
-**Aliases** are frequently positioned in common distributions.
+<i class="fa fa-note-icon fa-book-open fa-pull-left fa-2x"></i> **Aliases** are frequently positioned in common distributions.
 
 This is the case of the alias `ll`:
 
 ```bash
 alias ll='ls -l --color=auto'
 ```
+
+</div>
 
 ---
 
@@ -986,9 +984,13 @@ Otherwise, the `-p` option should be used. The `-p` option creates the parent di
 
 ---
 
-### <i class="fa-solid fa-danger fa-exclamation-triangle"> Danger</i>
+<div class="fa-danger">
+
+<i class="fa fa-pull-left fa-danger-icon fa-exclamation-triangle fa-pull-left fa-2x"></i>
 
 It is not recommended to use Linux command names as directory or file names.
+
+</div>
 
 ---
 
@@ -1018,9 +1020,11 @@ Date format: `[AAAA]MMJJhhmm[ss]`
 
 ---
 
-### <i class="fa-solid fa-tip fa-lightbulb"> Tip</i>
+<div class="fa-tip">
 
-The `touch` command is primarily used to create an empty file, but it can be useful for incremental or differential backups for example. Indeed, the only effect of executing a `touch` on a file will be to force it to be saved during the next backup.
+<i class="fa fa-tip-icon fa-lightbulb fa-pull-left fa-2x"></i> The `touch` command is primarily used to create an empty file, but it can be useful for incremental or differential backups for example. Indeed, the only effect of executing a `touch` on a file will be to force it to be saved during the next backup.
+
+</div>
 
 ---
 
@@ -1040,9 +1044,11 @@ $ rmdir /home/rockstar/work
 
 ---
 
-# <i class="fa-solid fa-tip fa-lightbulb"> Tip</i>
+<div class="fa-tip">
 
-To delete both a non-empty directory and its contents, use the `rm` command.
+<i class="fa fa-tip-icon fa-lightbulb fa-pull-left fa-2x"></i> To delete both a non-empty directory and its contents, use the `rm` command.
+
+</div>
 
 ---
 
@@ -1054,9 +1060,13 @@ The `rm` command deletes a file or directory.
 rm [-f] [-r] file [file] [...]
 ```
 
-### <i class="fa-solid fa-danger fa-exclamation-triangle"> Danger</i>
+</br>
 
-Any deletion of a file or directory is final.
+<div class="fa-danger">
+
+<i class="fa fa-danger-icon fa-exclamation-triangle fa-pull-left fa-2x"></i> Any deletion of a file or directory is final.
+
+</div>
 
 ---
 
@@ -1070,9 +1080,8 @@ Any deletion of a file or directory is final.
 
 ---
 
-### <i class="fa-solid fa-note fa-sticky-note"> Note</i>
-
-The `rm` command itself does not ask for confirmation when deleting files. However, with a Red Hat/Rocky distribution, `rm` does ask for confirmation of deletion because the `rm` command is an `alias` of the `rm -i` command. Don't be surprised if on another distribution, like Debian for example, you don't get a confirmation request.
+<div class="fa-note">
+<i class="fa fa-note-icon fa-sticky-note fa-pull-left fa-2x"></i> The `rm` command itself does not ask for confirmation when deleting files. However, with a Red Hat/Rocky distribution, `rm` does ask for confirmation of deletion because the `rm` command is an `alias` of the `rm -i` command. Don't be surprised if on another distribution, like Debian for example, you don't get a confirmation request.
 
 ---
 
@@ -1227,7 +1236,7 @@ If the destination directory does not exist, `file1` is copied under the name `w
 
 ---
 
-# <i class="fa-solid fa-file-lines"></i> Visualization
+## <i class="fa fa-file-lines"></i> Visualization
 
 ---
 
@@ -1654,7 +1663,7 @@ wc [-l] [-m] [-w] file [files]
 
 ---
 
-# <i class="fa-solid fa-magnifying-glass"></i> Search
+## <i class="fa fa-magnifying-glass"></i> Search
 
 ---
 
