@@ -18,8 +18,9 @@ markdown.marp.enableHtml: true
 header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Ansible courses > 2 - Ansible Intermediate**'
 ---
-
 # ![right:20% w:50](../assets/rocky_linux_logo.svg) 2 - Ansible Intermediate
+
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
 ## Learning Ansible with Rocky
 

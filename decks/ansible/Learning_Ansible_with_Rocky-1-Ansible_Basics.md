@@ -21,6 +21,8 @@ footer: '**Rocky Linux Academy > Ansible courses > 1 - Ansible Basics**'
 
 # ![right:20% w:50](../assets/rocky_linux_logo.svg) 1 - Ansible Basics
 
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
+
 ## Learning Ansible with Rocky
 
 ---
@@ -276,7 +278,9 @@ rocky9
 # Ansible CLI
 
 ---
-# ansible command line usage
+
+## ansible command line usage
+
 <style scoped>
 table {
   font-size: 0.5em;

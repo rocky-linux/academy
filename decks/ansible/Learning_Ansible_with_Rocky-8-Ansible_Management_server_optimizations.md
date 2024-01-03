@@ -21,6 +21,8 @@ footer: '**Rocky Linux Academy > Ansible courses > 8 - Management server optimiz
 
 # ![right:20% w:50](../assets/rocky_linux_logo.svg) 8 - Management server optimizations
 
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
+
 ## Learning Ansible with Rocky
 
 ---

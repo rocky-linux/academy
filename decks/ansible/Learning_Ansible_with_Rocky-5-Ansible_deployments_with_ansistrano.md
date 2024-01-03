@@ -21,6 +21,8 @@ footer: '**Rocky Linux Academy > Ansible courses > 5 - Ansible deployments with 
 
 # ![right:20% w:50](../assets/rocky_linux_logo.svg) 5 - Ansible deployments with Ansistrano
 
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
+
 ## Learning Ansible with Rocky
 
 ---

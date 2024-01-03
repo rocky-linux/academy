@@ -21,6 +21,8 @@ footer: '**Rocky Linux Academy > Ansible courses > 7 - Working with filters**'
 
 # ![right:20% w:50](../assets/rocky_linux_logo.svg) 7 - Working with filters
 
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
+
 ## Learning Ansible with Rocky
 
 ---

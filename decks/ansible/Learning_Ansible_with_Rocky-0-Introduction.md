@@ -18,13 +18,14 @@ markdown.marp.enableHtml: true
 header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Ansible courses > Introduction**'
 ---
-# Ansible
+
+# Introduction
+
+## Learning Ansible with Rocky
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
 **Ansible is a simple, yet powerful, automation engine for Linux.**
-
-<br/>
 
 <div class="columns">
 <div>
