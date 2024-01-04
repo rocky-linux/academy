@@ -112,50 +112,72 @@ section a:hover {
   padding: 0.3em;
 }
 /* Styling admonitions */
-.fa-warning,
-.fa-danger,
-.fa-note,
-.fa-tip {
-  border-radius: 0.8em;
+.note,
+.abstract,
+.info,
+.tip,
+.question,
+.warning,
+.danger {
+  border-radius: 0.5em;
   border-style: solid;
   border-width: 0.1em;
   padding: 0em 0.6em 0.6em 0.6em;
-}
-.fa-warning {
-  background-color: #ffe9cc;
-  border-color: #ffd399;
-  color: #000;
-}
-.fa-warning-icon {
-  color: #ffb24c;
-
-}
-
-.fa-danger {
-  background-color: #ffd0d9;
-  border-color: #ffb9c6;
+  margin: 0.5em;
   color: #111827;
 }
-
-.fa-danger-icon {
-  color: #ff1744;
-}
-.fa-note {
+.note {
   background-color: #d9e7ff;
-  color: #111827;
   border-color: #c5dbff;
 }
-.fa-note-icon {
-  color: #a1c4ff;
+.note-icon {
+  color: #448aff;
 }
-.fa-tip {
-  background-color: #ccf2ed;
+.abstract {
+  background-color: #e5f7ff;
+  border-color: #b2e7ff;
+}
+.abstract-icon {
+  color: #00b0ff;
+}
+.info {
+  background-color: #e5f7fa;
+  border-color: #b2e9f2;
+}
+.info-icon {
+  color: #00b8d4;
+}
+.tip {
+  background-color: #e5f8f6;
   border-color: #b2ebe4;
-  color: #111827;
 }
-.fa-tip-icon {
-  color: #66d8c9;
+.tip-icon {
+  color: #00bfa5;
 }
+.question {
+  background-color: #effbe7;
+  border-color: #d0f4b9;
+}
+.question-icon {
+  color: #64dd17;
+}
+.warning {
+  background-color: #fff4e5;
+  border-color: #ffdeb2;
+}
+.warning-icon {
+  color: #ff9100;
+}
+.danger {
+  background-color: #ffe7ec;
+  border-color: #ffb9c6;
+}
+
+.danger-icon {
+  color: #ff1744;
+}
+
+
 
 img[alt~="center"] {
   display: block;
@@ -210,5 +232,5 @@ footer {
 .fa-mastodon { color: purple; }
 .fa-linkedin { color: blue; }
 .fa-window-maximize { color: skyblue; }
-.fa-circle-exclamation { color: red; }
+/* .fa-circle-exclamation { color: red; } */
 /* .fa-trophy { color: #000; } */
