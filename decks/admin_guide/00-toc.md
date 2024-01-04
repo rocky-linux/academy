@@ -1,37 +1,27 @@
 ---
 marp: true
 theme: gaia
-paginate: true
-_class: lead
-markdown.marp.enableHtml: true
-header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../index.html)'
-footer: '**Rocky Linux Academy > Admin Guide > Introduction**'
----
-
-<style>
-header,footer
-{
+style: |
+  @import url('../assets/css/rocky-theme.css');
+  header,footer{
     color: #fff;
-}
-section header a {
-  color: inherit;
-}
-section a,a:link,a:visited {
+  }
+  section header a {
     color: inherit;
-}
-section {
-  padding-top: 90px;
-}
-@import url('../assets/css/rocky-theme.css');
-</style>
-
-![bg opacity:.5](../assets/rocky_linux_logo.svg)
-
-<div class="h1lead">
+  }
+  section {
+    padding-top: 90px;
+  }
+_class: lead
+paginate: true
+markdown.marp.enableHtml: true
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../)'
+footer: '**Rocky Linux Academy > Admin Guide > Commands**'
+---
 
 # Introduction
 
-</div>
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
 ## Rocky Linux Admin Guide
 

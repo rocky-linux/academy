@@ -53,12 +53,15 @@ section::after {
 section a,a:link,a:visited {
   text-decoration: none;
 }
-section,h1 {
-  color:#10b981;
+section h1 {
+  color:#096f4d;
 }
 
-section,h2 {
-  color: #111827;
+section h2 {
+  color: #064d35;
+}
+section h3,h4 {
+  color: #3a8b70;
 }
 section header a,a:visited {
   background-color: #10b981;
@@ -87,6 +90,7 @@ section a:hover {
   border: 2px solid #6b7280;
   border-radius: .6rem;
   text-decoration: none;
+  float: right;
 }
 .button a:hover {
   background-color: #fefbf2;
@@ -100,49 +104,80 @@ section a:hover {
 .h1lead h1 {
   color: #096f4d;
 }
+
 .fa-solid {
   background-color: #10b981;
   border-radius: 0.2em;
   color: white;
   padding: 0.3em;
 }
-
-.fa-warnings {
-  background-color: #ffe7ec;
-  border-radius: 0.8em;
+/* Styling admonitions */
+.note,
+.abstract,
+.info,
+.tip,
+.question,
+.warning,
+.danger {
+  border-radius: 0.5em;
   border-style: solid;
   border-width: 0.1em;
-  border-color: #6b7280;
-  color: #000;
-  padding: 0.1em 0.6em 0.6em 0.6em;
+  padding: 0em 0.6em 0.6em 0.6em;
+  margin: 0.5em;
+  color: #111827;
 }
-.fa-warnings h2 {
+.note {
+  background-color: #d9e7ff;
+  border-color: #c5dbff;
+}
+.note-icon {
+  color: #448aff;
+}
+.abstract {
+  background-color: #e5f7ff;
+  border-color: #b2e7ff;
+}
+.abstract-icon {
+  color: #00b0ff;
+}
+.info {
+  background-color: #e5f7fa;
+  border-color: #b2e9f2;
+}
+.info-icon {
+  color: #00b8d4;
+}
+.tip {
+  background-color: #e5f8f6;
+  border-color: #b2ebe4;
+}
+.tip-icon {
+  color: #00bfa5;
+}
+.question {
+  background-color: #effbe7;
+  border-color: #d0f4b9;
+}
+.question-icon {
+  color: #64dd17;
+}
+.warning {
+  background-color: #fff4e5;
+  border-color: #ffdeb2;
+}
+.warning-icon {
+  color: #ff9100;
+}
+.danger {
+  background-color: #ffe7ec;
+  border-color: #ffb9c6;
+}
+
+.danger-icon {
   color: #ff1744;
 }
 
-.fa-danger {
-  background-color: #ff1744;
-  border-radius: 0.2em;
-  color: white;
-  padding: 0.3em;
-}
 
-.fa-note {
-  background-color: #e5f9f6;
-  border-radius: 0.2em;
-  color: #448aff;
-  padding: 0.3em;
-}
-
-.fa-tip {
-  background-color: #e5f8f6;
-  border-radius: 0.8em;
-  border-style: solid;
-  border-width: 0.1em;
-  border-color: #6b7280;
-  color: #000;
-  padding: 0.1em 0.6em 0.6em 0.6em;
-}
 
 img[alt~="center"] {
   display: block;
@@ -197,5 +232,5 @@ footer {
 .fa-mastodon { color: purple; }
 .fa-linkedin { color: blue; }
 .fa-window-maximize { color: skyblue; }
-.fa-circle-exclamation { color: red; }
-.fa-trophy { color: #fff; }
+/* .fa-circle-exclamation { color: red; } */
+/* .fa-trophy { color: #000; } */
