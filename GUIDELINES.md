@@ -91,13 +91,13 @@ In this chapter, future Linux administrators will learn how to:
 :heavy_check_mark: **Use** the most useful Linux commands.
 ```
 
-Note that the title of this slide is level 2! There is obviously a blank line before and after the title.
+Note that the title of this slide is level 2! There is a blank line before and after the title.
 
 Please do not skip this important step for our learners.
 
 ## Adding a plan
 
-A plan is important so that the user can project himself into the chapter he is about to follow, and gives the trainer the opportunity to introduce each topic.
+A plan is important so that the user can project himself into the chapter he is about to follow, and allows the trainer to introduce each topic.
 
 ```markdown
 ---
@@ -136,7 +136,7 @@ If you have to use the same title multiple times, please consider using a counte
 ...
 ```
 
-## Using icons on title
+## Using icons on the title
 
 Using a carefully chosen, specific icon in a title makes it easier for learners to project themselves onto the slide (and it can be prettier too).
 
@@ -228,7 +228,7 @@ code {
 
 ## Admonitions
 
-To represent the admonitions in the documentation, corresponding CSS classes (notes,info,tip..) were created in the file `rocky-theme.css`. In particular, a common part was created for all admonitions:
+To represent admonitions in the documentation, corresponding CSS classes (notes,info,tip,...) were created in the file `rocky-theme.css`. In particular, a common part was created for all admonitions:
 
 ```css
 .note,
@@ -264,7 +264,7 @@ A separate class was also created for the admonition icon to set its color:
 }
 ```
 
-### Coversion of admonition
+### Conversion of admonition
 
 To correctly represent the admonition in the slide, the original code in the document must be changed. An admonition will have the following code in the original document:
 
@@ -288,7 +288,7 @@ Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint 
 </div>
 ```
 
-In this way the admonition is inserted into a *div* to which the corresponding class of the admonition is assigned which determines its background and border color, the admonition icon with the following classes is also inserted:
+In this way, the admonition is inserted into a *div* to which the corresponding class of the admonition is assigned which determines its background and border color. The admonition icon with the following classes is also inserted:
 
 * `fa` activate Awesome Fonts font loading without any customization
 * `note-icon` sets the color of the icon
@@ -298,9 +298,9 @@ In this way the admonition is inserted into a *div* to which the corresponding c
 
 NOTE: If the text is too short the display is not optimal, to remedy this you can insert a `</br>` tag after the sentence.
 
-## Check the knowledges
+## Checking knowledge
 
-Feel free to add questions to your presentations. You can add them at the end of a chapter or at the end of the presentation. This allows you to go back over specific notions, get the class talking and make the presentation more interactive.
+Feel free to add questions to your presentations. You can add them at the end of a chapter or the end of the presentation. This allows you to go back over specific notions, get the class talking, and make the presentation more interactive.
 
 ```markdown
 ---
@@ -317,6 +317,6 @@ Feel free to add questions to your presentations. You can add them at the end of
 ## A few final recommendations
 
 * Simplify your slides. An image is preferable to a long presentation. Remove as much text as possible.
-* Make your presentations fun. Add questions, games and images.
-* Put yourself in the trainer's shoes and give him/her the opportunity to interact with the class and the students.
+* Make your presentations fun. Add questions, games, and images.
+* Put yourself in the trainer's shoes and allow him/her the opportunity to interact with the class and the students.
 * Strongly prefer Markdown to HTML.
