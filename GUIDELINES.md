@@ -22,7 +22,6 @@ This header is used to specify that we will be using **marp** and to define its 
 You will also need to specify any additional css styles for the entire deck. Putting the styles in the header avoids overloading the first slide and avoids using html code in the markdown.
 
 ```yaml
----
 marp: true
 theme: gaia
 style: |
@@ -145,7 +144,6 @@ Using a carefully chosen, specific icon in a title makes it easier for learners 
 ## <i class="fa-regular fa-window-restore"></i> Backup and restoration
 ```
 
-
 ## Making columns
 
 You can process columns using a specific class, as shown below:
@@ -230,11 +228,75 @@ code {
 
 ## Admonitions
 
-You can use admonitions in your slides as follow:
+To represent the admonitions in the documentation, corresponding CSS classes (notes,info,tip..) were created in the file `rocky-theme.css`. In particular, a common part was created for all admonitions:
+
+```css
+.note,
+.abstract,
+.info,
+.tip,
+.question,
+.warning,
+.danger {
+  border-radius: 0.5em;
+  border-style: solid;
+  border-width: 0.1em;
+  padding: 0em 0.6em 0.6em 0.6em;
+  margin: 0.5em;
+  color: #111827;
+}
+```
+
+And a custom part for each admonition that sets the background and border color according to the type of admonition:
+
+```css
+.note {
+  background-color: #d9e7ff;
+  border-color: #c5dbff;
+}
+```
+
+A separate class was also created for the admonition icon to set its color:
+
+```css
+.note-icon {
+  color: #448aff;
+}
+```
+
+### Coversion of admonition
+
+To correctly represent the admonition in the slide, the original code in the document must be changed. An admonition will have the following code in the original document:
 
 ```markdown
-<i class="fa fa-quote-left fa-2x fa-pull-left"></i> This is an abstract.
+!!! note "Title of the note"
+
+    Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
 ```
+
+which should be changed to:
+
+```markdown
+<div class="note">
+
+<i class="fa note-icon fa-book-open fa-pull-left fa-2x"></a>
+
+**Title of the note**
+
+Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+
+</div>
+```
+
+In this way the admonition is inserted into a *div* to which the corresponding class of the admonition is assigned which determines its background and border color, the admonition icon with the following classes is also inserted:
+
+* `fa` activate Awesome Fonts font loading without any customization
+* `note-icon` sets the color of the icon
+* `fa-book-open` corresponds to the selected icon
+* `fa-pull-left` this property fixes the icon on the left side of the box and allows the text to wrap around the icon
+* `fa-2x` doubles the size of the icon
+
+NOTE: If the text is too short the display is not optimal, to remedy this you can insert a `</br>` tag after the sentence.
 
 ## Check the knowledges
 
