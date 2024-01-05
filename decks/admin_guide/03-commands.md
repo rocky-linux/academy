@@ -439,10 +439,12 @@ On a physical terminal, the display will be permanently hidden, whereas in a gra
 
 ---
 
-<div class="fa-tip">
+<div class="tip">
 
-<i class="fa-regular fa-tip-icon fa-lightbulb fa-pull-left fa-2x"></i> <kbd>CTRL</kbd> + <kbd>L</kbd> will have the same effect as the `clear` command
+<i class="fa-regular tip-icon fa-lightbulb fa-pull-left fa-2x"></i>
 
+<kbd>CTRL</kbd> + <kbd>L</kbd> will have the same effect as the `clear` command
+</br>
 </div>
 
 ---
@@ -509,9 +511,9 @@ In this last example, the `-d` option displays a given date. The `+%j` option fo
 
 ---
 
-<div class="fa-warn">
+<div class="warning">
 
-<i class="fa fa-warn-icon fa-exclamation-circle fa-pull-left fa-2x"></i> The format of a date can change depending on the value of the language defined in the environment variable `$LANG`.
+<i class="fa warning-icon fa-exclamation-circle fa-pull-left fa-2x"></i> The format of a date can change depending on the value of the language defined in the environment variable `$LANG`.
 
 </div>
 
@@ -685,10 +687,6 @@ In the above example, we are looking to give the location of the file `myfile` f
 
 * By an **absolute path**, the current directory does not matter. We start at the root, and work our way down to the directories `home`, `groupA`, `alice` and finally the file `myfile`: `/home/groupA/alice/myfile`.
 
----
-
-## <i class="fa fa-folder-tree"></i> File Tree
-
 * By a **relative path**, our starting point being the current directory `bob`, we go up one level through `..` (i.e., into the `groupA` directory), then down into the alice directory, and finally the `myfile` file: `../alice/myfile`.
 
 ---
@@ -750,6 +748,12 @@ $ ls /home
 
 ---
 
+<style scoped>
+table {
+  font-size: 0.8em;
+}
+</style>
+
 ### `ls` command
 
 The main options of the `ls` command are:
@@ -764,7 +768,7 @@ The main options of the `ls` command are:
 
 <style scoped>
 table {
-  font-size: 0.6em;
+  font-size: 0.59em;
 }
 </style>
 
@@ -816,9 +820,9 @@ table {
 | `rockstar`      | The name of the file (or directory).                                                                          |
 ---
 
-<div class="fa-note">
+<div class="note">
 
-<i class="fa fa-note-icon fa-book-open fa-pull-left fa-2x"></i> **Aliases** are frequently positioned in common distributions.
+<i class="fa note-icon fa-book-open fa-pull-left fa-2x"></i> **Aliases** are frequently positioned in common distributions.
 
 This is the case of the alias `ll`:
 
@@ -974,9 +978,9 @@ Otherwise, the `-p` option should be used. The `-p` option creates the parent di
 
 ---
 
-<div class="fa-danger">
+<div class="danger">
 
-<i class="fa fa-pull-left fa-danger-icon fa-exclamation-triangle fa-pull-left fa-2x"></i>
+<i class="fa fa-pull-left danger-icon fa-exclamation-triangle fa-pull-left fa-2x"></i>
 
 It is not recommended to use Linux command names as directory or file names.
 
@@ -1000,6 +1004,12 @@ $ touch /home/rockstar/myfile
 
 ---
 
+<style scoped>
+table {
+  font-size: 0.57em;
+}
+</style>
+
 ### `touch` command
 
 | Option                            | Information                                                                |
@@ -1010,9 +1020,9 @@ Date format: `[AAAA]MMJJhhmm[ss]`
 
 ---
 
-<div class="fa-tip">
+<div class="tip">
 
-<i class="fa fa-tip-icon fa-lightbulb fa-pull-left fa-2x"></i> The `touch` command is primarily used to create an empty file, but it can be useful for incremental or differential backups for example. Indeed, the only effect of executing a `touch` on a file will be to force it to be saved during the next backup.
+<i class="fa tip-icon fa-lightbulb fa-pull-left fa-2x"></i> The `touch` command is primarily used to create an empty file, but it can be useful for incremental or differential backups for example. Indeed, the only effect of executing a `touch` on a file will be to force it to be saved during the next backup.
 
 </div>
 
@@ -1034,9 +1044,9 @@ $ rmdir /home/rockstar/work
 
 ---
 
-<div class="fa-tip">
+<div class="tip">
 
-<i class="fa fa-tip-icon fa-lightbulb fa-pull-left fa-2x"></i> To delete both a non-empty directory and its contents, use the `rm` command.
+<i class="fa tip-icon fa-lightbulb fa-pull-left fa-2x"></i> To delete both a non-empty directory and its contents, use the `rm` command.
 
 </div>
 
@@ -1052,14 +1062,20 @@ rm [-f] [-r] file [file] [...]
 
 </br>
 
-<div class="fa-danger">
+<div class="danger">
 
-<i class="fa fa-danger-icon fa-exclamation-triangle fa-pull-left fa-2x"></i> Any deletion of a file or directory is final.
+<i class="fa danger-icon fa-exclamation-triangle fa-pull-left fa-2x"></i> Any deletion of a file or directory is final.
 </br>
 
 </div>
 
 ---
+
+<style scoped>
+table {
+  font-size: 0.9em;
+}
+</style>
 
 ### `rm` command
 
@@ -1071,9 +1087,9 @@ rm [-f] [-r] file [file] [...]
 
 ---
 
-<div class="fa-note">
+<div class="note">
 
-<i class="fa fa-note-icon fa-clipboard fa-pull-left fa-2x"></i> The `rm` command itself does not ask for confirmation when deleting files. However, with a Red Hat/Rocky distribution, `rm` does ask for confirmation of deletion because the `rm` command is an `alias` of the `rm -i` command. Don't be surprised if on another distribution, like Debian for example, you don't get a confirmation request.
+<i class="fa note-icon fa-clipboard fa-pull-left fa-2x"></i> The `rm` command itself does not ask for confirmation when deleting files. However, with a Red Hat/Rocky distribution, `rm` does ask for confirmation of deletion because the `rm` command is an `alias` of the `rm -i` command. Don't be surprised if on another distribution, like Debian for example, you don't get a confirmation request.
 
 </div>
 
@@ -1118,6 +1134,13 @@ $ mv /home/rockstar/file1 /home/rockstar/file2 /tmp
 ```
 
 ---
+
+
+<style scoped>
+table {
+  font-size: 0.65em;
+}
+</style>
 
 ### `mv` command
 
@@ -1407,6 +1430,12 @@ By default (without the `-n` option), the `head` command will display the first 
 
 ---
 
+<style scoped>
+table {
+  font-size: 0.92em;
+}
+</style>
+
 ### `tail` command
 
 The `tail` command displays the end of a file.
@@ -1469,7 +1498,7 @@ adm:x:3:4:adm:/var/adm/:/sbin/nologin
 
 <style scoped>
 table {
-  font-size: 0.7em;
+  font-size: 0.58em;
 }
 </style>
 
@@ -1641,6 +1670,12 @@ wc [-l] [-m] [-w] file [files]
 
 ---
 
+<style scoped>
+table {
+  font-size: 0.7em;
+}
+</style>
+
 ### `wc` command
 
 | Option | Description                    |
@@ -1675,7 +1710,7 @@ If the search directory is not specified, the `find` command will search from th
 | Option              | Description                            |
 | ------------------- | -------------------------------------- |
 | `-perm permissions` | Search for files by their permissions. |
-| `-size size`        | Search for files by size.              |
+| `-size size`        | Search for files by size.       |
 
 ---
 
@@ -1691,9 +1726,9 @@ The previous command searches for all files in the `/tmp` directory named `*.txt
 
 ---
 
-<div class="fa-tip">
+<div class="tip">
 
-<i class="fa fa-tip-icon fa-lightbulb fa-pull-left fa-2x"></i>
+<i class="fa tip-icon fa-lightbulb fa-pull-left fa-2x"></i>
 
 **Understand the `-exec` option**
 
@@ -1715,9 +1750,9 @@ The `;` character is a special shell character that must be protected by a `\` t
 
 </br>
 
-<div class="fa-tip">
+<div class="tip">
 
-<i class="fa fa-tip-icon fa-lightbulb fa-pull-left fa-2x"></i>
+<i class="fa tip-icon fa-lightbulb fa-pull-left fa-2x"></i>
 
 `$ find /tmp -name *.txt -delete` does the same thing.
 </br>
@@ -1791,9 +1826,9 @@ $ grep -w "^root" /etc/passwd
 
 ---
 
-<div class="fa-note">
+<div class="note">
 
-<i class="fa fa-note-icon fa-clipboard fa-pull-left fa-2x"></i>
+<i class="fa note-icon fa-clipboard fa-pull-left fa-2x"></i>
 
 This command is very powerful and it is highly recommended to consult its manual. It has many derivatives.
 
@@ -1856,17 +1891,17 @@ $ find /home -name "test[123]*"
 
 ---
 
-<div class="fa-note">
+<div class="note">
 
-<i class="fa fa-note-icon fa-sticky-note fa-pull-left fa-2x"></i>
+<i class="fa note-icon fa-sticky-note fa-pull-left fa-2x"></i>
 
 Always surround words containing meta-characters with `"` to prevent them from being replaced by the names of files that meet the criteria.
 
 </div>
 
-<div class="fa-warning">
+<div class="warning">
 
-<i class="fa fa-warning-icon fa-bell fa-pull-left fa-2x"></i>
+<i class="fa warning-icon fa-bell fa-pull-left fa-2x"></i>
 
 Do not confuse shell meta-characters with regular expression meta-characters. The `grep` command uses regular expression meta-characters.
 
@@ -1913,9 +1948,9 @@ $ ftp -in serverftp << ftp-commands.txt
 
 ---
 
-<div class="fa-note">
+<div class="note">
 
-<i class="fa fa-note-icon fa-sticky-note fa-pull-left fa-2x"></i>
+<i class="fa note-icon fa-sticky-note fa-pull-left fa-2x"></i>
 
 Only commands that require keyboard input will be able to handle input redirection.
 
@@ -1955,9 +1990,9 @@ The shell exits the `ftp` command when it receives a line containing only the ke
 
 ---
 
-<div class="fa-warning">
+<div class="warning">
 
-<i class="fa fa-warning-icon fa-exclamation-circle fa-pull-left fa-2x"></i>
+<i class="fa warning-icon fa-exclamation-circle fa-pull-left fa-2x"></i>
 
 The ending keyword, here `END` or `STOP`, must be the only word on the line and must be at the beginning of the line.
 
@@ -2168,9 +2203,9 @@ For permanent use, they must be created in the:
 
 ---
 
-<div class="fa-warning">
+<div class="warning">
 
-<i class="fa fa-warning-icon fa-exclamation-circle fa-pull-left fa-2x"></i>
+<i class="fa warning-icon fa-exclamation-circle fa-pull-left fa-2x"></i>
 
 Special care must be taken when using aliases which can be potentially dangerous! For example, an alias set up without the administrator's knowledge:
 
