@@ -5,7 +5,6 @@
 @import url('brands.css');
 @import url('regular.css');
 
-
 header {
   display: grid;
   grid-template-columns: 1fr max-content;
@@ -81,6 +80,20 @@ section header a:hover {
 section a:hover {
   background-color: #fff8e1;
   text-decoration-line: underline;
+}
+
+/* Style for the plan section menu */
+.plan {
+  background-color: #e3ddc8;
+  border-radius: 0.5em;
+  border-style: solid;
+  border-width: 0.1em;
+  color: #111827;
+  list-style-type: circle;
+  padding: .3em;
+}
+.plan a,a:link,a:hover,a:visited {
+  color: #0c9467;
 }
 .button a {
   background-color: #fdf6e2;
