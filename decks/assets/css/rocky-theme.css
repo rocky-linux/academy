@@ -121,16 +121,16 @@ section h3,h4 {
   display: inline-block;
 }
 .top_link a {
-  background-color: #fff8e1;
+  background-color: #fefbf2;
   border-style: solid;
   border-width: .1em;
-  border-color: #a5bfb2;
+  border-color: #e4e1d0;
   border-radius: .5em;
   color: white;
   padding: .3em;
 }
 .top_link a:hover {
-  background-color: #fffcf6;
+  background-color: #fefdf0;
   text-decoration-style: none;
 }
 /* Style for text in footer */
@@ -139,12 +139,18 @@ section h3,h4 {
 }
 /* Style for the plan section menu */
 .plan {
-  background-color: #cfefdf;
+  background-color: #fefbf2;
   font-size: .9em;
   color: #448aff;
   border-radius: .5em;
-  height: 70%;
+  height: 65%;
   padding: 1em;
+}
+.plan_header {
+  background-color: #b7e7d0;
+  border-radius: .4em;
+  text-align: center;
+  margin-bottom: .2em;
 }
 /* Button for chapters */
 .button a {
@@ -164,13 +170,13 @@ section h3,h4 {
 .button {
   float: right;
 }
-
-.fa-solid {
-  background-color: #10b981;
-  border-radius: 0.2em;
-  color: white;
-  padding: 0.3em;
-}
+/**/
+/* .fa-solid { */
+/*   background-color: #10b981; */
+/*   border-radius: 0.2em; */
+/*   color: white; */
+/*   padding: 0.3em; */
+/* } */
 /* Styling admonitions */
 .note,
 .abstract,

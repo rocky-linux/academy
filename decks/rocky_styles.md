@@ -6,7 +6,7 @@ style: |
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:300](./assets/rocky_logo_white.png) <i class="top_link">[Back to menu](#2)</i>'
+header: '![w:300](./assets/rocky_logo_white.png) <i class="top_link">[Back to menu](#styles-menu)</i>'
 footer: '<i class="footer_text">**Rocky Linux Academy > Style Guide**</i>'
 ---
 
@@ -31,24 +31,154 @@ The following tools are used in the implementation of this project:
 
 ![bg opacity:.5](./assets/rocky_linux_logo.svg)
 
-## Plan menu
+<div class="plan_header">
+
+## Styles menu
+
+</div>
 
 <div class="columns plan">
 <div>
 
-<i class="fa fa-book"></i> [What is an operating system?](#4)
-<i class="fa fa-book"></i> [Generalities UNIX - GNU/Linux](#8)
-<i class="fa fa-book"></i> [The GNU/Linux distributions](#33)
+<i class="fa fa-book"></i> [Introduction](#introduction)
+<i class="fa fa-book"></i> [Add a background](#add-a-background-11)
+<i class="fa fa-book"></i> [Add Awesome Fonts](#add-awesome-fonts-11)
+<i class="fa fa-book"></i> [Unordered List](#lists-style-11)
+<i class="fa fa-book"></i> [Ordered List](#lists-style-31)
 
 </div>
 <div>
 
-<i class="fa fa-book"></i> [Areas of use](#48)
-<i class="fa fa-book"></i> [Shell](#50)
-<i class="fa fa-book"></i> [Check your Knowledge](#56)
+<i class="fa fa-book"></i> [Add Images](#add-images-11)
+<i class="fa fa-book"></i> [Admonition](#admonition)
+<i class="fa fa-book"></i> [Back to Main Menu](./index.html)
 
 </div>
 </div>
+
+---
+
+## Add a background 1/1
+
+**Marp** provides numerous options for background insertion and placement. The background is inserted with a common Markdown `[text](url)` tag what differentiates it is the use of the `bg` attribute in the alternative text. In Rocky Academy, the *rocky_linux_logo.svg* was used with the following settings:
+
+```markdown
+![bg opacity:.5](./assets/rocky_linux_logo.svg)
+```
+
+This sets the background as in the next slide.
+
+---
+
+![bg opacity:.5](./assets/rocky_linux_logo.svg)
+
+## Add a background 2/1
+
+The background is mainly used for the first page of the slide and for the menu.
+
+---
+
+## Add Awesome Fonts 1/1
+
+---
+
+## Add Awesome Fonts 2/1
+
+<div class="columns">
+<div>
+
+* <i class="fa-brands fa-linux"></i> Normal size
+* <i class="fa-brands fa-linux fa-2x"></i> Double size
+* <i class="fa-brands fa-linux fa-4x"></i> Quad size
+
+</div>
+<div>
+
+### Dimensioni
+
+```markdown
+<i class="fa-brands fa-linux"></i>
+<i class="fa-brands fa-linux fa-2x"></i>
+<i class="fa-brands fa-linux fa-4x"></i>
+```
+
+Awesome Fonts provides through its CSS the insertion, sizing and styling of the glyph.
+
+</div>
+
+---
+
+## Add Awesome Fonts 3/1
+
+<div class="columns">
+<div>
+
+* <i class="fa-solid fa-lightbulb fa-2x"></i> Solid Style
+* <i class="fa-regular fa-lightbulb fa-2x"></i> Regular Style
+* <i class="fa-brands fa-github fa-2x"></i> Brands Style
+
+</div>
+<div>
+
+The free classes provided by **Awesome Fonts** are three:
+
+**fa-solid** - **fa-regular** - **fa-brands**
+
+```markdown
+<i class="fa-solid fa-lightbulb"></i>
+<i class="fa-regular fa-lightbulb"></i>
+<i class="fa-brands fa-github"></i>
+```
+
+</div>
+
+---
+
+## Add Awesome Fonts 4/1
+
+<i class="fa-solid fa-quote-left fa-2x fa-pull-left"></i> Left positioning is set with the `fa-pull-left` class, which determines its position and the wrapping of text in the image.
+
+```markdown
+<i class="fa-solid fa-quote-left fa-2x fa-pull-left"></i>
+```
+
+<i class="fa-solid fa-quote-right fa-2x fa-pull-right"></i> Similarly, the `fa-pull-right` class places it to the right.
+
+```markdown
+<i class="fa-solid fa-quote-right fa-2x fa-pull-right"></i>
+```
+
+---
+
+## Add Awesome Fonts 5/1
+
+Through the `style=""` you can configure font properties such as color, border properties and margins.
+
+<i class="fa-solid fa-arrow-right fa-pull-right" style="color: #078ad2;"> [Next Chapter](#lists-style-11)</i>
+
+Right-hand positioning:
+
+```markdown
+<i class="fa-solid fa-arrow-right fa-pull-right" style="color: #078ad2;"> [Next Chapter](#lists-style-11)</i>
+```
+
+<i class="fa-regular fa-circle-right fa-pull-right fa-border" style="color: #ff9100; border-color: #ff9100; border-radius: .3em"> [Next Chapter](#lists-style-11)</i>
+
+Other version:
+
+---
+
+## Add Awesome Fonts 6/1
+
+<i class="fa-brands fa-linux fa-4x fa-border fa-pull-left" style="--fa-border-color: #10b981; --fa-border-radius: 50%"></i>
+
+This image was obtained using the `fa-linux` font with the additional style properties.
+
+**Note:** There is no property for the font background, this in some cases can be set with CSS.
+
+```css
+style="--fa-border-color: #10b981; --fa-border-radius: 50%"
+```
 
 ---
 
@@ -67,7 +197,7 @@ The following tools are used in the implementation of this project:
 </div>
 <div>
 
-## Unordered List
+### Unordered List
 
 Unordered lists offer a dynamic display of list items. With each advance, the next item is displayed.
 
@@ -107,7 +237,7 @@ Items in ordered lists are all displayed at the same time.
 
 ---
 
-## Add images to slides 1/1
+## Add images 1/1
 
 Basic functions are provided by *Marpit* to use Markdown tags to insert images.
 
@@ -119,7 +249,7 @@ This image was inserted with the following Markdown code:
 
 ---
 
-## Add images to slides 2/1
+## Add images 2/1
 
 The positioning of images within slides can be achieved by integrating CSS settings provided by [Awesome Fonts](https://fontawesome.com/docs/web/style/pull).
 
@@ -131,7 +261,7 @@ In particular, it provides the classes:
 
 ---
 
-## Add images to slides 3/1
+## Add images 3/1
 
 Using the options provided by *Marpit* only image insertion is possible, with no control over the position and behavior of the text. This image was inserted using only the functions of *Marpit*.
 
@@ -139,15 +269,15 @@ Using the options provided by *Marpit* only image insertion is possible, with no
 
 ---
 
-## Add images to slides 4/1
+## Add images 4/1
 
-Using the `fa-border` and `fa-pull-right` attributes, it is possible to place the image right with the text wrapping the image.
+Using the `fa-pull-right` attribute, it is possible to place the image right with the text wrapping the image.
 
 <i class="fa-border fa-pull-right">![w:150](./assets/rocky_linux_logo.svg)</i> Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
 
 ---
 
-## Add images to slides 5/1
+## Add images 5/1
 
 <style scoped>
 code {
@@ -163,6 +293,10 @@ Multiple images can be inserted by controlling the position and size of each one
 <i class="fa-border fa-pull-right" style="--fa-border-style: none"> ![w:150](./assets/rocky_linux_logo.svg)</i>
 <i class="fa-border fa-pull-left" style="--fa-border-style: none"> ![w:100](./assets/rocky_linux_logo.svg)</i>
 ```
+
+---
+
+## Admonition
 
 ---
 
