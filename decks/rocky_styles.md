@@ -3,9 +3,6 @@ marp: true
 theme: gaia
 style: |
   @import url('./assets/css/rocky-theme.css');
-  section {
-    padding-top: 90px;
-  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
@@ -18,6 +15,17 @@ footer: '<i class="footer_text">**Rocky Linux Academy > Style Guide**</i>'
 ![bg opacity:.5](./assets/rocky_linux_logo.svg)
 
 ## Styles for presentations on Rocky Linux
+
+This slide is intended to illustrate the graphic parts that can be used to create presentations in Rocky Academy.
+
+---
+
+## Introduction
+
+The following tools are used in the implementation of this project:
+
+* **Marp** a suite of tools for transforming documentation written in Markdown into presentations (HTML and PDF)
+* **Awesome Fonts** set of CSS fonts and styles that allow the inclusion of characters depicting images (glyphs) for slide customization.
 
 ---
 
@@ -141,9 +149,20 @@ Using the `fa-border` and `fa-pull-right` attributes, it is possible to place th
 
 ## Add images to slides 5/1
 
+<style scoped>
+code {
+  font-size: 0.5em;
+}
+</style>
+
 Multiple images can be inserted by controlling the position and size of each one.
 
-<i class="fa-border fa-pull-right">![w:150](./assets/rocky_linux_logo.svg)</i> Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. <i class="fa-border fa-pull-left">![w:100](./assets/rocky_linux_logo.svg)</i> Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+<i class="fa-border fa-pull-right" style="--fa-border-style: none"> ![w:150](./assets/rocky_linux_logo.svg)</i> It is also possible to insert the same image in multiple positions with different sizes. <i class="fa-border fa-pull-left" style="--fa-border-style: none"> ![w:100](./assets/rocky_linux_logo.svg)</i> In this example, the image *rocky_linux_logo.svg* was inserted twice in two different positions with different sizes.
+
+```markdown
+<i class="fa-border fa-pull-right" style="--fa-border-style: none"> ![w:150](./assets/rocky_linux_logo.svg)</i>
+<i class="fa-border fa-pull-left" style="--fa-border-style: none"> ![w:100](./assets/rocky_linux_logo.svg)</i>
+```
 
 ---
 
