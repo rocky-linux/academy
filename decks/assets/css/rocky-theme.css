@@ -4,6 +4,7 @@
 @import url('solid.css');
 @import url('brands.css');
 @import url('regular.css');
+@import 'gaia';
 
 header {
   display: grid;
@@ -36,9 +37,6 @@ kbd {
     padding: 0 .6666666667em;
     vertical-align: text-top;
     word-break: break-word;
-}
-section {
-  padding-top: 90px;
 }
 /* Styles for unordered lists */
 section ul {
@@ -101,13 +99,11 @@ section::after {
   color: #fff;
 }
 section a,a:link,a:visited {
-  color: red;
   text-decoration: dotted;
 }
 
 section a:hover {
   text-decoration-line: underline;
-  color: red;
 }
 
 section h1 {
@@ -120,20 +116,7 @@ section h2 {
 section h3,h4 {
   color: #3a8b70;
 }
-/* section header a,a:visited { */
-/*   background-color: #10b981; */
-/*   padding: 0em 0.6em 0em 0.6em; */
-/*   text-decoration: none; */
-/*   border: 2px solid #f5f5f5; */
-/*   border-radius: .2rem; */
-/* } */
-/* section header a:link { */
-/*   background-color: #10b981; */
-/*   text-decoration: none; */
-/* } */
-/* section header a:hover { */
-/*   background-color: #0c9467; */
-/* } */
+/* Style for the button in the header */
 .top_link {
   display: inline-block;
 }
@@ -150,6 +133,7 @@ section h3,h4 {
   background-color: #fffcf6;
   text-decoration-style: none;
 }
+/* Style for text in footer */
 .footer_text {
   color: white;
 }
@@ -162,7 +146,7 @@ section h3,h4 {
   height: 70%;
   padding: 1em;
 }
-
+/* Button for chapters */
 .button a {
   background-color: #fdf6e2;
   padding: 0em 0.6em 0em 0.6em;
@@ -177,13 +161,8 @@ section h3,h4 {
   background-color: #fefbf2;
   text-decoration: none;
 }
-
 .button {
   float: right;
-}
-
-.h1lead h1 {
-  color: #096f4d;
 }
 
 .fa-solid {
@@ -258,8 +237,6 @@ section h3,h4 {
   color: #ff1744;
 }
 
-
-
 img[alt~="center"] {
   display: block;
 margin: 0 auto;
@@ -280,23 +257,6 @@ blockquote:after{
   content: unset;
 }
 
-section header {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    color: white;
-    font-size: 1em;
-    padding: 20px;
-}
-
-footer {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-}
-
 .columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -314,5 +274,3 @@ footer {
 .fa-mastodon { color: purple; }
 .fa-linkedin { color: blue; }
 .fa-window-maximize { color: skyblue; }
-/* .fa-circle-exclamation { color: red; } */
-/* .fa-trophy { color: #000; } */
