@@ -78,6 +78,22 @@ The background is mainly used for the first page of the slide and for the menu.
 
 ---
 
+## Headings Style
+
+# Title example
+
+---
+
+## h2 Title example
+
+### Shell
+
+#### `apropos` command
+
+##### h5 Title example
+
+---
+
 ## Add Awesome Fonts 1/1
 
 ---

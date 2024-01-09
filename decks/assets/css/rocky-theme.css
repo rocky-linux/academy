@@ -4,7 +4,6 @@
 @import url('solid.css');
 @import url('brands.css');
 @import url('regular.css');
-@import 'gaia';
 
 header {
   display: grid;
@@ -107,32 +106,136 @@ section a:hover {
 }
 
 section h1 {
-  color:#096f4d;
+  font-family: helvetica;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fefefe;
+  text-shadow: #e7e7e7 3px 5px 0,
+               #999 4px 6px 3px,
+               #ccc 8px 11px 10px;
+}
+/* section h1 { */
+/*   font-size: 6.25em; */
+/*   font-weight: 600; */
+/*   color: #fdfdfe; */
+/*   text-shadow: 0px 0px 5px #87dcc0, 0px 0px 10px #87dcc0, 0px 0px 10px #87dcc0, */
+/*     0px 0px 20px #87dcc0; */
+/* } */
+/* section h2 { */
+/*   color: #064d35; */
+/* } */
+h2 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  color: #111827;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
-section h2 {
-  color: #064d35;
+h2 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
 }
-section h3,h4 {
+h2 em {
+  font-style: normal;
+  font-weight: 600;
+}
+/*  HEADING STYLE #3 */
+h2 {
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  padding-bottom: 15px;
+  position: relative;
+}
+h2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.1em;
+  width: 55px;
+  background-color: #10b981;
+}
+h2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 1px;
+  width: 95%;
+  max-width: 60%;
+  background-color: #10b981;
+}
+/* section h3,h4 { */
+/*   color: #3a8b70; */
+/* } */
+/* Style for the button in the header */
+h3 {
+  font-size: 1rem;
+  overflow: hidden;
   color: #3a8b70;
 }
-/* Style for the button in the header */
-.top_link {
+
+h3:after {
+  content: "";
   display: inline-block;
+  height: 0.5em;
+  vertical-align: bottom;
+  width: 100%;
+  margin-right: -100%;
+  margin-left: 20px;
+  border-top: 1px solid #10b981;
 }
-.top_link a {
-  background-color: #fefbf2;
-  border-style: solid;
-  border-width: .1em;
-  border-color: #e4e1d0;
-  border-radius: .5em;
-  color: white;
-  padding: .3em;
+h4 {
+  font-size: 1rem;
+  overflow: hidden;
+  color: #ff9100;
 }
-.top_link a:hover {
-  background-color: #fefdf0;
-  text-decoration-style: none;
+
+h4:after {
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  vertical-align: bottom;
+  width: 50%;
+  margin-right: -100%;
+  margin-left: 20px;
+  border-top: 1px solid #10b981;
 }
+h5 {
+  overflow: hidden;
+  text-align: center;
+}
+
+h5::before,
+h5::after {
+  background-color: #000;
+  content: " ";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+h5::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+h5::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
 /* Style for text in footer */
 .footer_text {
   color: white;
