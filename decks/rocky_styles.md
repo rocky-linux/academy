@@ -3,6 +3,9 @@ marp: true
 theme: gaia
 style: |
   @import url('./assets/css/rocky-theme.css');
+    p {
+      margin-top: .5em;
+    }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
@@ -84,13 +87,27 @@ The background is mainly used for the first page of the slide and for the menu.
 
 ---
 
-## h2 Title example
+## Heading Style h2
 
-### Shell
+The `h2` title should be used for main slide titles. For all other needs, subsequent tags (h3, h4 and h5) should be used.
+
+### Heading Style h3
+
+This tag can be used for all topics that are nevertheless important but secondary to the title of the slide.
+
+---
+
+#### `Heading` Style h4
+
+This style fits well with subtopics such as the commands described in the *03-command.md* page of the administrator's guide.
+
+Example:
 
 #### `apropos` command
 
 ##### h5 Title example
+
+This style has no defined purpose and can be used as a wildcard to interrupt long text or as a title for slides where there are only examples or blocks of code.
 
 ---
 
@@ -110,7 +127,7 @@ The background is mainly used for the first page of the slide and for the menu.
 </div>
 <div>
 
-### Dimensioni
+### Sizes
 
 ```markdown
 <i class="fa-brands fa-linux"></i>
@@ -118,7 +135,7 @@ The background is mainly used for the first page of the slide and for the menu.
 <i class="fa-brands fa-linux fa-4x"></i>
 ```
 
-Awesome Fonts provides through its CSS the insertion, sizing and styling of the glyph.
+Awesome Fonts provides through its CSS classes the insertion, sizing and styling of the glyph.
 
 </div>
 
