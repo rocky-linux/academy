@@ -108,9 +108,9 @@ section a:hover {
   text-decoration-line: underline;
 }
 
-section h1 {
+h1 {
   font-family: helvetica;
-  text-transform: uppercase;
+/*   text-transform: uppercase; */
   text-align: center;
   color: #fefefe;
   text-shadow: #e7e7e7 3px 5px 0,
@@ -134,7 +134,6 @@ h2 {
   line-height: 1.5em;
   padding-bottom: 15px;
   position: relative;
-  color: #448aff;
 }
 h2:before {
   content: "";
@@ -143,7 +142,7 @@ h2:before {
   bottom: 0;
   height: 0.1em;
   width: 55px;
-  background-color: #ff9100;
+  background-color: black;
 }
 h2:after {
   content: "";
@@ -153,12 +152,11 @@ h2:after {
   height: 1px;
   width: 95%;
   max-width: 60%;
-  background-color: #ff9100;
+  background-color: black;
 }
 h3 {
   font-size: 1rem;
   overflow: hidden;
-  color: #3a8b70;
 }
 h3:after {
   content: "";
@@ -168,12 +166,11 @@ h3:after {
   width: 100%;
   margin-right: -100%;
   margin-left: 20px;
-  border-top: 1px solid #10b981;
+  border-top: 1px solid;
 }
 h4 {
   font-size: 1rem;
   overflow: hidden;
-  color: #ff9100;
 }
 
 h4:after {
@@ -184,35 +181,70 @@ h4:after {
   width: 50%;
   margin-right: -100%;
   margin-left: 20px;
-  border-top: 1px solid #10b981;
+  border-top: 1px solid;
 }
+/* h5 { */
+/*   overflow: hidden; */
+/*   text-align: center; */
+/*   color: #3a8b70; */
+/* } */
+/**/
+/* h5::before, */
+/* h5::after { */
+/*   background-color: #87dcc0; */
+/*   content: " "; */
+/*   display: inline-block; */
+/*   height: 1px; */
+/*   position: relative; */
+/*   vertical-align: bottom; */
+/*   width: 50%; */
+/* } */
+/**/
+/* h5::before { */
+/*   right: 0.5em; */
+/*   margin-left: -50%; */
+/* } */
+/**/
+/* h5::after { */
+/*   left: 0.5em; */
+/*   margin-right: -50%; */
+/* } */
 h5 {
-  overflow: hidden;
-  text-align: center;
-  color: #3a8b70;
+  display: flex;
+  flex-direction: row;
 }
-
-h5::before,
-h5::after {
-  background-color: #87dcc0;
-  content: " ";
-  display: inline-block;
-  height: 1px;
-  position: relative;
-  vertical-align: bottom;
-  width: 50%;
+h5::before, h5::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: 0.3em;
 }
-
-h5::before {
-  right: 0.5em;
-  margin-left: -50%;
+h6 {
+  display: flex;
+  flex-direction: row;
 }
-
-h5::after {
-  left: 0.5em;
-  margin-right: -50%;
+h6::before {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: 0.3em;
 }
-
+/* Custom styles for intro and plan */
+.intro h2 {
+  color: teal;
+}
+.intro h2::before {
+  display: none;
+}
+.intro h2::after {
+  display: none;
+}
+.plan_header h2::before {
+  display: none;
+}
+.plan_header h2::after {
+  display: none;
+}
 /* Style for text in footer */
 .footer_text {
   color: white;
@@ -221,16 +253,20 @@ h5::after {
 .plan {
   background-color: #fefbf2;
   font-size: .9em;
-  color: #448aff;
+  color: #111827;
   border-radius: .5em;
   height: 65%;
   padding: 1em;
 }
+.plan a,a:link {
+  color: #000;
+}
 .plan_header {
-  background-color: #b7e7d0;
+  background-color: #10b981;
   border-radius: .4em;
   text-align: center;
   margin-bottom: .2em;
+  color: #fefbf2;
 }
 /* Button for chapters */
 .button a {

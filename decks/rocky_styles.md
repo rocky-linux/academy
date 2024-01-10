@@ -6,6 +6,9 @@ style: |
     p {
       margin-top: .5em;
     }
+    section a {
+    color: inherit;
+    }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
@@ -13,13 +16,19 @@ header: '![w:300](./assets/rocky_logo_white.png) <i class="top_link">[Back to me
 footer: '<i class="footer_text">**Rocky Linux Academy > Style Guide**</i>'
 ---
 
+
+
 # Graphical examples
 
 ![bg opacity:.5](./assets/rocky_linux_logo.svg)
 
+<div class="intro">
+
 ## Styles for presentations on Rocky Linux
 
 This slide is intended to illustrate the graphic parts that can be used to create presentations in Rocky Academy.
+
+</div>
 
 ---
 
@@ -37,8 +46,6 @@ The following tools are used in the implementation of this project:
 <div class="plan_header">
 
 ## Styles menu
-
-</div>
 
 <div class="columns plan">
 <div>
@@ -108,6 +115,10 @@ Example:
 ##### h5 Title example
 
 This style has no defined purpose and can be used as a wildcard to interrupt long text or as a title for slides where there are only examples or blocks of code.
+
+---
+
+###### h6 Title example
 
 ---
 
