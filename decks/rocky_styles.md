@@ -3,17 +3,11 @@ marp: true
 theme: gaia
 style: |
   @import url('./assets/css/rocky-theme.css');
-    p {
-      margin-top: .5em;
-    }
-    section a {
-    color: inherit;
-    }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:300](./assets/rocky_logo_white.png) <i class="top_link">[Back to menu](#styles-menu)</i>'
-footer: '<i class="footer_text">**Rocky Linux Academy > Style Guide**</i>'
+header: '![w:300](./assets/rocky_logo_white.png) [Back to menu](#styles-menu)'
+footer: '**Rocky Linux Academy > Style Guide**'
 ---
 
 
@@ -344,7 +338,7 @@ Multiple images can be inserted by controlling the position and size of each one
 
 ---
 
-## Admonition - Note
+##### Admonition - Note
 
 <div class="note">
 
@@ -368,7 +362,7 @@ Code:
 
 ---
 
-## Admonition - Abstract
+##### Admonition - Abstract
 
 <div class="abstract">
 
@@ -392,7 +386,7 @@ Code:
 
 ---
 
-## Admonition - Info
+##### Admonition - Info
 
 <div class="info">
 
