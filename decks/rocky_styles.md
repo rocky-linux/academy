@@ -6,17 +6,23 @@ style: |
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:300](./assets/rocky_logo_white.png) <i class="top_link">[Back to menu](#styles-menu)</i>'
-footer: '<i class="footer_text">**Rocky Linux Academy > Style Guide**</i>'
+header: '![w:300](./assets/rocky_logo_white.png) [Back to menu](#styles-menu)'
+footer: '**Rocky Linux Academy > Style Guide**'
 ---
+
+
 
 # Graphical examples
 
 ![bg opacity:.5](./assets/rocky_linux_logo.svg)
 
+<div class="intro">
+
 ## Styles for presentations on Rocky Linux
 
 This slide is intended to illustrate the graphic parts that can be used to create presentations in Rocky Academy.
+
+</div>
 
 ---
 
@@ -34,8 +40,6 @@ The following tools are used in the implementation of this project:
 <div class="plan_header">
 
 ## Styles menu
-
-</div>
 
 <div class="columns plan">
 <div>
@@ -78,6 +82,40 @@ The background is mainly used for the first page of the slide and for the menu.
 
 ---
 
+## Headings Style
+
+# Title example
+
+---
+
+## Heading Style h2
+
+The `h2` title should be used for main slide titles. For all other needs, subsequent tags (h3, h4 and h5) should be used.
+
+### Heading Style h3
+
+This tag can be used for all topics that are nevertheless important but secondary to the title of the slide.
+
+---
+
+#### `Heading` Style h4
+
+This style fits well with subtopics such as the commands described in the *03-command.md* page of the administrator's guide.
+
+Example:
+
+#### `apropos` command
+
+##### h5 Title example
+
+This style has no defined purpose and can be used as a wildcard to interrupt long text or as a title for slides where there are only examples or blocks of code.
+
+---
+
+###### h6 Title example
+
+---
+
 ## Add Awesome Fonts 1/1
 
 ---
@@ -94,7 +132,7 @@ The background is mainly used for the first page of the slide and for the menu.
 </div>
 <div>
 
-### Dimensioni
+### Sizes
 
 ```markdown
 <i class="fa-brands fa-linux"></i>
@@ -102,7 +140,7 @@ The background is mainly used for the first page of the slide and for the menu.
 <i class="fa-brands fa-linux fa-4x"></i>
 ```
 
-Awesome Fonts provides through its CSS the insertion, sizing and styling of the glyph.
+Awesome Fonts provides through its CSS classes the insertion, sizing and styling of the glyph.
 
 </div>
 
@@ -300,7 +338,7 @@ Multiple images can be inserted by controlling the position and size of each one
 
 ---
 
-## Admonition - Note
+##### Admonition - Note
 
 <div class="note">
 
@@ -324,7 +362,7 @@ Code:
 
 ---
 
-## Admonition - Abstract
+##### Admonition - Abstract
 
 <div class="abstract">
 
@@ -348,7 +386,7 @@ Code:
 
 ---
 
-## Admonition - Info
+##### Admonition - Info
 
 <div class="info">
 
