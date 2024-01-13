@@ -18,7 +18,7 @@
 :root {
   --section-bg: #fef3c7;
   --text-color: #374151;
-  --title-deck: #E24E1B;
+  --title-deck: #dc2626;
   --title-h2-line: #DC2626;
   --title-h3: #DA7635;
   --title-h4: #D97706;
@@ -80,6 +80,7 @@ p {
 ul {
   color: #10b981;
   list-style: none;
+  font-size: 0.8em;
 }
 ul li {
   color: #085c40;
