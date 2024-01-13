@@ -5,29 +5,33 @@
 @import url('brands.css');
 @import url('regular.css');
 
-
 /* CSS HEX */
-/* --gunmetal: #1f2937ff; */
-/* --antiflash-white: #e5e7ebff; */
-/* --blue-ncs: #0284c7ff; */
-/* --mint: #10b981ff; */
-/* --amber: #fbbf24ff; */
-/* --ochre: #d97706ff; */
-/* --rojo: #dc2626ff; */
+/* --mint: #10b981; */
+/* --rojo: #dc2626; */
+/* --rose-bonbon: #ec4899; */
+/* --uranian-blue: #bfdbfe; */
+/* --marian-blue: #1e3a8a; */
+/* --lemon-chiffon: #fef3c7; */
+/* --wine: #783546; */
+/* --rose-taupe: #935d6b; */
 
 :root {
-  --section-bg: #E5E7EB;
-  --text-color: #1F2937;
-  --title-deck: #0284C7;
+  --section-bg: #fef3c7;
+  --text-color: #374151;
+  --title-deck: #E24E1B;
   --title-h2-line: #DC2626;
-  --title-h3: #FE7210;
+  --title-h3: #DA7635;
   --title-h4: #D97706;
   --title-h5: #DC2626;
   --title-h6: #0284C7;
-  --highlight-color: #FBBF24;
-  --primary-decoration: #D97706;
-  --secondary-decoration: #FBBF24;
+  --highlight-color: #1e3a8a;
+  --primary-decoration: #935d6b;
+  --secondary-decoration: #783546;
+  --icon-one: #bfdbfe;
 }
+
+.icon-one { color: var(--icon-one); }
+
 section {
   background-color: var(--section-bg) !important;
   color: var(--text-color) !important;
@@ -186,7 +190,7 @@ h2:after {
   height: 1px;
   width: 95%;
   max-width: 60%;
-  background-color: var(--secondary-decoration);
+  background-color: var(--primary-decoration);
 }
 h3 {
   font-size: 1rem;
@@ -296,14 +300,30 @@ h6::before {
   padding: 1em;
 }
 .plan a {
-  color: red !important;
+  color: var(--highlight-color) !important;
+}
+.plan a::before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 50%;
+  background-color: #69b6d5;
+  margin-right: 0.5em;
+}
+.plan a:hover::before {
+  background-color: red;
 }
 .plan_header {
   background-color: #10b981;
   border-radius: .4em;
   text-align: center;
   margin-bottom: .2em;
-  color: #fefbf2;
+}
+.plan_header h2 {
+  color: var(--section-bg);
 }
 
 /* Button for chapters */

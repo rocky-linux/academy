@@ -3,15 +3,6 @@ marp: true
 theme: gaia
 style: |
   @import url('../assets/css/rocky-theme.css');
-  header,footer{
-    color: #fff;
-  }
-  section header a {
-    color: inherit;
-  }
-  section {
-    padding-top: 90px;
-  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
@@ -23,15 +14,19 @@ footer: '**Rocky Linux Academy > Admin Guide > Presentation**'
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
+<div class="intro">
+
 ## Introduction to the Linux Operating System
+
+</div>
 
 In this chapter you will learn about GNU/Linux distributions.
 
 ---
 
-## <i class="fa fa-trophy"></i> Objectives
+## Objectives
 
-In this chapter you will learn about GNU/Linux distributions.
+In this chapter you will learn about GNU/Linux distributions. <i class="fa-solid icon-one fa-trophy fa-pull-right fa-4x"></i>
 
 :heavy_check_mark: Describe the features and possible architectures of an operating system.
 :heavy_check_mark: Recount the history of UNIX and GNU/Linux.
@@ -41,14 +36,28 @@ In this chapter you will learn about GNU/Linux distributions.
 
 ---
 
-## <i class="fa fa-table-columns"></i> Plan
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
-* [What is an operating system?](#4)
-* [Generalities UNIX - GNU/Linux](#8)
-* [The GNU/Linux distributions](#33)
-* [Areas of use](#48)
-* [Shell](#50)
-* [Check your Knowledge](#56)
+<div class="plan_header">
+
+## Presentation
+
+<div class="columns plan">
+<div>
+
+[What is an operating system?](#4)
+[Generalities UNIX - GNU/Linux](#8)
+[The GNU/Linux distributions](#33)
+
+</div>
+<div>
+
+[Areas of use](#48)
+[Shell](#50)
+[Check your Knowledge](#56)
+
+</div>
+</div>
 
 ---
 
