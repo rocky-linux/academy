@@ -133,26 +133,44 @@ A workstation-type installation (with graphical interface) starts this interface
 
 ### The shell
 
+<div class="columns">
+<div>
+
 Once the user is connected to a console, the shell displays the **command prompt**. It then behaves like an infinite loop, repeating the same pattern with each statement entered:
+
+The key sequence <kbd>CTRL</kbd> + <kbd>C</kbd> is used to interrupt a running command.
+
+</div>
+<div>
 
 * Displays the command prompt.
 * Reads the command.
 * Analyzes the syntax.
 * Substitutes special characters.
 
+</div>
+</div>
+
 ---
 
 ### The shell
+
+<div class="columns">
+<div>
+
+Once the user is connected to a console, the shell displays the **command prompt**. It then behaves like an infinite loop, repeating the same pattern with each statement entered:
+
+The key sequence <kbd>CTRL</kbd> + <kbd>C</kbd> is used to interrupt a running command.
+
+</div>
+<div>
 
 * Executes the command.
 * Displays the command prompt.
 * Etc.
 
----
-
-### The shell
-
-The key sequence <kbd>CTRL</kbd> + <kbd>C</kbd> is used to interrupt a running command.
+</div>
+</div>
 
 ---
 
@@ -167,10 +185,6 @@ command [option(s)] [argument(s)]
 The name of the command is often **lower case**.
 
 A space separates each item.
-
----
-
-### The shell
 
 **Short options** begin with a dash (`-l`), while **long options** begin with two dashes (`--list`).
 A double dash (`--`) indicates the end of the option list.
@@ -205,7 +219,9 @@ In the literature, the term "option" is equivalent to the term "parameter," whic
 
 ---
 
-## <i class="fa fa-keyboard"></i> General commands
+## General commands
+
+![w:400 opacity:50%](./images/general_commands.png)
 
 ---
 
@@ -278,27 +294,26 @@ clear (1)            - clear the terminal screen
 
 #### `man` command
 
+<style scoped>
+    ol {
+        font-size: 0.65em;
+    }
+</style>
+
+<div class="columns">
+<div>
+
 Once found by `apropos` or `whatis`, the manual is read by `man` ("Man is your friend").
 
----
-
-#### `man` command
-
 This set of manuals is divided into 8 sections, grouping information by topic, the default section being 1:
-
----
-
-<div class="columns"a>
-<div>
-    
-1. Executable programs or commands.
-2. System calls (functions given by the kernel).
-3. Library calls (functions given by the library).
-4. Special files (usually found in /dev).
 
 </div>
 <div>
 
+1. Executable programs or commands.
+2. System calls (functions given by the kernel).
+3. Library calls (functions given by the library).
+4. Special files (usually found in /dev).
 5. File Formats and conventions (configuration files such as etc/passwd).
 6. Games (such as character-based applications).
 7. Miscellaneous (e.g. man (7)).
@@ -316,13 +331,21 @@ Information about each section can be accessed by typing `man x intro`, where `x
 
 #### `man` command
 
+<div class="columns">
+<div>
+
 The command:
 
 ```bash
 man passwd
 ```
 
-will tell the administrator about the passwd command, its options, etc. While a:
+will tell the administrator about the passwd command, its options, etc.
+
+</div>
+<div>
+
+While a:
 
 ```bash
 $ man 5 passwd
@@ -330,9 +353,8 @@ $ man 5 passwd
 
 will inform him about the files related to the command.
 
----
-
-#### `man` command
+</div>
+</div>
 
 Navigate through the manual with the arrows <kbd>↑</kbd> and <kbd>↓</kbd>. Exit the manual by pressing the <kbd>q</kbd> key.
 
@@ -347,10 +369,6 @@ shutdown [-h] [-r] time [message]
 ```
 
 Specify the shutdown time in the format `hh:mm` for a precise time, or `+mm` for a delay in minutes.
-
----
-
-#### `shutdown` command
 
 To force an immediate stop, use the word `now` in place of the time. In this case, the optional message is not sent to other users of the system.
 
@@ -371,11 +389,10 @@ To force an immediate stop, use the word `now` in place of the time. In this cas
 
 Options:
 
-| Options | Remarks                          |
-| ------- | -------------------------------- |
+| Options | Remarks                               |
+| ------- | ------------------------------------- |
 | `-h`    | Shuts down the system electronically. |
-| `-r`    | Restarts the system.              |
-
+| `-r`    | Restarts the system.                  |
 
 ---
 
@@ -384,10 +401,6 @@ Options:
 The `history` command displays the history of commands that have been entered by the user.
 
 The commands are stored in the `.bash_history` file in the user's login directory.
-
----
-
-#### `history` command
 
 <i class="fa fa-pen-to-square"></i> Example of a history command
 
@@ -412,11 +425,11 @@ $ history
 
 <style scoped>
 table {
-  font-size: 0.6em;
+  font-size: 0.68em;
 }
 </style>
 
-<i class="fa fa-pen-to-square"></i> Manipulating history:
+<i class="fa-regular fa-pen-to-square"></i> Manipulating history:
 
 To manipulate the history, the following commands entered from the command prompt will:
 
