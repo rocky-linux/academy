@@ -3,52 +3,71 @@ marp: true
 theme: gaia
 style: |
   @import url('../assets/css/rocky-theme.css');
-  header,footer{
-    color: #fff;
-  }
-  section header a {
-    color: inherit;
-  }
-  section {
-    padding-top: 90px;
-  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../)'
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](#presentation-menu)'
 footer: '**Rocky Linux Academy > Admin Guide > Commands**'
 ---
 
 # Linux commands
-
+<!-- markdownlint-disable MD024 -->
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
+
+<div class="intro">
 
 ## Commands for Linux Users
 
 In this chapter you will learn Linux commands and how to use them.
 
+</div>
+
 ---
 
-## <i class="fa fa-trophy"></i> Objectives
+## Objectives
+
+<i class="fa-pull-right fa-4x">![w:200 opacity:50%](./images/objectives.png)</i>
 
 In this chapter, future Linux administrators will learn how to:
 
-:heavy_check_mark: **Move** within the system tree.   
-:heavy_check_mark: **Create** a text file, **display** its contents and **modify** it.   
+:heavy_check_mark: **Move** within the system tree.  
+:heavy_check_mark: **Create** a text file, **display** its contents and **modify** it.
 :heavy_check_mark: **Use** the most useful Linux commands.
 
 ---
 
-:checkered_flag: **user commands**, **linux**
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
-**Knowledge**: :star:   
-**Complexity**: :star:
+<div class="plan_header">
 
-**Reading time**: 40 minutes
+## Commands menu
+
+<div class="columns plan">
+<div>
+
+[Generalities](#generalities)
+[The Users](#the-users)
+[The Shell](#the-shell)
+
+</div>
+<div>
+
+[Desktop environments](#desktop-environments)
+[Free / Open Source](#free--open-source)
+[GNU GPL](#gnu-gpl)
+[Areas of use](#areas-of-use)
+[Shell](#shell)
+[Check your Knowledge](#check-your-knowledge)
+[Back to Main Menu](../)
+
+</div>
+</div>
 
 ---
 
-## <i class="fa fa-arrow-right-to-bracket"></i> Generalities
+### Generalities
+
+<i class="fa-pull-right">![w:200 opacity:50%](./images/administrator.png)</i>
 
 Current Linux systems have graphical utilities dedicated to the work of an administrator. However, it is important to be able to use the interface in command line mode for several reasons:
 
@@ -57,7 +76,7 @@ Current Linux systems have graphical utilities dedicated to the work of an admin
 
 ---
 
-## <i class="fa fa-arrow-right-to-bracket"></i> Generalities
+### Generalities
 
 * Remote administration is done on the command line with an SSH terminal.
 * In order to preserve server resources, the graphical interface is either not installed or launched on demand.
@@ -65,13 +84,13 @@ Current Linux systems have graphical utilities dedicated to the work of an admin
 
 ---
 
-## <i class="fa fa-arrow-right-to-bracket"></i> Generalities
+### Generalities
 
 Learning these commands allows the administrator to connect to a Linux terminal, to manage its resources and files, to identify the station, the terminal, and the connected users, etc.
 
 ---
 
-## <i class="fa fa-users"></i> The users
+### The users
 
 The user of a Linux system will be defined in the `/etc/passwd` file, by:
 
@@ -83,7 +102,7 @@ The user of a Linux system will be defined in the `/etc/passwd` file, by:
 
 ---
 
-## <i class="fa fa-users"></i> The users
+### The users
 
 In other files the user will be defined by:
 
@@ -92,7 +111,7 @@ In other files the user will be defined by:
 
 ---
 
-## <i class="fa fa-users"></i> The users
+### The users
 
 Depending on the security policy implemented on the system, the password will require a certain number of characters and meet certain complexity requirements.
 
@@ -100,19 +119,19 @@ Among the existing command interpreters, the **Bourne-Again Shell** (`/bin/bash`
 
 ---
 
-## <i class="fa fa-users"></i> The users
+### The users
 
 The user's login directory is by convention stored in the `/home` directory of the workstation. It will contain the user's personal data and the configuration files of his applications. By default, at login, the login directory is selected as the current directory.
 
 ---
 
-## <i class="fa fa-users"></i> The users
+### The users
 
 A workstation-type installation (with graphical interface) starts this interface on terminal 1. Linux being multi-user, it is possible to connect several users several times, on different **physical terminals** (TTY) or **virtual terminals** (PTS). Virtual terminals are available within a graphical environment. A user switches from one physical terminal to another using <kbd>Alt</kbd> + <kbd>Fx</kbd> from the command line or using <kbd>CTRL</kbd> + <kbd>Alt</kbd> + <kbd>Fx</kbd>.
 
 ---
 
-## <i class="fa fa-terminal"></i> The shell
+### The shell
 
 Once the user is connected to a console, the shell displays the **command prompt**. It then behaves like an infinite loop, repeating the same pattern with each statement entered:
 
@@ -123,7 +142,7 @@ Once the user is connected to a console, the shell displays the **command prompt
 
 ---
 
-## <i class="fa fa-terminal"></i> The shell
+### The shell
 
 * Executes the command.
 * Displays the command prompt.
@@ -131,13 +150,13 @@ Once the user is connected to a console, the shell displays the **command prompt
 
 ---
 
-## <i class="fa fa-terminal"></i> The shell
+### The shell
 
 The key sequence <kbd>CTRL</kbd> + <kbd>C</kbd> is used to interrupt a running command.
 
 ---
 
-## <i class="fa fa-terminal"></i> The shell
+### The shell
 
 The use of a command generally follows this sequence:
 
@@ -151,14 +170,14 @@ A space separates each item.
 
 ---
 
-## <i class="fa fa-terminal"></i> The shell
+### The shell
 
 **Short options** begin with a dash (`-l`), while **long options** begin with two dashes (`--list`).
 A double dash (`--`) indicates the end of the option list.
 
 ---
 
-## <i class="fa fa-terminal"></i> The shell
+### The shell
 
 It is possible to group some short options together:
 
@@ -174,7 +193,7 @@ $ ls -lia
 
 ---
 
-## <i class="fa fa-terminal"></i> The shell
+### The shell
 
 There can be several arguments after an option:
 
