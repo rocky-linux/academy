@@ -208,7 +208,7 @@ UNIX is still relevant today (HP-UX, AIX, Solaris, etc.).
 
 #### Linux
 
-<i class="fa fa-quote-left fa-3x fa-pull-left"></i> Dispute over the name: although people are accustomed to calling the Linux operating system verbally, Linux is strictly a kernel. We must not forget the development and contribution of the GNU project to the open source cause, so! I prefer to call it the GNU/Linux operating system.
+<i class="fa fa-quote-left fa-3x fa-pull-left"></i> Dispute over the name: Although people are accustomed to calling the Linux operating system verbally "Linux",  Linux is strictly a kernel. We must not forget the development and contribution of the GNU project to the open source cause, so I prefer to call it the GNU/Linux operating system.
 
 ---
 
