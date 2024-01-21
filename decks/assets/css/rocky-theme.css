@@ -25,7 +25,7 @@
   --title-h5: #DC2626;
   --title-h6: #0284C7;
   --highlight-color: #1e3a8a;
-  --primary-decoration: #FFE14B;
+  --primary-decoration: #bfdbfe;
   --secondary-decoration: #783546;
   --icon-one: #bfdbfe;
 }
@@ -35,6 +35,7 @@
 section {
   background-color: var(--section-bg) !important;
   color: var(--text-color);
+  padding-top: 80px !important;
 }
 header {
   display: grid;
@@ -46,13 +47,17 @@ header {
   color: #fff;
 }
 header a {
+  box-shadow: inset 0 0 0 0 var(--section-bg);
   color: var(--section-bg) !important;
-  display: inline-block;
-  margin: 0;
-  border: 0.1em solid;
-  padding: 0 0.5em 0 0.5em;;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
-
+header a:hover {
+  box-shadow: inset 170px 0 0 0 var(--section-bg);
+  color: var(--text-color) !important;
+  text-decoration: none;
+}
 footer {
   display: grid;
   grid-template-columns: 1fr max-content;
@@ -136,15 +141,17 @@ section::after {
   font-weight: bold;
   color: var(--section-bg);
 }
+/* a { */
+/*   text-decoration: dotted; */
+/*   color: grey !important; */
+/* } */
+/**/
+/* a:hover { */
+/*   text-decoration-line: underline; */
+/* } */
 a {
-  text-decoration: dotted;
-  color: grey !important;
+  text-decoration: none;
 }
-
-a:hover {
-  text-decoration-line: underline;
-}
-
 h1 {
   font-family: helvetica;
 /*   text-transform: uppercase; */
@@ -154,16 +161,6 @@ h1 {
                #999 4px 6px 3px,
                #ccc 8px 11px 10px;
 }
-/* section h1 { */
-/*   font-size: 6.25em; */
-/*   font-weight: 600; */
-/*   color: #fdfdfe; */
-/*   text-shadow: 0px 0px 5px #87dcc0, 0px 0px 10px #87dcc0, 0px 0px 10px #87dcc0, */
-/*     0px 0px 20px #87dcc0; */
-/* } */
-/* section h2 { */
-/*   color: #064d35; */
-/* } */
 h2 {
   font-size: 1em;
   font-weight: 700;
@@ -173,90 +170,6 @@ h2 {
   position: relative;
   color: var(--title-deck);
 }
-/* h2::before { */
-/*   content: ''; */
-/*   display: inline-block; */
-/*   width: 0.7em; */
-/*   height: 0.7em; */
-/*   /* -moz-border-radius: 75%; */ */
-/*   /* -webkit-border-radius: 75%; */ */
-/*   border-radius: 0.2em; */
-/* /*   background-color: #69b6d5; */ */
-/*   border: 2px solid #000; */
-/*   margin-right: 0.3em; */
-/* } */
-/* h2:before { */
-/*   content: ""; */
-/*   position: absolute; */
-/*   left: 0; */
-/*   bottom: 0; */
-/*   height: 0.1em; */
-/*   width: 55px; */
-/*   background-color: var(--primary-decoration); */
-/* } */
-/* h2:after { */
-/*   content: ""; */
-/*   position: absolute; */
-/*   left: 0; */
-/*   bottom: 2px; */
-/*   height: 1px; */
-/*   width: 95%; */
-/*   max-width: 60%; */
-/*   background-color: var(--primary-decoration); */
-/* } */
-h3 {
-  font-size: 1rem;
-  overflow: hidden;
-  color: var(--title-h3);
-}
-/* h3:after { */
-/*   content: ""; */
-/*   display: inline-block; */
-/*   height: 0.5em; */
-/*   vertical-align: bottom; */
-/*   width: 80%; */
-/*   margin-right: -100%; */
-/*   margin-left: 20px; */
-/*   border-top: 1px solid; */
-/*   color: var(--primary-decoration); */
-/* } */
-h4 {
-  display: flex;
-  flex-direction: row;
-  color: var(--title-h6);
-}
-h4::before {
-  content: "";
-  flex: 1 1;
-  border-bottom: 1px solid;
-  margin: 0.3em;
-}
-/* h5 { */
-/*   overflow: hidden; */
-/*   text-align: center; */
-/*   color: #3a8b70; */
-/* } */
-/**/
-/* h5::before, */
-/* h5::after { */
-/*   background-color: #87dcc0; */
-/*   content: " "; */
-/*   display: inline-block; */
-/*   height: 1px; */
-/*   position: relative; */
-/*   vertical-align: bottom; */
-/*   width: 50%; */
-/* } */
-/**/
-/* h5::before { */
-/*   right: 0.5em; */
-/*   margin-left: -50%; */
-/* } */
-/**/
-/* h5::after { */
-/*   left: 0.5em; */
-/*   margin-right: -50%; */
-/* } */
 h3 {
   display: flex;
   flex-direction: row;
@@ -269,6 +182,18 @@ h3::before, h3::after {
   margin: 0.3em;
   color: var(--title-deck);
 }
+h4 {
+  display: flex;
+  flex-direction: row;
+  color: var(--title-h6);
+}
+h4::before {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: 0.3em;
+}
+
 /* h6 { */
 /*   display: flex; */
 /*   flex-direction: row; */
@@ -300,13 +225,12 @@ h3::before, h3::after {
 .plan {
   background-color: #fefbf2;
   font-size: .9em;
-  color: #111827;
   border-radius: .5em;
   height: 65%;
   padding: 1em;
 }
 .plan a {
-  color: var(--highlight-color) !important;
+  color: var(--highlight-color);
 }
 .plan a::before {
   content: '';
