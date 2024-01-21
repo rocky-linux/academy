@@ -26,15 +26,6 @@ marp: true
 theme: gaia
 style: |
   @import url('../assets/css/rocky-theme.css');
-  header,footer{
-    color: #fff;
-  }
-  section header a {
-    color: inherit;
-  }
-  section {
-    padding-top: 90px;
-  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
@@ -60,9 +51,13 @@ As with any title, a blank line must be placed after it.
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
+<div class="intro">
+
 ## Title of the chapter
 
 **Text to introduce the chapter.**
+
+</div>
 ```
 
 Next, we define a background image with the Rocky logo.
@@ -82,7 +77,7 @@ In terms of pedagogy, it is important to define the objectives to be achieved wi
 
 ---
 
-## <i class="fa-solid fa-trophy"></i> Objectives
+## Objectives
 
 In this chapter, future Linux administrators will learn how to:
 
@@ -99,15 +94,42 @@ Please do not skip this important step for our learners.
 
 A plan is important so that the user can project himself into the chapter he is about to follow, and allows the trainer to introduce each topic.
 
+This is the example plan used in the *01-presentation.md* file:
+
 ```markdown
----
 
-## ![right:20% w:50](../assets/rocky_linux_logo.svg) Table of contents
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
-<i class="fa fa-book"></i> [Chapter 1](name_of_the_markdown_file_without_extension.html)
-<i class="fa fa-book"></i> [Chapter 2](name_of_the_markdown_file_without_extension.html)
-<i class="fa fa-book"></i> [Chapter 3](name_of_the_markdown_file_without_extension.html)
-...
+<div class="plan_header">
+
+## Presentation menu
+
+</div>
+
+<div class="columns plan">
+<div>
+
+[What is an operating system?](#what-is-an-operating-system)
+[Generalities UNIX - GNU/Linux](#generalities-unix---gnulinux)
+[Market Share](#market-share)
+[Architectural design](#architectural-design)
+[Multi-task](#multi-task)
+[The GNU/Linux philosopy](#the-unixlinux-philosophy)
+[The GNU/Linux distributions](#the-gnulinux-distributions)
+
+</div>
+<div>
+
+[Desktop environments](#desktop-environments)
+[Free / Open Source](#free--open-source)
+[GNU GPL](#gnu-gpl)
+[Areas of use](#areas-of-use)
+[Shell](#shell)
+[Check your Knowledge](#check-your-knowledge)
+[Back to Main Menu](../)
+
+</div>
+</div>
 ```
 
 ## Last slide
@@ -124,24 +146,16 @@ Let us talk about the last slide right away: this slide should enable the traine
 
 ## How to deal with multiple same titles
 
-If you have to use the same title multiple times, please consider using a counter on the title like that:
+In order to have a smoother display of the slides, it is sometimes necessary to repeat the initial title in the subsequent slides, so that the course user when the content changes always has the reference on what the main topic of the slide is.
 
-```
-## Generalities 1/3
+Its repetition does not produce any Markdown syntax problems in the resulting file since *marp* takes care of numbering any equal titles to have a unique `id` for all anchors.
 
----
+NOTE: Headings with the same content are classified as syntax errors in Markdown but since they are necessary for better display they should be muted if a linter is used (by default in this project *markdownlint* is used).
 
-## Generalities 2/3
-
-...
-```
-
-## Using icons on the title
-
-Using a carefully chosen, specific icon in a title makes it easier for learners to project themselves onto the slide (and it can be prettier too).
+The inline tag can be used for the purpose.
 
 ```markdown
-## <i class="fa-regular fa-window-restore"></i> Backup and restoration
+<!-- markdownlint-disable MD024 -->
 ```
 
 ## Making columns
