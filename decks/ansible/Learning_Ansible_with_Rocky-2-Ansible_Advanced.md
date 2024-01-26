@@ -3,31 +3,27 @@ marp: true
 theme: gaia
 style: |
   @import url('../assets/css/rocky-theme.css');
-  header,footer{
-    color: #fff;
-  }
-  section header a {
-    color: inherit;
-  }
-  section {
-    padding-top: 90px;
-  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
 header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Ansible courses > 2 - Ansible Intermediate**'
 ---
-# ![right:20% w:50](../assets/rocky_linux_logo.svg) 2 - Ansible Intermediate
+# 2 - Ansible Intermediate
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
+<div class="intro">
+
 ## Learning Ansible with Rocky
 
----
-<br/>
+</div>
 
-# <i class="fa-solid fa-trophy"></i> Objectives
+---
+
+## Objectives
+
+<i class="fa-pull-right fa-4x">![w:200 opacity:50%](../assets/images/objectives.png)</i>
 
 In this chapter you will continue to learn how to work with Ansible.
 
@@ -37,15 +33,20 @@ In this chapter you will continue to learn how to work with Ansible.
 <i class="fa fa-check"></i> manage asynchronous tasks.
 
 ---
-<br/>
+<div class="plan_header">
 
-# Plan
+## Plan
+
+<div class="plan columns">
 
 <i class="fa fa-book"></i> [The variables](#the-variables)
 <i class="fa fa-book"></i> [Loop management](#loop-management)
 <i class="fa fa-book"></i> [Conditionnals](#conditionals)
 <i class="fa fa-book"></i> [Managing changes: the `handlers`](#36)
 <i class="fa fa-book"></i> [Asynchronous tasks](#43)
+
+</div>
+</div>
 
 ---
 
@@ -64,7 +65,7 @@ In this chapter, we can start to discover some more advanced notions of how to u
 
 ---
 
-# The variables
+## The variables
 
 Under Ansible, there are different types of primitive variables:
 
@@ -72,7 +73,11 @@ Under Ansible, there are different types of primitive variables:
 * integers,
 * booleans.
 
-> More information can be found at https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html.
+<div class="note">
+
+<i class="fa note-icon fa-book-open fa-pull-left fa-2x"></i>
+
+**More information can be found at** https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html.
 
 ---
 # The variables

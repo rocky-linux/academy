@@ -10,7 +10,7 @@ header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](#presentation-m
 footer: '**Rocky Linux Academy > Admin Guide > Presentation**'
 ---
 
-# Introduction to Linux
+# 1 - Introduction to Linux
 <!-- markdownlint-disable MD024 -->
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
@@ -26,7 +26,7 @@ In this chapter you will learn about GNU/Linux distributions.
 
 ## Objectives
 
-<i class="fa-pull-right fa-4x">![w:200 opacity:50%](./images/objectives.png)</i>
+<i class="fa-pull-right fa-4x">![w:200 opacity:50%](../assets/images/objectives.png)</i>
 
 In this chapter you will learn about GNU/Linux distributions.
 
@@ -663,4 +663,4 @@ There are several types of shells available and configurable on a platform or ac
 [ ] C shell (csh)
 [ ] Korn shell (ksh)
 
-<i class="button">[Next Chapter](./03-commands.html)</i>
+<i class="button">[Next Chapter](./02-installation.html)</i>

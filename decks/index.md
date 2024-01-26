@@ -15,17 +15,21 @@ footer: '**Rocky Linux Academy**'
 ---
 
 # Welcome to the Rocky Linux Academy
-
+<!-- markdownlint-disable MD024 -->
 ![bg opacity:.5](./assets/rocky_linux_logo.svg)
 
 ![right:50% w:200](./assets/rocky_linux_logo.svg)
 
-Learning Linux made easy.
+<div class="intro">
+
+## Learning Linux made easy
+
+</div>
 
 ---
 
-# <i class="fa-solid fa-chalkboard-user"></i> What you will learn
+## <i class="fa-solid fa-chalkboard-user"></i> What you will learn
 
-<i class="fa-brands fa-leanpub"></i> [Learning Linux Administration with Rocky Linux](./admin_guide/)
-<i class="fa-brands fa-leanpub"></i> [Learning Bash with Rocky Linux](./bash/) (soon)
-<i class="fa-brands fa-leanpub"></i> [Learning Ansible with Rocky Linux](./ansible/)
+<i class="fa fa-book"></i> [Learning Linux Administration with Rocky Linux](./admin_guide/)
+<i class="fa fa-book"></i> [Learning Bash with Rocky Linux](./bash/) (soon)
+<i class="fa fa-book"></i> [Learning Ansible with Rocky Linux](./ansible/)

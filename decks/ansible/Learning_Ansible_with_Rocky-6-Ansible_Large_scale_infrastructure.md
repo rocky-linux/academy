@@ -3,15 +3,6 @@ marp: true
 theme: gaia
 style: |
   @import url('../assets/css/rocky-theme.css');
-  header,footer{
-    color: #fff;
-  }
-  section header a {
-    color: inherit;
-  }
-  section {
-    padding-top: 90px;
-  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
@@ -19,16 +10,21 @@ header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Ansible courses > 6 - Large scale infrastructure**'
 ---
 
-# ![right:20% w:50](../assets/rocky_linux_logo.svg) 6 - Large scale infrastructure
+# 6 - Large scale infrastructure
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
+<div class="intro">
+
 ## Learning Ansible with Rocky
 
----
-<br/>
+</div>
 
-# <i class="fa-solid fa-trophy"></i> Objectives
+---
+
+## Objectives
+
+<i class="fa-pull-right fa-4x">![w:200 opacity:50%](../assets/images/objectives.png)</i>
 
 In this chapter you will learn how to scale your configuration management system.
 
@@ -36,15 +32,20 @@ In this chapter you will learn how to scale your configuration management system
 <i class="fa fa-check"></i> Apply all or part of your configuration management to a group of nodes;   
 
 ---
-<br/>
+<div class="plan_header">
 
-# Plan
+## Plan
+
+<div class="plan columns">
 
 <i class="fa fa-book"></i> [Variables storage](#10)
 <i class="fa fa-book"></i> [About Ansible tags](#18)
 <i class="fa fa-book"></i> [About the directory layout](#24)
 <i class="fa fa-book"></i> [Tests](#34)
 <i class="fa fa-book"></i> [Benefits](#43)
+
+</div>
+</div>
 
 ---
 #

@@ -1,52 +1,50 @@
 ---
 marp: true
 theme: gaia
+style: |
+  @import url('../assets/css/rocky-theme.css');
+_class: lead
 paginate: true
 markdown.marp.enableHtml: true
 header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../index.html)'
 footer: '**Rocky Linux Academy > Admin Guide > Index**'
 ---
 
-<style>
-header,footer
-{
-    color: #fff;
-}
-section header a {
-  color: inherit;
-}
-section a,a:link,a:visited {
-    color: inherit;
-}
-section {
-  padding-top: 90px;
-}
-@import url('../assets/css/rocky-theme.css');
-</style>
+# Linux Administration with Rocky
 
-# <i class="fa-brands fa-black-tie"></i> Linux Administration with Rocky
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
-<div class="columns">
+<div class="intro">
+
+## Rocky Linux Admin Guide
+
+</div>
+
+---
+
+## Presentation menu
+
+<div class="columns plan">
 <div>
 
-<i class="fa fa-book"></i> [Introduction](./00-toc.html)
-<i class="fa fa-book"></i> [Introduction to Linux](./01-presentation.html)
-<i class="fa fa-book"></i> [Commands](./03-commands.html)
-<i class="fa fa-book"></i> [VI](./05-vi.html)
-<i class="fa fa-book"></i> [Users](./06-users.html)
-<i class="fa fa-book"></i> [File Systems](./07-file-systems.html)
-<i class="fa fa-book"></i> [Process](./08-process.html)
+[Course Introduction](./00-toc.html)
+[Introduction to Linux](./01-presentation.html)
+[Installation](./02-installation.html)
+[Commands](./03-commands.html)
+[VI](./05-vi.html)
+[Users](./06-users.html)
+[File Systems](./07-file-systems.html)
 
 </div>
 <div>
 
-<i class="fa fa-book"></i> [Backups](./09-backups.html)
-<i class="fa fa-book"></i> [Boot](./10-boot.html)
-<i class="fa fa-book"></i> [Tasks](./11-tasks.html)
-<i class="fa fa-book"></i> [Network](./12-network.html)
-<i class="fa fa-book"></i> [Softwares](./13-softwares.html)
-<i class="fa fa-book"></i> [Special Authority](./14-special-authority.html)
+[Process](./08-process.html)
+[Backups](./09-backups.html)
+[Boot](./10-boot.html)
+[Tasks](./11-tasks.html)
+[Network](./12-network.html)
+[Softwares](./13-softwares.html)
+[Special Authority](./14-special-authority.html)
 
 </div>
-
 </div>

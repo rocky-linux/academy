@@ -3,15 +3,6 @@ marp: true
 theme: gaia
 style: |
   @import url('../assets/css/rocky-theme.css');
-  header,footer{
-    color: #fff;
-  }
-  section header a {
-    color: inherit;
-  }
-  section {
-    padding-top: 90px;
-  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
@@ -19,16 +10,21 @@ header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Ansible courses > 5 - Ansible deployments with Ansistrano**'
 ---
 
-# ![right:20% w:50](../assets/rocky_linux_logo.svg) 5 - Ansible deployments with Ansistrano
+# 5 - Ansible deployments with Ansistrano
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
+<div class="intro">
+
 ## Learning Ansible with Rocky
 
----
-<br/>
+</div>
 
-# <i class="fa-solid fa-trophy"></i> Objectives
+---
+
+## Objectives
+
+<i class="fa-pull-right fa-4x">![w:200 opacity:50%](../assets/images/objectives.png)</i>
 
 In this chapter you will learn how to deploy applications with the Ansible role Ansistrano (https://ansistrano.com).
 
@@ -39,12 +35,17 @@ In this chapter you will learn how to deploy applications with the Ansible role 
 <i class="fa fa-check"></i> React between deployment steps.  
 
 ---
-<br/>
+<div class="plan_header">
 
-# Plan
+## Plan
+
+<div class="plan columns">
 
 <i class="fa fa-book"></i> [Introduction](./Learning_Ansible_with_Rocky-5-Ansible_deployments_with_ansistrano.html#5)
 <i class="fa fa-book"></i> [Demo](./Learning_Ansible_with_Rocky-5-Ansible_deployments_with_ansistrano.html#10)
+
+</div>
+</div>
 
 ---
 

@@ -3,15 +3,10 @@ marp: true
 theme: gaia
 style: |
   @import url('../assets/css/rocky-theme.css');
-  header,footer{
-    color: #fff;
-  }
-  section header a {
-    color: inherit;
-  }
-  section {
-    padding-top: 90px;
-  }
+  header,footer { color: #fff; }
+  section header a { color: inherit; }
+  section a,a:link,a:visited { color: inherit; }
+  section {padding-top: 90px; }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
@@ -20,7 +15,7 @@ footer: '**Rocky Linux Academy > Ansible courses > Program**'
 ---
 
 # <i class="fa-brands fa-black-tie"></i> Learning Ansible with Rocky Linux
-
+<!-- markdownlint-disable MD024 -->
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
 <div class="columns">

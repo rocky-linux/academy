@@ -3,15 +3,6 @@ marp: true
 theme: gaia
 style: |
   @import url('../assets/css/rocky-theme.css');
-  header,footer{
-    color: #fff;
-  }
-  section header a {
-    color: inherit;
-  }
-  section {
-    padding-top: 90px;
-  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
@@ -19,21 +10,30 @@ header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Ansible courses > 8 - Management server optimizations**'
 ---
 
-# ![right:20% w:50](../assets/rocky_linux_logo.svg) 8 - Management server optimizations
+# 8 - Management server optimizations
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
+<div class="intro">
+
 ## Learning Ansible with Rocky
+
+</div>
 
 ---
 
-## <i class="fa-solid fa-trophy"></i> Objectives
+## Objectives
+
+<i class="fa-pull-right fa-4x">![w:200 opacity:50%](../assets/images/objectives.png)</i>
 
 <i class="fa fa-check"></i> In this chapter, we will review the configuration options that may be of interest to optimize our Ansible management server.
 
 ---
+<div class="plan_header">
 
 ## Plan
+
+<div class="plan columns">
 
 <i class="fa fa-book"></i> [The `ansible.cfg` configuration file](#5)
 <i class="fa fa-book"></i> [Caching the facts](#13)
@@ -41,6 +41,9 @@ footer: '**Rocky Linux Academy > Ansible courses > 8 - Management server optimiz
 <i class="fa fa-book"></i> [Working with Windows servers](#27)
 <i class="fa fa-book"></i> [Working with IP modules](#32)
 <i class="fa fa-book"></i> [Generating a CMDB](#35)
+
+</div>
+</div>
 
 ---
 

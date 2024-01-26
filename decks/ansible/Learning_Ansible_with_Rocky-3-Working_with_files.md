@@ -3,15 +3,6 @@ marp: true
 theme: gaia
 style: |
   @import url('../assets/css/rocky-theme.css');
-  header,footer{
-    color: #fff;
-  }
-  section header a {
-    color: inherit;
-  }
-  section {
-    padding-top: 90px;
-  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
@@ -19,15 +10,21 @@ header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Ansible courses > 3 - Management of Files**'
 ---
 
-# ![right:20% w:50](../assets/rocky_linux_logo.svg) 3 - Management of Files
+# 3 - Management of Files
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
+<div class="intro">
+
 ## Learning Ansible with Rocky
+
+</div>
 
 ---
 
-# <i class="fa-solid fa-trophy"></i> Objectives
+## Objectives
+
+<i class="fa-pull-right fa-4x">![w:200 opacity:50%](../assets/images/objectives.png)</i>
 
 In this chapter you will learn how to manage files with Ansible.
 
@@ -36,9 +33,11 @@ In this chapter you will learn how to manage files with Ansible.
 <i class="fa fa-check"></i> retrieve files from the targeted servers.
 
 ---
-<br/>
+<div class="plan_header">
 
-# Plan
+## Plan
+
+<div class="plan columns">
 
 <i class="fa fa-book"></i> [ini_file module](#5)
 <i class="fa fa-book"></i> [lineinfile module](#11)
@@ -46,6 +45,9 @@ In this chapter you will learn how to manage files with Ansible.
 <i class="fa fa-book"></i> [fetch module](#21)
 <i class="fa fa-book"></i> [template module](#26)
 <i class="fa fa-book"></i> [get_url module](#32)
+
+</div>
+</div>
 
 ---
 

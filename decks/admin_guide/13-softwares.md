@@ -2,34 +2,23 @@
 marp: true
 theme: gaia
 style: |
-  :root {
-    --color-background: #fff !important;
-    --color-foreground: #111927 !important;
-    --color-highlight: #10b981 !important;
-    --color-dimmed: #10b981 !important;
-  }
+  @import url('../assets/css/rocky-theme.css');
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:50](./assets/rocky_linux_logo_white.svg) **Software Management**'
-footer: Rocky Linux Academy - Admin Guide
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](#presentation-menu)'
+footer: '**Rocky Linux Academy > Admin Guide > Software Management**'
 ---
 
-<style>
-header,footer
-{
-    color: #fff;
-}
-section {
-  padding-top: 90px;
-}
-@import url('./assets/css/rocky-theme.css');
-@import url('./assets/css/fontawesome.css');
-@import url('./assets/css/solid.css');
-@import url('./assets/css/brands.css');
-</style>
+# 13 - Software Management
 
-# Software Management
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
+
+<div class="intro">
+
+## Rocky Linux Admin Guide
+
+</div>
 
 ---
 

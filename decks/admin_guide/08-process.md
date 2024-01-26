@@ -1,74 +1,27 @@
 ---
 marp: true
 theme: gaia
+style: |
+  @import url('../assets/css/rocky-theme.css');
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
 
 backgroundColor: #fff
 
-header: Rocky Linux Admin Guide | X - 
-footer: Rocky Linux Academy - Admin Guide
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](#presentation-menu)'
+footer: '**Rocky Linux Academy > Admin Guide > Process Management**'
 ---
-<style>
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
-}
-blockquote {
-  background: #ffedcc;
-  border-left: 10px solid #d1bf9d;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-}
-blockquote:before{
-  content: unset;
-}
-blockquote:after{
-  content: unset;
-}
-header {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-    font-size: 1em;
-    padding: 20px;
-}
-footer {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    background-color: #10b981;
-    align-content: right;
-    color: white;
-}
 
-.columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-.columns3 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-} 
+# 8 - Process Management
 
-.fa-twitter { color: aqua; }
-.fa-mastodon { color: purple; }
-.fa-linkedin { color: blue; }
-.fa-window-maximize { color: skyblue; }
-.fa-circle-exclamation { color: red; }
-.fa-trophy { color: #10b981; }
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
-table {
-  font-size: 10px;
-}
-</style>
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
-# X - 
+<div class="intro">
+
 ## Rocky Linux Admin Guide
+
+</div>
 
 ---
 <br/>
@@ -89,13 +42,6 @@ In this chapter you will learn how to .
 * [](#4)
   
 ---
-
-
----
-title: Process Management
----
-
-# Process Management
 
 In this chapter you will learn how to work with processes.
 

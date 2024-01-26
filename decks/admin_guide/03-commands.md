@@ -10,7 +10,7 @@ header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](#presentation-m
 footer: '**Rocky Linux Academy > Admin Guide > Commands**'
 ---
 
-# Linux commands
+# 3 - Linux commands
 <!-- markdownlint-disable MD024 -->
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
@@ -26,7 +26,7 @@ In this chapter you will learn Linux commands and how to use them.
 
 ## Objectives
 
-<i class="fa-pull-right fa-4x">![w:200 opacity:50%](./images/objectives.png)</i>
+<i class="fa-pull-right fa-4x">![w:200 opacity:50%](../assets/images/objectives.png)</i>
 
 In this chapter, future Linux administrators will learn how to:
 

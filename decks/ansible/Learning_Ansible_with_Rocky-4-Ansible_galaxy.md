@@ -3,15 +3,6 @@ marp: true
 theme: gaia
 style: |
   @import url('../assets/css/rocky-theme.css');
-  header,footer{
-    color: #fff;
-  }
-  section header a {
-    color: inherit;
-  }
-  section {
-    padding-top: 90px;
-  }
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
@@ -19,17 +10,22 @@ header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Ansible courses > 4 - Ansible Galaxy**'
 ---
 
-# ![right:20% w:50](../assets/rocky_linux_logo.svg) 4 - Ansible Galaxy
+# 4 - Ansible Galaxy
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
+<div class="intro">
+
 ## Learning Ansible with Rocky
+
+</div>
 
 ---
 
-<br/>
 
-# <i class="fa-solid fa-trophy"></i> Objectives
+## Objectives
+
+<i class="fa-pull-right fa-4x">![w:200 opacity:50%](../assets/images/objectives.png)</i>
 
 In this chapter you will learn how to use, install, and manage Ansible roles and collections.
 
@@ -37,14 +33,18 @@ In this chapter you will learn how to use, install, and manage Ansible roles and
 <i class="fa fa-check"></i> install and manage roles.
 
 ---
+<div class="plan_header">
 
-<br/>
+## Plan
 
-# Plan
+<div class="plan columns">
 
 <i class="fa fa-book"></i> [ansible-galaxy command](#5)
 <i class="fa fa-book"></i> [Ansible Roles](#10)
 <i class="fa fa-book"></i> [Ansible Collections](#42)
+
+</div>
+</div>
 
 ---
 

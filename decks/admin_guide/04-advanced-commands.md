@@ -1,41 +1,25 @@
 ---
 marp: true
 theme: gaia
+style: |
+  @import url('../assets/css/rocky-theme.css');
 paginate: true
 _class: lead
 markdown.marp.enableHtml: true
-header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](../index.html)'
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](#presentation-menu)'
 footer: '**Rocky Linux Academy > Admin Guide > Advanced Commands**'
 ---
-
-<style>
-header,footer
-{
-    color: #fff;
-}
-section header a {
-  color: inherit;
-}
-section a,a:link,a:visited {
-    color: inherit;
-}
-section {
-  padding-top: 90px;
-}
-@import url('../assets/css/rocky-theme.css');
-</style>
+# 4 - Advanced Linux Commands
 
 ![bg opacity:.5](../assets/rocky_linux_logo.svg)
 
-<div class="h1lead">
-
-# Advanced Linux Commands
-
-</div>
+<div class="intro">
 
 ## Advanced Commands for Linux users
 
 Advanced commands provide greater customization and controls in more specialized situations once you become familiar with basic commands.
+
+</div>
 
 ---
 
@@ -53,7 +37,7 @@ In this chapter, future Linux administrators will learn:
 
 **Reading time**: 20 minutes
 
-****
+---
 
 ## `uniq` command
 
