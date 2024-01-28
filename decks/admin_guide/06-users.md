@@ -21,47 +21,61 @@ footer: '**Rocky Linux Academy > Admin Guide > User Management**'
 
 ## Rocky Linux Admin Guide
 
+In this chapter you will learn how to manage users.
+
 </div>
 
 ---
-<br/>
+## Objectives
 
-# <i class="fa-solid fa-trophy"></i> Objectives
+<i class="fa-pull-right fa-4x">![w:200 opacity:50%](../assets/images/objectives.png)</i>
 
-In this chapter you will learn how to .
+In this chapter, future Linux administrators will learn how to:
 
-:heavy_check_mark: ;
-:heavy_check_mark: ;
-:heavy_check_mark: .
-
----
-<br/>
-
-# Plan
-
-* [](#4)
-  
----
-
-In this chapter you will learn how to manage users.
-
-****
-**Objectives**: In this chapter, future Linux administrators will learn how to:
-
-:heavy_check_mark: add, delete or modify a **group**;   
-:heavy_check_mark: add, delete or modify a **user**;   
-:heavy_check_mark: understand the files associated with users and groups and learn how to manage them;   
-:heavy_check_mark: change the *owner* or the *group owner* of a file;   
-:heavy_check_mark: *secure* user accounts;   
+:heavy_check_mark: add, delete or modify a **group**;
+:heavy_check_mark: add, delete or modify a **user**;
+:heavy_check_mark: understand the files associated with users and groups and learn how to manage them;
+:heavy_check_mark: change the *owner* or the *group owner* of a file;
+:heavy_check_mark: *secure* user accounts;
 :heavy_check_mark: change identity.
+
+---
+## Objectives
+
+<i class="fa-pull-right fa-4x">![w:200 opacity:50%](../assets/images/objectives.png)</i>
 
 :checkered_flag: **users**
 
 **Knowledge**: :star: :star:   
 **Complexity**: :star: :star:
 
-**Reading time**: 30 minutes
-****
+---
+
+![bg opacity:.5](../assets/rocky_linux_logo.svg)
+
+<div class="plan_header">
+
+## Plan
+
+<div class="columns plan">
+<div>
+
+[General](#general)
+[Group management](#group-management)
+[User management](#user-management)
+[File owners](#file-owners)
+[Guest management](#guest-management)
+[Securing](#securing)
+[Advanced management](#advanced-management)
+[Identity change](#identity-change)
+
+</div>
+<div>
+
+</div>
+</div>
+  
+---
 
 ## General
 
