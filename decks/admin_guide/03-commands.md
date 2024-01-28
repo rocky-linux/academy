@@ -6,7 +6,7 @@ style: |
 _class: lead
 paginate: true
 markdown.marp.enableHtml: true
-header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](#presentation-menu)'
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Admin Guide > Commands**'
 ---
 
@@ -2521,4 +2521,4 @@ $ ls /; cd /home; ls -lia; cd /
 <br />
 <br />
 
-<i class="button">[Next Chapter](./02-installation.html)</i>
+<i class="button">[Next Chapter](./04-advanced-commands.html)</i>

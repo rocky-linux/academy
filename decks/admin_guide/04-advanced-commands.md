@@ -6,7 +6,7 @@ style: |
 paginate: true
 _class: lead
 markdown.marp.enableHtml: true
-header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](#presentation-menu)'
+header: '![w:300](../assets/rocky_logo_white.png) [Back to menu](./index.html)'
 footer: '**Rocky Linux Academy > Admin Guide > Advanced Commands**'
 ---
 # 4 - Advanced Linux Commands
