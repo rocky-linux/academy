@@ -136,14 +136,15 @@ As part of this management of resources, the operating system has to:
 
 #### UNIX
 
-* **1964 — 1968**:
-  MULTICS (MULTiplexed Information and Computing Service) is developed for MIT, Bell Labs (AT&T) and General Electric.
+**1964 — 1968**:
+
+MULTICS (MULTiplexed Information and Computing Service) is developed for MIT, Bell Labs (AT&T) and General Electric.
 
 ---
 
 #### UNIX
 
-* **1969 — 1971**: After the withdrawal of Bell (1969) and then General Electric from the project, two developers, Ken Thompson and Dennis Ritchie (joined later by Brian Kernighan), judging MULTICS to be too complex, begin development of UNIX (UNiplexed Information and Computing Service). While it was originally created in Assembly language, the creators of UNIX eventually develop the B language and then the C language (1971) and completely rewrite UNIX.
+**1969 — 1971**: After the withdrawal of Bell (1969) and then General Electric from the project, two developers, Ken Thompson and Dennis Ritchie (joined later by Brian Kernighan), judging MULTICS to be too complex, begin development of UNIX (UNiplexed Information and Computing Service). While it was originally created in Assembly language, the creators of UNIX eventually develop the B language and then the C language (1971) and completely rewrite UNIX.
 
 ---
 
@@ -167,51 +168,51 @@ UNIX is still relevant today (HP-UX, AIX, Solaris, etc.).
 
 #### GNU Project
 
-* **1984**: Richard Matthew Stallman launched the GNU (GNU's Not Unix) Project, which aims to establish a **free** and **open** Unix system, in which the more important tools are: gcc compiler, bash shell, Emacs editor and so on. GNU is a Unix-like operating system. The development of GNU, started in January 1984, is known as the GNU Project. Many of the programs in GNU are released under the auspices of the GNU Project; those we call GNU packages.
+**1984**: Richard Matthew Stallman launched the GNU (GNU's Not Unix) Project, which aims to establish a **free** and **open** Unix system, in which the more important tools are: gcc compiler, bash shell, Emacs editor and so on. GNU is a Unix-like operating system. The development of GNU, started in January 1984, is known as the GNU Project. Many of the programs in GNU are released under the auspices of the GNU Project; those we call GNU packages.
 
-* **1990**: GNU's own kernel, the GNU Hurd, was started in 1990 (before Linux was started).
+**1990**: GNU's own kernel, the GNU Hurd, was started in 1990 (before Linux was started).
 
 ---
 
 #### MINIX
 
-* **1987**: Andrew S. Tanenbaum develops MINIX, a simplified UNIX, to teach operating systems in a simple way. Mr. Tanenbaum makes the source code of his operating system available.
+**1987**: Andrew S. Tanenbaum develops MINIX, a simplified UNIX, to teach operating systems in a simple way. Mr. Tanenbaum makes the source code of his operating system available.
 
 ---
 
 #### Linux
 
-* **1991**: A Finnish student, **Linus Torvalds**, creates an operating system that runs on his personal computer and names it Linux. He publishes his first version, called 0.02, on the Usenet discussion forum, and other developers help him improve his system. The term Linux is a play on words between the founder's first name, Linus, and UNIX.
+**1991**: A Finnish student, **Linus Torvalds**, creates an operating system that runs on his personal computer and names it Linux. He publishes his first version, called 0.02, on the Usenet discussion forum, and other developers help him improve his system. The term Linux is a play on words between the founder's first name, Linus, and UNIX.
 
 ---
 
 #### Linux
 
-* **1993**: The Debian distribution is created. Debian is a non-commercial, community-based distribution. Originally developed for use on servers, it is  well-suited for this role; however it is a universal system, usable on a personal computer as well. Debian forms the basis for many other distributions, such as Mint or Ubuntu.
+**1993**: The Debian distribution is created. Debian is a non-commercial, community-based distribution. Originally developed for use on servers, it is  well-suited for this role; however it is a universal system, usable on a personal computer as well. Debian forms the basis for many other distributions, such as Mint or Ubuntu.
 
 ---
 
 #### Linux
 
-* **1994**: The commercial distribution Red Hat is created by the company Red Hat, which is today the leading distributor of the GNU/Linux operating system. Red Hat supports the community version Fedora and until recently the free distribution CentOS.
+**1994**: The commercial distribution Red Hat is created by the company Red Hat, which is today the leading distributor of the GNU/Linux operating system. Red Hat supports the community version Fedora and until recently the free distribution CentOS.
 
 ---
 
 #### Linux
 
-* **1997**: The KDE desktop environment is created. It is based on the Qt component library and the C++ development language.
+**1997**: The KDE desktop environment is created. It is based on the Qt component library and the C++ development language.
 
-* **1999**: The GNOME desktop environment is created. It is based on the GTK+ component library.
+**1999**: The GNOME desktop environment is created. It is based on the GTK+ component library.
 
 ---
 
 #### Linux
 
-* **2002**: The Arch distribution is created. Its distinctive is that it offers rolling release (continuous update).
+**2002**: The Arch distribution is created. Its distinctive is that it offers rolling release (continuous update).
 
-* **2004**: Ubuntu is created by the Canonical company (Mark Shuttleworth). It is based on Debian but includes free and proprietary software.
+**2004**: Ubuntu is created by the Canonical company (Mark Shuttleworth). It is based on Debian but includes free and proprietary software.
 
-* **2021**: Rocky Linux is created, based on Red Hat distribution.
+**2021**: Rocky Linux is created, based on Red Hat distribution.
 
 ---
 
@@ -246,10 +247,10 @@ Linux equips 100% of the top 500 supercomputers since 2018. A supercomputer is a
 
 <i class="fa-pull-right">![w:150](./images/arch_design.png)</i>
 
-* The **kernel** is the first software component.
-  * It is the heart of the Linux system.
-  * It manages the hardware resources of the system.
-  * The other software components must go through it to access the hardware.
+The **kernel** is the first software component.
+* It is the heart of the Linux system.
+* It manages the hardware resources of the system.
+* The other software components must go through it to access the hardware.
 
 ---
 
@@ -257,8 +258,8 @@ Linux equips 100% of the top 500 supercomputers since 2018. A supercomputer is a
 
 <i class="fa-pull-right">![w:150 opacity:50%](./images/shell.png)</i>
 
-* The **shell** is a utility that interprets user commands and ensures their execution.
-  * Main shells: Bourne shell, C shell, Korn shell and Bourne-Again shell (bash).
+The **shell** is a utility that interprets user commands and ensures their execution.
+* Main shells: Bourne shell, C shell, Korn shell and Bourne-Again shell (bash).
 
 ---
 
@@ -266,10 +267,10 @@ Linux equips 100% of the top 500 supercomputers since 2018. A supercomputer is a
 
 <i class="fa-pull-right">![w:150 opacity:50%](./images/applications.png)</i>
 
-* **Applications** are user programs including but not limited to:
-  * Internet browsers
-  * Word processors
-  * Spreadsheets
+**Applications** are user programs including but not limited to:
+* Internet browsers
+* Word processors
+* Spreadsheets
 
 ---
 
@@ -684,4 +685,4 @@ There are several types of shells available and configurable on a platform or ac
 <br />
 <br />
 
-<i class="button">[Next Chapter](./02-installation.html)</i>
+<i class="button">[Next Chapter](./02-installation.html)</i>
