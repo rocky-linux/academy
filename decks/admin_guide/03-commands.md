@@ -48,12 +48,11 @@ In this chapter, future Linux administrators will learn how to:
 [Generalities](#generalities)
 [The Users](#the-users)
 [The Shell](#the-shell)
-
+[Desktop environments](#desktop-environments)
+[Free / Open Source](#free--open-source)
 </div>
 <div>
 
-[Desktop environments](#desktop-environments)
-[Free / Open Source](#free--open-source)
 [GNU GPL](#gnu-gpl)
 [Areas of use](#areas-of-use)
 [Shell](#shell)
@@ -87,6 +86,13 @@ Current Linux systems have graphical utilities dedicated to the work of an admin
 ### Generalities
 
 Learning these commands allows the administrator to connect to a Linux terminal, to manage its resources and files, to identify the station, the terminal, and the connected users, etc.
+
+---
+<br/>
+<br/>
+<br/>
+
+# Questions ?
 
 ---
 
@@ -128,6 +134,13 @@ The user's login directory is by convention stored in the `/home` directory of t
 ### The users
 
 A workstation-type installation (with graphical interface) starts this interface on terminal 1. Linux being multi-user, it is possible to connect several users several times, on different **physical terminals** (TTY) or **virtual terminals** (PTS). Virtual terminals are available within a graphical environment. A user switches from one physical terminal to another using <kbd>Alt</kbd> + <kbd>Fx</kbd> from the command line or using <kbd>CTRL</kbd> + <kbd>Alt</kbd> + <kbd>Fx</kbd>.
+
+---
+<br/>
+<br/>
+<br/>
+
+# Questions ?
 
 ---
 
@@ -216,6 +229,13 @@ $ ls -lia /etc /home /var
 ```
 
 In the literature, the term "option" is equivalent to the term "parameter," which is more commonly used in programming. The optional side of an option or argument is symbolized by enclosing it in square brackets `[` and `]`. When more than one option is possible, a vertical bar called a "pipe" separates them `[a|e|i]`.
+
+---
+<br/>
+<br/>
+<br/>
+
+# Questions ?
 
 ---
 
@@ -458,6 +478,14 @@ Auto-completion is a great help.
 If double-pressing the <kbd>TAB</kbd> key presents no options, then there is no solution to the current completion.
 
 ---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
+---
 
 ## <i class="fa fa-desktop"></i> Display and Identification
 
@@ -649,6 +677,14 @@ Since Linux is multi-user, it is possible that multiple sessions are open on the
 <i class="fa fa-arrow-right-from-bracket"></i>  pts/: represents a virtual console in a graphical environment with the number after representing the instance of the virtual console (0, 1, 2...)
 
 The `-r` option also displays the runlevel (see chapter "startup").
+
+---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
 
 ---
 
@@ -1284,6 +1320,14 @@ $ cp file1 /wrongrep
 If the destination directory does not exist, `file1` is copied under the name `wrongrep` to the root directory.
 
 ---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
+---
 
 ## <i class="fa fa-file-lines"></i> Visualization
 
@@ -1718,6 +1762,13 @@ table {
 | `-w`   | Counts the number of words.     |
 
 ---
+<br/>
+<br/>
+<br/>
+
+# Questions ?
+
+---
 
 ## <i class="fa fa-magnifying-glass"></i> Search
 
@@ -1938,6 +1989,13 @@ Always surround words containing meta-characters with `"` to prevent them from b
 Do not confuse shell meta-characters with regular expression meta-characters. The `grep` command uses regular expression meta-characters.
 
 </div>
+
+---
+<br/>
+<br/>
+<br/>
+
+# Questions ?
 
 ---
 
@@ -2169,6 +2227,13 @@ Search for a string in the result:
 ```bash
 $ ls -lia / | grep fichier
 ```
+---
+
+<br/>
+<br/>
+<br/>
+
+# Questions ?
 
 ---
 
@@ -2444,3 +2509,16 @@ $ ls /; cd /home; ls -lia; cd /
 - [ ] `ls -R / 2> errors.log`   
 - [ ] `ls -R / 2>> errors.log`   
 - [ ] `ls -R / 2> errors.log 2>&1`   
+
+---
+<br/>
+<br/>
+<br/>
+
+# Questions ?
+
+<br />
+<br />
+<br />
+
+<i class="button">[Next Chapter](./02-installation.html)</i>

@@ -553,3 +553,16 @@ The suffix can be specified thanks to the `-S` option:
 $ install -v -b -S ".bak" -D -t ~/samples/ src/sample.txt
 'src/sample.txt' -> '~/samples/sample.txt' (archive: '~/samples/sample.txt.bak')
 ```
+
+---
+<br/>
+<br/>
+<br/>
+
+# Questions ?
+
+<br />
+<br />
+<br />
+
+<i class="button">[Next Chapter](./05-vi.html)</i>

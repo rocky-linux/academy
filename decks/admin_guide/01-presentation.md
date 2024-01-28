@@ -116,6 +116,15 @@ As part of this management of resources, the operating system has to:
 ![w:500](images/operating_system.png)
 
 ---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
+
+---
 
 ## Generalities UNIX - GNU/Linux
 
@@ -662,5 +671,17 @@ There are several types of shells available and configurable on a platform or ac
 [ ] Bourne-Again shell (bash)
 [ ] C shell (csh)
 [ ] Korn shell (ksh)
+
+---
+<br/>
+<br/>
+<br/>
+
+
+# Questions ?
+
+<br />
+<br />
+<br />
 
 <i class="button">[Next Chapter](./02-installation.html)</i>
